@@ -5,11 +5,11 @@ import ReactPlayer from 'react-player';
 
 const Video = () => {
 	return (
-		<Box>
+		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container minWidth="lg">
-				<Grid container spacing={2} my={5}>
-					<Grid item xs={12}>
-						<ReactPlayer width="100%" muted url="https://youtu.be/vr0qNXmkUJ8" />
+				<Grid container>
+					<Grid item xs={12} align="center">
+						<ReactPlayer width="820px" height="460px" playing muted loop url="https://youtu.be/vr0qNXmkUJ8" />
 					</Grid>
 				</Grid>
 			</Container>

@@ -12,17 +12,17 @@ const Membership = () => {
 	const { t } = useTranslation();
 
 	return (
-		<Box>
+		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container minWidth="lg">
-				<Grid container spacing={2} my={5}>
+				<Grid container spacing={2}>
 					<Grid item xs={12}>
-						<Typography variant="h1" color="#524fa1">
+						<Typography variant="h3" color="#524fa1" fontWeight="600">
 							{t('Membership')}
 						</Typography>
 					</Grid>
 
 					<Grid item xs={12}>
-						<Typography variant="h3">{t('If you agree with the principles')}</Typography>
+						<Typography>{t('If you agree with the principles')}</Typography>
 					</Grid>
 
 					<Grid item xs={12}>
@@ -51,7 +51,9 @@ const Membership = () => {
 						</Stack>
 					</Grid>
 					<Grid item>
-						<Button variant="contained">{t('Submit')}</Button>
+						<Button variant="contained" sx={{ backgroundColor: '#524fa1' }}>
+							{t('Submit')}
+						</Button>
 					</Grid>
 				</Grid>
 			</Container>

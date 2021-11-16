@@ -9,11 +9,11 @@ const Header = () => {
 	const { t, i18n } = useTranslation();
 
 	return (
-		<AppBar position="sticky" variant="none" sx={{ backgroundColor: '#262153' }}>
+		<AppBar position="sticky" variant="none" sx={{ backgroundColor: 'rgba(38, 33, 83, 0.9)' }}>
 			<Container>
 				<Grid container spacing={2} alignItems="center">
-					<Grid item xs={12} md={2}>
-						<img src="whitelogo.png" style={{ width: '100%' }} />
+					<Grid item xs={12} md={1}>
+						<img src="headerLogo.png" style={{ width: '100%' }} />
 					</Grid>
 					<Grid item xs={12} md={8}>
 						<Stack direction="row" spacing={1} justifyContent="center">
@@ -27,9 +27,9 @@ const Header = () => {
 					</Grid>
 					<Grid item xs={12} md={2}>
 						<Stack direction="row" spacing={2}>
-							<FacebookRoundedIcon variant="outlined" fontSize="large" />
-							<InstagramIcon variant="outlined" fontSize="large" />
-							<TwitterIcon variant="outlined" fontSize="large" />
+							<FacebookRoundedIcon variant="outlined" fontSize="medium" />
+							<InstagramIcon variant="outlined" fontSize="medium" />
+							<TwitterIcon variant="outlined" fontSize="medium" />
 						</Stack>
 					</Grid>
 				</Grid>

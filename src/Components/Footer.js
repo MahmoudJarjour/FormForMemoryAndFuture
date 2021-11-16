@@ -8,24 +8,24 @@ import { useTranslation } from 'react-i18next';
 const Footer = () => {
 	const { t } = useTranslation();
 	return (
-		<Container sx={{ minWidth: '100%', backgroundColor: '#262153' }}>
+		<Container sx={{ minWidth: '100%' }}>
 			<Grid container spacing={2} alignItems="center" mt={5}>
 				<Grid item xs={12} md={2}>
-					<img src="whitelogo.png" style={{ width: '100%' }} />
+					<img src="logo.png" style={{ width: '100%' }} />
 				</Grid>
 				<Grid item xs={12} md={8} align="center">
-					<Typography color="white">{t('Copyright')} © 2021 Forum for Memory and Future.</Typography>
+					<Typography>{t('Copyright')} © 2021 Forum for Memory and Future.</Typography>
 				</Grid>
 				<Grid item xs={12} md={2}>
 					<Grid container spacing={1} alignItems="center">
 						<Grid item xs={12} md={4}>
-							<FacebookRoundedIcon variant="outlined" fontSize="large" sx={{ color: 'whitesmoke' }} />
+							<FacebookRoundedIcon variant="outlined" fontSize="medium" sx={{ color: '#524fa1' }} />
 						</Grid>
 						<Grid item xs={12} md={4}>
-							<InstagramIcon variant="outlined" fontSize="large" sx={{ color: 'whitesmoke' }} />
+							<InstagramIcon variant="outlined" fontSize="medium" sx={{ color: '#524fa1' }} />
 						</Grid>
 						<Grid item xs={12} md={4}>
-							<TwitterIcon variant="outlined" fontSize="large" sx={{ color: 'whitesmoke' }} />
+							<TwitterIcon variant="outlined" fontSize="medium" sx={{ color: '#524fa1' }} />
 						</Grid>
 					</Grid>
 				</Grid>

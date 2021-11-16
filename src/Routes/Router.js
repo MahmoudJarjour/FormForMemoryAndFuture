@@ -27,9 +27,11 @@ const theme = createTheme({
 		},
 	},
 	typography: {
-		fontFamily: 'Advent Pro',
-		fontSize: '16px',
-		lineHeight: 1.2,
+		h3: {
+			lineHeight: 1.1,
+		},
+		fontFamily: getLanguage() === 'en' ? 'Advent Pro' : 'Tajawal',
+		fontSize: 16,
 	},
 	overrides: {
 		MuiFormLabel: {

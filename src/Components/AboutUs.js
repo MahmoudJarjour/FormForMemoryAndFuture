@@ -12,17 +12,17 @@ import { Box } from '@mui/system';
 const AboutUs = () => {
 	const { t } = useTranslation();
 	return (
-		<Box>
+		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container minWidth="lg">
-				<Grid container spacing={2} my={5}>
+				<Grid container spacing={2}>
 					<Grid item xs={12}>
-						<Typography variant="h1" color="#524fa1">
+						<Typography variant="h3" color="#524fa1" fontWeight="600">
 							{' '}
 							{t('AboutUs')}{' '}
 						</Typography>
 					</Grid>
 					<Grid item xs={12}>
-						<Typography variant="h3">{t('FirstSectionText')}</Typography>
+						<Typography>{t('FirstSectionText')}</Typography>
 					</Grid>
 
 					{/* { First 3 items } */}
@@ -31,49 +31,45 @@ const AboutUs = () => {
 							<Grid item xs={12} md={4}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
 									<Grid item xs={12} align="center">
-										<ThumbUpAltIcon variant="outlined" sx={{ fontSize: '40px', color: '#524fa1' }} />
+										<ThumbUpAltIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h4" align="center">
 											{t('Give up violence')}
 										</Typography>
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h3" align="center">
-											{t('Prevent the use of armed violence as a means of dealing with conflicts')}
-										</Typography>
+										<Typography align="center">{t('Prevent the use of armed violence as a means of dealing with conflicts')}</Typography>
 									</Grid>
 								</Grid>
 							</Grid>
 							<Grid item xs={12} md={4}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
 									<Grid item xs={12} align="center">
-										<GavelIcon variant="outlined" sx={{ fontSize: '40px', color: '#524fa1' }} />
+										<GavelIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h4" align="center">
 											{t('Saving rights')}
 										</Typography>
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h3" align="center">
-											{t('Highlight the right of the Lebanese ')}
-										</Typography>
+										<Typography align="center">{t('Highlight the right of the Lebanese ')}</Typography>
 									</Grid>
 								</Grid>
 							</Grid>
 							<Grid item xs={12} md={4}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
 									<Grid item xs={12} align="center">
-										<GroupIcon variant="outlined" sx={{ fontSize: '40px', color: '#524fa1' }} />
+										<GroupIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h4" align="center">
 											{t('Respect individuals')}
 										</Typography>
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h3" align="center">
+										<Typography align="center">
 											{t('Establish a common life based on the respect of the rights of individuals and groups.')}
 										</Typography>
 									</Grid>
@@ -86,15 +82,15 @@ const AboutUs = () => {
 							<Grid item xs={12} md={6}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
 									<Grid item xs={12} align="center">
-										<CloudDownloadIcon variant="outlined" sx={{ fontSize: '40px', color: '#524fa1' }} />
+										<CloudDownloadIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h4" align="center">
 											{t('Download Documents')}
 										</Typography>
 									</Grid>
 									<Grid item xs={12} align="center">
-										<Button variant="contained" startIcon={<CloudDownloadIcon />}>
+										<Button variant="contained" startIcon={<CloudDownloadIcon />} sx={{ backgroundColor: '#524fa1' }}>
 											{t('Download Documents')}
 										</Button>
 									</Grid>
@@ -104,15 +100,15 @@ const AboutUs = () => {
 							<Grid item xs={12} md={6}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
 									<Grid item xs={12} align="center">
-										<DriveFileMoveIcon variant="outlined" sx={{ fontSize: '40px', color: '#524fa1' }} />
+										<DriveFileMoveIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h4" align="center">
 											{t('Browse Archive')}
 										</Typography>
 									</Grid>
 									<Grid item xs={12} align="center">
-										<Button variant="contained" startIcon={<DriveFileMoveIcon />}>
+										<Button variant="contained" startIcon={<DriveFileMoveIcon />} sx={{ backgroundColor: '#524fa1' }}>
 											{t('Browse Archive')}
 										</Button>
 									</Grid>

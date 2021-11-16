@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 const Members = () => {
 	const { t } = useTranslation();
 	return (
-		<Box sx={{ backgroundColor: '#e0e0e0' }}>
+		<Box sx={{ backgroundColor: '#ECEAE8' }} pt={10} pb={10}>
 			<Container minWidth="lg">
-				<Grid container spacing={3} my={5}>
+				<Grid container spacing={3}>
 					<Grid item xs={12}>
-						<Typography variant="h1" color="#524fa1">
+						<Typography variant="h3" color="#524fa1" fontWeight="600">
 							{t('Members')}
 						</Typography>
 					</Grid>
@@ -29,7 +29,7 @@ const Members = () => {
 										/>
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h5" align="center">
 											First Member
 										</Typography>
 									</Grid>
@@ -47,7 +47,7 @@ const Members = () => {
 										/>
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h5" align="center">
 											Second Member
 										</Typography>
 									</Grid>
@@ -66,7 +66,7 @@ const Members = () => {
 									</Grid>
 
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h5" align="center">
 											Third Person
 										</Typography>
 									</Grid>
@@ -85,7 +85,7 @@ const Members = () => {
 									</Grid>
 
 									<Grid item xs={12}>
-										<Typography variant="h2" align="center">
+										<Typography variant="h5" align="center">
 											Third Person
 										</Typography>
 									</Grid>

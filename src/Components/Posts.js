@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next';
 const Posts = () => {
 	const { t } = useTranslation();
 	return (
-		<Box sx={{ backgroundColor: '#e0e0e0' }}>
+		<Box sx={{ backgroundColor: '#ECEAE8' }} py={10}>
 			<Container minWidth="lg">
-				<Grid container spacing={2} my={5}>
+				<Grid container spacing={2}>
 					<Grid item xs={12}>
-						<Typography variant="h1" color="#524fa1">
+						<Typography variant="h3" color="#524fa1" fontWeight="600">
 							{t('POSTS')}
 						</Typography>
 					</Grid>
