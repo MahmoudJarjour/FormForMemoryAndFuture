@@ -12,7 +12,7 @@ const Header = () => {
 		<AppBar position="sticky" variant="none" sx={{ backgroundColor: 'rgba(38, 33, 83, 0.9)' }}>
 			<Container>
 				<Grid container spacing={2} alignItems="center">
-					<Grid item xs={12} md={1}>
+					<Grid item xs={1} md={1}>
 						<img src="headerLogo.png" style={{ width: '100%' }} />
 					</Grid>
 					<Grid item xs={12} md={8}>

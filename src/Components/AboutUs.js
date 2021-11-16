@@ -30,11 +30,11 @@ const AboutUs = () => {
 						<Grid container spacing={2} justifyContent="center" alignItems="center">
 							<Grid item xs={12} md={4}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
-									<Grid item xs={12} align="center">
+									<Grid item xs={12} align="center" py={2}>
 										<ThumbUpAltIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h4" align="center">
+										<Typography variant="h4" align="center" py={2}>
 											{t('Give up violence')}
 										</Typography>
 									</Grid>
@@ -45,11 +45,11 @@ const AboutUs = () => {
 							</Grid>
 							<Grid item xs={12} md={4}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
-									<Grid item xs={12} align="center">
+									<Grid item xs={12} align="center" py={2}>
 										<GavelIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h4" align="center">
+										<Typography variant="h4" align="center" py={2}>
 											{t('Saving rights')}
 										</Typography>
 									</Grid>
@@ -60,11 +60,11 @@ const AboutUs = () => {
 							</Grid>
 							<Grid item xs={12} md={4}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
-									<Grid item xs={12} align="center">
+									<Grid item xs={12} align="center" py={2}>
 										<GroupIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h4" align="center">
+										<Typography variant="h4" align="center" py={2}>
 											{t('Respect individuals')}
 										</Typography>
 									</Grid>
@@ -81,11 +81,11 @@ const AboutUs = () => {
 						<Grid container spacing={2} mt={5} justifyContent="center" alignItems="center">
 							<Grid item xs={12} md={6}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
-									<Grid item xs={12} align="center">
+									<Grid item xs={12} align="center" py={2}>
 										<CloudDownloadIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h4" align="center">
+										<Typography variant="h4" align="center" py={2}>
 											{t('Download Documents')}
 										</Typography>
 									</Grid>
@@ -99,11 +99,11 @@ const AboutUs = () => {
 
 							<Grid item xs={12} md={6}>
 								<Grid container spacing={2} justifyContent="center" alignItems="center">
-									<Grid item xs={12} align="center">
+									<Grid item xs={12} align="center" py={2}>
 										<DriveFileMoveIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h4" align="center">
+										<Typography variant="h4" align="center" py={2}>
 											{t('Browse Archive')}
 										</Typography>
 									</Grid>
