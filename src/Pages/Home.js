@@ -14,6 +14,7 @@ const Home = () => {
 	return (
 		<>
 			<Header />
+
 			<FirstSection />
 			<Video />
 			<Members />
