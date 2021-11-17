@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player';
 const Video = () => {
 	return (
 		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
-			<Container minWidth="lg">
+			<Container maxWidth="lg">
 				<Grid container>
 					<Grid item xs={12} align="center">
 						<Card elevation={0}>

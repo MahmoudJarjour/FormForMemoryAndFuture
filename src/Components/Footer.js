@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const Footer = () => {
 	const { t } = useTranslation();
 	return (
-		<Container sx={{ minWidth: '100%' }}>
+		<Container sx={{ maxWidth: '100%' }}>
 			<Grid container spacing={2} alignItems="center" mt={5}>
 				<Grid item xs={12} md={2}>
 					<img src="logo.png" style={{ width: '100%' }} />

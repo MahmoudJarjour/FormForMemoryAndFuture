@@ -13,7 +13,7 @@ const Membership = () => {
 
 	return (
 		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
-			<Container minWidth="lg">
+			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item xs={12}>
 						<Typography variant="h3" color="#524fa1" fontWeight="600">

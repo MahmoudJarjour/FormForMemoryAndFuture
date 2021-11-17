@@ -20,7 +20,7 @@ const theme = createTheme({
 	direction: getLanguage() === 'ar' ? 'rtl' : 'ltr',
 	palette: {
 		primary: {
-			main: '#0c9fc1',
+			main: '#262153',
 		},
 		background: {
 			default: '#f5f5f5',

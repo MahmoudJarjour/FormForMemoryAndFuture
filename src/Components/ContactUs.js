@@ -9,7 +9,7 @@ const ContactUs = () => {
 	const { t } = useTranslation();
 	return (
 		<Box py={10} sx={{ backgroundColor: '#262153' }}>
-			<Container minWidth="lg">
+			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={4}>
 						<Grid container spacing={2}>
