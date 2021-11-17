@@ -1,14 +1,15 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Stack, Typography } from '@mui/material';
 import React from 'react';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { useTranslation } from 'react-i18next';
+import { Link } from '@mui/material';
 
 const Footer = () => {
 	const { t } = useTranslation();
 	return (
-		<Container sx={{ maxWidth: '100%' }}>
+		<Container name="Footer" sx={{ maxWidth: '100%' }}>
 			<Grid container spacing={2} alignItems="center" mt={5}>
 				<Grid item xs={12} md={2}>
 					<img src="logo.png" style={{ width: '100%' }} />
@@ -17,17 +18,18 @@ const Footer = () => {
 					<Typography>{t('Copyright')} © 2021 Forum for Memory and Future.</Typography>
 				</Grid>
 				<Grid item xs={12} md={2}>
-					<Grid container spacing={1} alignItems="center">
-						<Grid item xs={12} md={4}>
-							<FacebookRoundedIcon variant="outlined" fontSize="medium" sx={{ color: '#524fa1' }} />
-						</Grid>
-						<Grid item xs={12} md={4}>
-							<InstagramIcon variant="outlined" fontSize="medium" sx={{ color: '#524fa1' }} />
-						</Grid>
-						<Grid item xs={12} md={4}>
-							<TwitterIcon variant="outlined" fontSize="medium" sx={{ color: '#524fa1' }} />
-						</Grid>
-					</Grid>
+					<Stack direction="row" spacing={2} justifyContent="center">
+						<Link href="https://www.facebook.com/pg/memoryfuturelb/posts/" target="_blank">
+							<FacebookRoundedIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+						</Link>
+
+						<Link href="https://www.instagram.com/" target="_blank">
+							<InstagramIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+						</Link>
+						<Link href="https://twitter.com/" target="_blank">
+							<TwitterIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+						</Link>
+					</Stack>
 				</Grid>
 			</Grid>
 		</Container>

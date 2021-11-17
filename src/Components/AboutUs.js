@@ -12,7 +12,7 @@ import { Box } from '@mui/system';
 const AboutUs = () => {
 	const { t } = useTranslation();
 	return (
-		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
+		<Box name="AboutUs" py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item xs={12}>

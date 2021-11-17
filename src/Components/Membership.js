@@ -9,10 +9,20 @@ const Membership = () => {
 		setNews(event.target.value);
 	};
 
+	const [username, SetUsername] = useState('');
+
+	const handleUserName = (event) => {
+		SetUsername(event.target.value);
+	};
+	const [userEmail, SetUserEmail] = useState('');
+	const handleUserEmail = (event) => {
+		SetUserEmail(event.target.value);
+	};
+
 	const { t } = useTranslation();
 
 	return (
-		<Box py={10} sx={{ backgroundColor: '#F7F4F2' }}>
+		<Box name="MemberShip" py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item xs={12}>
@@ -27,8 +37,24 @@ const Membership = () => {
 
 					<Grid item xs={12}>
 						<Stack direction="column" spacing={1}>
-							<TextField required id="standard-Name" label={t('Enter your name')} variant="outlined" fullWidth />
-							<TextField required id="Standerd-Email" label={t('Enter your Email')} variant="outlined" fullWidth />
+							<TextField
+								required
+								id="standard-Name"
+								label={t('Enter your name')}
+								value={username}
+								onChange={handleUserName}
+								variant="outlined"
+								fullWidth
+							/>
+							<TextField
+								required
+								id="Standerd-Email"
+								label={t('Enter your Email')}
+								value={userEmail}
+								onChange={handleUserEmail}
+								variant="outlined"
+								fullWidth
+							/>
 							<FormControl fullWidth required>
 								<InputLabel id="demo-simple-select-required-label">{t('News')}</InputLabel>
 								<Select

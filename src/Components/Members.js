@@ -16,37 +16,37 @@ const Members = () => {
 		{
 			key: 'titlekey1',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '1.png',
 		},
 		{
 			key: 'titlekey2',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '3.png',
 		},
 		{
 			key: 'titlekey3',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '2.png',
 		},
 		{
 			key: 'titlekey4',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '1.png',
 		},
 		{
 			key: 'titlekey5',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '3.png',
 		},
 		{
 			key: 'titlekey6',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '2.png',
 		},
 		{
 			key: 'titlekey7',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: '1.png',
 		},
 	];
 
@@ -56,7 +56,7 @@ const Members = () => {
 	};
 	return (
 		<>
-			<Box sx={{ backgroundColor: '#ECEAE8' }} pt={10} pb={10}>
+			<Box name="Members" sx={{ backgroundColor: '#ECEAE8' }} pt={10} pb={10}>
 				<Container maxWidth="lg">
 					<Grid container spacing={3}>
 						<Grid item xs={12}>
@@ -68,7 +68,7 @@ const Members = () => {
 						<Grid item xs={12}>
 							<Carousel>
 								{[...new Array(Math.ceil(members.length / 3))].map((_, index) => (
-									<Grid container spacing={3} key={'page' + index}>
+									<Grid container spacing={5} key={'page' + index}>
 										{members.splice(0, 3).map((item) => (
 											<Grid item md={4} xs={12} key={item.key}>
 												<Card variant="none" sx={{ backgroundColor: '#ECEAE8' }}>

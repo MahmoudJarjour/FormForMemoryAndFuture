@@ -29,19 +29,19 @@ const Posts = () => {
 		{
 			key: 'titlekey1',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: 'post1.png',
 			body: 'Qui irure amet do anim dolor ad. Lorem quis fugiat eu ea aliquip ex anim consequat cillum do ipsum. Anim aliquip duis excepteur laborum irure minim velit elit dolore. Velit dolor exercitation laborum sunt quis aliquip deserunt occaecat. Sint commodo voluptate commodo occaecat est.',
 		},
 		{
 			key: 'titlekey2',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: 'post2.png',
 			body: 'Qui irure amet do anim dolor ad. Lorem quis fugiat eu ea aliquip ex anim consequat cillum do ipsum. Anim aliquip duis excepteur laborum irure minim velit elit dolore. Velit dolor exercitation laborum sunt quis aliquip deserunt occaecat. Sint commodo voluptate commodo occaecat est.',
 		},
 		{
 			key: 'titlekey3',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'https://via.placeholder.com/400',
+			image: 'post3.png',
 			body: 'Qui irure amet do anim dolor ad. Lorem quis fugiat eu ea aliquip ex anim consequat cillum do ipsum. Anim aliquip duis excepteur laborum irure minim velit elit dolore. Velit dolor exercitation laborum sunt quis aliquip deserunt occaecat. Sint commodo voluptate commodo occaecat est.',
 		},
 	];
@@ -53,7 +53,7 @@ const Posts = () => {
 
 	return (
 		<>
-			<Box sx={{ backgroundColor: '#ECEAE8' }} py={10}>
+			<Box name="Posts" sx={{ backgroundColor: '#ECEAE8' }} py={10}>
 				<Container maxWidth="lg">
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
