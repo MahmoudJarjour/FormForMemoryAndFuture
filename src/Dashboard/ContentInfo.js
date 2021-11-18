@@ -181,17 +181,6 @@ export default function ContentInfo() {
 
 						<Stack direction="column" spacing={2}>
 							<Grid container spacing={3} mt={3} justifyContent="center" alignItems="center">
-								<Button variant="contained" component="span">
-									Add Block
-								</Button>
-
-								<Button variant="contained" component="span">
-									Edit Block
-								</Button>
-								<Button variant="contained" component="span">
-									Delete Block
-								</Button>
-
 								<Grid item xs={12}>
 									<Grid container spacing={2}>
 										<Grid item xs={12}>
@@ -272,17 +261,6 @@ export default function ContentInfo() {
 
 						<Stack direction="column" spacing={2}>
 							<Grid container spacing={3} mt={3} justifyContent="center" alignItems="center">
-								<Button variant="contained" component="span">
-									Add Block
-								</Button>
-
-								<Button variant="contained" component="span">
-									Edit Block
-								</Button>
-								<Button variant="contained" component="span">
-									Delete Block
-								</Button>
-
 								<Grid item xs={12}>
 									<Grid container spacing={2}>
 										<Grid item xs={12}>
