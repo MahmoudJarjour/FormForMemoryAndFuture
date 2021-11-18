@@ -1,36 +1,29 @@
-import * as React from 'react';
-import { Typography, Toolbar, List, Box, Divider, Container, Grid, Paper, Link, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import React, { useState } from 'react';
+import { Typography, Toolbar, List, Box, Divider, Container, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
-
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import LogoutIcon from '@mui/icons-material/Logout';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
 
-function Copyright(props) {
-	const { t } = useTranslation();
-	return (
-		<Typography variant="body2" color="text.secondary" align="center" {...props}>
-			{t('Copyright')}
-			{' © '}
-			<Link color="inherit" href="#">
-				{t('Forum for Memory and Future')}
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
+import PeopleIcon from '@mui/icons-material/People';
+import LayersIcon from '@mui/icons-material/Layers';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+import VideoSettingsIcon from '@mui/icons-material/VideoSettings';
+import { Copyright } from './CopyRight';
+import i18next from 'i18next';
+import EditVideo from './EditVideo';
+import Subscribers from './Subscribers';
+import ContentInfo from './ContentInfo';
+import EditMember from './EditMember';
+import EditPosts from './EditPosts';
 
 const drawerWidth = 240;
 
@@ -75,13 +68,50 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 		}),
 	},
 }));
+const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
 export default function AdminPanel() {
-	const [open, setOpen] = React.useState(true);
+	const [open, setOpen] = useState(true);
 	const toggleDrawer = () => {
 		setOpen(!open);
 	};
 	const { t } = useTranslation();
+
+	const [selectedButton, setSelectedButton] = useState(0);
+
+	const content = [
+		{
+			id: 1,
+			label: t('Video'),
+			component: <EditVideo />,
+			icon: <VideoSettingsIcon />,
+		},
+		{
+			id: 2,
+			label: t('Members'),
+			component: <EditMember />,
+			icon: <PeopleIcon />,
+		},
+		{
+			id: 3,
+			label: t('POSTS'),
+			component: <EditPosts />,
+			icon: <PostAddIcon />,
+		},
+		{
+			id: 4,
+			label: t('Subscribers'),
+			component: <Subscribers />,
+			icon: <LayersIcon />,
+		},
+		{
+			id: 5,
+			label: t('Contact Info'),
+			component: <ContentInfo />,
+			icon: <ContactPageIcon />,
+		},
+	];
+
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
@@ -104,10 +134,12 @@ export default function AdminPanel() {
 						<MenuIcon />
 					</IconButton>
 					<Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-						'Forum for Memory and Future'
+						{t('Forum for Memory and Future')}
 					</Typography>
 					<IconButton color="inherit">
-						<LogoutIcon />
+						<Link underline="none" color="#F5F5F5" to="/LogIn">
+							<LogoutIcon />
+						</Link>
 					</IconButton>
 				</Toolbar>
 			</AppBar>
@@ -126,42 +158,12 @@ export default function AdminPanel() {
 				</Toolbar>
 				<Divider />
 				<List>
-					<ListItem button>
-						<ListItemIcon>
-							<DashboardIcon />
-						</ListItemIcon>
-						<ListItemText primary={t('Dashboard')} />
-					</ListItem>
-					<ListItem button>
-						<ListItemIcon>
-							<ShoppingCartIcon />
-						</ListItemIcon>
-						<ListItemText primary={t('Video')} />
-					</ListItem>
-					<ListItem button>
-						<ListItemIcon>
-							<PeopleIcon />
-						</ListItemIcon>
-						<ListItemText primary={t('Members')} />
-					</ListItem>
-					<ListItem button>
-						<ListItemIcon>
-							<BarChartIcon />
-						</ListItemIcon>
-						<ListItemText primary={t('POSTS')} />
-					</ListItem>
-					<ListItem button>
-						<ListItemIcon>
-							<LayersIcon />
-						</ListItemIcon>
-						<ListItemText primary={t('Subscribers')} />
-					</ListItem>
-					<ListItem button>
-						<ListItemIcon>
-							<LayersIcon />
-						</ListItemIcon>
-						<ListItemText primary={t('Contact Info')} />
-					</ListItem>
+					{content.map((item, index) => (
+						<ListItem key={item.id} button onClick={() => setSelectedButton(index)}>
+							<ListItemIcon>{item.icon}</ListItemIcon>
+							<ListItemText primary={item.label} />
+						</ListItem>
+					))}
 				</List>
 			</Drawer>
 			<Box
@@ -177,8 +179,7 @@ export default function AdminPanel() {
 				<Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
 					{/* {content Section} */}
 
-					<Typography>Here we Have the content sections</Typography>
-
+					{content[selectedButton].component}
 					<Copyright sx={{ pt: 4 }} />
 				</Container>
 			</Box>

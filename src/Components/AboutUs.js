@@ -1,5 +1,4 @@
 import { Button, Container, Grid, Typography } from '@mui/material';
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';

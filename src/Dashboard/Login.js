@@ -5,28 +5,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
-
-function Copyright(props) {
-	const { t } = useTranslation();
-	return (
-		<Typography variant="body2" color="text.secondary" align="center" {...props}>
-			{t('Copyright')}
-			{' © '}
-			<Link color="inherit" href="#">
-				{t('Forum for Memory and Future')}
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
+import { Copyright } from './CopyRight';
 
 export default function LogIn() {
 	const handleSubmit = (event) => {
@@ -76,7 +62,7 @@ export default function LogIn() {
 							</Link>
 						</Grid>
 						<Grid item>
-							<Link href="#" variant="body2">
+							<Link to="/SignUp" variant="body2">
 								{t("Don't have an account? Sign Up")}
 							</Link>
 						</Grid>

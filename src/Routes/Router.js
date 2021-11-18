@@ -76,6 +76,7 @@ const Router = () => {
 						<Route path="/LogIn" exact component={LogIn} />
 						<Route path="/SignUp" exact component={SignUp} />
 						<Route path="/AdminPanel" exact component={AdminPanel} />
+
 						<Route component={NotFound} />
 					</Switch>
 				</ThemeProvider>

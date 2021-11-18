@@ -12,21 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useTranslation } from 'react-i18next';
-
-function Copyright(props) {
-	const { t } = useTranslation();
-	return (
-		<Typography variant="body2" color="text.secondary" align="center" {...props}>
-			{t('Copyright')}
-			{' © '}
-			<Link color="inherit" href="#">
-				{t('Forum for Memory and Future')}
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
+import { Copyright } from './CopyRight';
 
 export default function SignUp() {
 	const handleSubmit = (event) => {
