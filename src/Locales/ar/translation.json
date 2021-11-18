@@ -35,5 +35,26 @@
 
   "CONTACT INFO":"معلومات التواصل",
 
-  "Copyright":"حقوق النشر "
+  "Copyright":"حقوق النشر ",
+
+  "First Name":"الاسم الأول",
+  "Last Name":"الاسم الأخير",
+  "Email Address":"البريد الالكتروني",
+  "Password":"كلمة السر",
+  "Sign up":"إنشاء حساب",
+
+
+  "Already have an account? Sign in":"لديك حساب بالفعل؟ تسجيل الدخول",
+  "I want to receive news and updates via email.":"أريد تلقي الأخبار والتحديثات عبر البريد الإلكتروني.",
+
+  "Sign in":"تسجيل الدخول",
+  "Forgot password?":"نسيت كلمة المرور ؟",
+  "Don't have an account? Sign Up":"ليس لديك حساب؟ إنشاء حساب ",
+  "Remember me":"تذكرني",
+
+
+  "Dashboard":"لوحة القيادة",
+  "Video":"الفيديو",
+  "Subscribers":"المشتركين",
+  "Contact Info":"معلومات المشتركين"
 }

@@ -33,5 +33,32 @@
   "Monday - Thursday":"Monday - Thursday",
 
   "CONTACT INFO":"CONTACT INFO",
-  "Copyright":"Copyright"
+  "Copyright":"Copyright",
+  
+
+
+  "First Name":"First Name",
+  "Last Name":"Last Name",
+  "Email Address":"Email Address",
+  "Password":"Password",
+  "Sign up":"Sign Up",
+
+
+  "Already have an account? Sign in":"Already have an account? Sign in",
+  "I want to receive news and updates via email.":"I want to receive news and updates via email.",
+
+  "Sign in":"Sign in",
+  "Forgot password?":"Forgot password?",
+  "Don't have an account? Sign Up":"Don't have an account? Sign Up",
+  "Remember me":"Remember me",
+
+
+  "Dashboard":"Dashboard",
+  "Video":"Video",
+  
+  "Subscribers":"Subscribers",
+  "Contact Info":"Contact Info"
+
+
+
 }

@@ -8,6 +8,9 @@ import Members from '../Components/Members';
 import Membership from '../Components/Membership';
 import Posts from '../Components/Posts';
 import Video from '../Components/Video';
+import LogIn from '../Dashboard/Login';
+
+import SignUp from '../Dashboard/SignUp';
 
 const Home = () => {
 	return (

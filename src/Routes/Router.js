@@ -8,6 +8,9 @@ import { CacheProvider } from '@emotion/react';
 import Home from '../Pages/Home';
 import NotFound from '../Pages/NotFound';
 import i18n from '../Locales/i18n';
+import LogIn from '../Dashboard/Login';
+import SignUp from '../Dashboard/SignUp';
+import AdminPanel from '../Dashboard/AdminPanel';
 
 const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
@@ -70,6 +73,9 @@ const Router = () => {
 					<CssBaseline />
 					<Switch>
 						<Route path="/" exact component={Home} />
+						<Route path="/LogIn" exact component={LogIn} />
+						<Route path="/SignUp" exact component={SignUp} />
+						<Route path="/AdminPanel" exact component={AdminPanel} />
 						<Route component={NotFound} />
 					</Switch>
 				</ThemeProvider>

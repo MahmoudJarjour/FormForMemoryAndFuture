@@ -15,7 +15,13 @@ const Footer = () => {
 					<img src="logo.png" alt="Form For Memory And Future" style={{ width: '100%' }} />
 				</Grid>
 				<Grid item xs={12} md={8} align="center" alignItems="center">
-					<Typography>{t('Copyright')} © 2021 Forum for Memory and Future.</Typography>
+					<Typography variant="body2" color="text.secondary" align="center">
+						{t('Copyright')}
+						{' © '}
+						<Link color="inherit" href="#">
+							{t('Forum for Memory and Future')}
+						</Link>{' '}
+					</Typography>
 				</Grid>
 				<Grid item xs={12} md={2}>
 					<Stack direction="row" spacing={2} justifyContent="center">
