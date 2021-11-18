@@ -1,17 +1,4 @@
-import {
-	Card,
-	CardActionArea,
-	CardContent,
-	CardMedia,
-	Container,
-	Dialog,
-	DialogContent,
-	DialogTitle,
-	Grid,
-	IconButton,
-	Stack,
-	Typography,
-} from '@mui/material';
+import { Card, CardActionArea, CardMedia, Container, Dialog, DialogContent, DialogTitle, Grid, IconButton, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -85,7 +72,7 @@ const Posts = () => {
 				</DialogTitle>
 				<DialogContent>
 					<Stack direction="column" spacing={3}>
-						<img src={selectedPost.image} style={{ width: '100%' }} />
+						<img src={selectedPost.image} alt={selectedPost.body} style={{ width: '100%' }} />
 						<Typography>{selectedPost.body}</Typography>
 					</Stack>
 				</DialogContent>

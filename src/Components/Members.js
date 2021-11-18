@@ -1,15 +1,30 @@
-import { Card, CardActionArea, CardContent, CardMedia, Container, Dialog, DialogContent, DialogTitle, Grid, Stack, Typography } from '@mui/material';
+import {
+	Card,
+	CardActionArea,
+	CardContent,
+	CardMedia,
+	Container,
+	Dialog,
+	DialogContent,
+	DialogTitle,
+	Grid,
+	Stack,
+	Typography,
+	useMediaQuery,
+} from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { useTranslation } from 'react-i18next';
 import faker from 'faker';
+import { useTheme } from '@emotion/react';
 
 const Members = () => {
 	const { t, i18n } = useTranslation();
 
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [selectedPost, setSelectedPost] = useState({});
+	const [divider, setDivider] = useState(1);
 
 	faker.locale = i18n.language;
 	const members = [
@@ -54,6 +69,14 @@ const Members = () => {
 		setSelectedPost(member);
 		setIsDialogOpen(true);
 	};
+
+	const theme = useTheme();
+	const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
+
+	useEffect(() => {
+		setDivider(isMobileView ? 1 : 3);
+	}, [isMobileView]);
+
 	return (
 		<>
 			<Box name="Members" sx={{ backgroundColor: '#ECEAE8' }} pt={10} pb={10}>
@@ -67,16 +90,15 @@ const Members = () => {
 
 						<Grid item xs={12}>
 							<Carousel>
-								{[...new Array(Math.ceil(members.length / 3))].map((_, index) => (
+								{[...new Array(Math.ceil(members.length / divider))].map((_, index) => (
 									<Grid container spacing={5} key={'page' + index}>
-										{members.splice(0, 3).map((item) => (
+										{members.splice(0, divider).map((item) => (
 											<Grid item md={4} xs={12} key={item.key}>
 												<Card variant="none" sx={{ backgroundColor: '#ECEAE8' }}>
 													<CardActionArea onClick={() => openMember(item)}>
 														<CardMedia style={{ paddingTop: '100%', borderRadius: '100%' }} image={item.image} />
 													</CardActionArea>
 													<CardContent>
-														{console.log(item.title)}
 														<Typography align="center">{item.title}</Typography>
 													</CardContent>
 												</Card>
@@ -98,7 +120,7 @@ const Members = () => {
 				</DialogTitle>
 				<DialogContent>
 					<Stack direction="column" spacing={3}>
-						<img src={selectedPost.image} style={{ width: '100%' }} />
+						<img src={selectedPost.image} alt={selectedPost.title} style={{ width: '100%' }} />
 						<Typography>{selectedPost.body}</Typography>
 					</Stack>
 				</DialogContent>

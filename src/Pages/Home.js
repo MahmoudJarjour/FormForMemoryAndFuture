@@ -1,4 +1,3 @@
-import { Container } from '@mui/material';
 import React from 'react';
 import AboutUs from '../Components/AboutUs';
 import ContactUs from '../Components/ContactUs';
@@ -14,7 +13,6 @@ const Home = () => {
 	return (
 		<>
 			<Header />
-
 			<FirstSection />
 			<Video />
 			<Members />

@@ -12,9 +12,9 @@ const Footer = () => {
 		<Container name="Footer" sx={{ maxWidth: '100%' }}>
 			<Grid container spacing={2} alignItems="center" mt={5}>
 				<Grid item xs={12} md={2}>
-					<img src="logo.png" style={{ width: '100%' }} />
+					<img src="logo.png" alt="Form For Memory And Future" style={{ width: '100%' }} />
 				</Grid>
-				<Grid item xs={12} md={8} align="center">
+				<Grid item xs={12} md={8} align="center" alignItems="center">
 					<Typography>{t('Copyright')} © 2021 Forum for Memory and Future.</Typography>
 				</Grid>
 				<Grid item xs={12} md={2}>
