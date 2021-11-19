@@ -84,31 +84,31 @@ export default function AdminPanel() {
 			id: 1,
 			label: t('Video'),
 			component: <EditVideo />,
-			icon: <VideoSettingsIcon />,
+			icon: <VideoSettingsIcon sx={{ color: '#524fa1' }} />,
 		},
 		{
 			id: 2,
 			label: t('Members'),
 			component: <EditMember />,
-			icon: <PeopleIcon />,
+			icon: <PeopleIcon sx={{ color: '#524fa1' }} />,
 		},
 		{
 			id: 3,
 			label: t('POSTS'),
 			component: <EditPosts />,
-			icon: <PostAddIcon />,
+			icon: <PostAddIcon sx={{ color: '#524fa1' }} />,
 		},
 		{
 			id: 4,
 			label: t('Subscribers'),
 			component: <Subscribers />,
-			icon: <LayersIcon />,
+			icon: <LayersIcon sx={{ color: '#524fa1' }} />,
 		},
 		{
 			id: 5,
 			label: t('Contact Info'),
 			component: <ContentInfo />,
-			icon: <ContactPageIcon />,
+			icon: <ContactPageIcon sx={{ color: '#524fa1' }} />,
 		},
 	];
 
