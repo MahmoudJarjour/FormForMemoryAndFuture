@@ -1,9 +1,11 @@
 import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 export default function EditContactUs() {
 	const { t } = useTranslation();
+
 	const [EnglishTitle, SetEnglishTitle] = useState('');
 	const handleEnglishTitle = (event) => {
 		SetEnglishTitle(event.target.value);
@@ -23,60 +25,55 @@ export default function EditContactUs() {
 	const handleArabicAddress = (event) => {
 		SetArabicAddress(event.target.value);
 	};
-	//================
-	const [EnglishWorkHour, SetEnglishWorkHour] = useState('');
-	const handleEnglishWorkHour = (event) => {
-		SetEnglishWorkHour(event.target.value);
+
+	const [Englishsubtitle1, SetEnglishsubtitle1] = useState('');
+	const handleEnglishsubtitle1 = (event) => {
+		SetEnglishsubtitle1(event.target.value);
 	};
 
-	const [EnglishDays, SetEnglishDays] = useState('');
-	const handleEnglishDays = (event) => {
-		SetEnglishDays(event.target.value);
+	const [EnglishDiscription1, SetEnglishDiscription1] = useState('');
+	const handleEnglishDiscription1 = (event) => {
+		SetEnglishDiscription1(event.target.value);
 	};
 
-	const [EnglishTime, SetEnglishTime] = useState('');
-	const handleEnglishTime = (event) => {
-		SetEnglishTime(event.target.value);
+	const [EnglishPhoneNumber, SetEnglishPhoneNumber] = useState('');
+	const handleEnglishPhoneNumber = (event) => {
+		SetEnglishPhoneNumber(event.target.value);
 	};
 
-	const [EnglishPhone, SetEnglishPhone] = useState('');
-	const handleEnglishPhone = (event) => {
-		SetEnglishPhone(event.target.value);
+	const [ArabicPhoneNumber, SetArabicPhoneNumber] = useState('');
+	const handleArabicPhoneNumber = (event) => {
+		SetArabicPhoneNumber(event.target.value);
 	};
 
-	const [Englishcontact, SetEnglishcontact] = useState('');
-	const handleEnglishcontact = (event) => {
-		SetEnglishcontact(event.target.value);
+	const [EnglishSubtitle2, SetEnglishSubtitle2] = useState('');
+	const handleEnglishSubtitle2 = (event) => {
+		SetEnglishSubtitle2(event.target.value);
 	};
 
-	const [ArabicWorkHour, SetArabicWorkHour] = useState('');
-	const handleArabicWorkHour = (event) => {
-		SetArabicWorkHour(event.target.value);
+	const [Arabicsubtitle1, SetArabicsubtitle1] = useState('');
+	const handleArabicsubtitle1 = (event) => {
+		SetArabicsubtitle1(event.target.value);
 	};
 
-	const [ArabicDays, SetArabicDays] = useState('');
-	const handleArabicDays = (event) => {
-		SetArabicDays(event.target.value);
+	const [ArabicDiscription1, SetArabicDiscription1] = useState('');
+	const handleArabicDiscription1 = (event) => {
+		SetArabicDiscription1(event.target.value);
 	};
 
-	const [ArabicTime, SetArabicTime] = useState('');
-	const handleArabicTime = (event) => {
-		SetArabicTime(event.target.value);
+	const [ArabicSubtitle2, SetArabicSubtitle2] = useState('');
+	const handleArabicSubtitle2 = (event) => {
+		SetArabicSubtitle2(event.target.value);
 	};
 
-	const [ArabicPhone, SetArabicPhone] = useState('');
-	const handleArabicPhone = (event) => {
-		SetArabicPhone(event.target.value);
+	const [ArabicEmail, SetArabicEmail] = useState('');
+	const handleArabicEmail = (event) => {
+		SetArabicEmail(event.target.value);
 	};
 
-	const [Arabiccontact, SetArabiccontact] = useState('');
-	const handleArabiccontact = (event) => {
-		SetArabiccontact(event.target.value);
-	};
-
-	const [Email, SetEmail] = useState('');
-	const handleEmail = (event) => {
-		SetEmail(event.target.value);
+	const [EnglishEmail, SetEnglishEmail] = useState('');
+	const handleEnglishEmail = (event) => {
+		SetEnglishEmail(event.target.value);
 	};
 
 	const content = [
@@ -85,29 +82,31 @@ export default function EditContactUs() {
 			Titlelabel: 'Enter English Title',
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
+
 			Address: 'English Address:',
 			Addresslabel: 'Enter English Address',
 			Addressvalue: EnglishAddress,
 			Addresschange: handleEnglishAddress,
-			workHourLabel: 'Work Hour Title English',
-			workHourvalue: EnglishWorkHour,
-			workHouronchange: handleEnglishWorkHour,
 
-			TimeLabel: 'Time English',
-			Timevalue: EnglishTime,
-			Timeonchange: handleEnglishTime,
+			subtitle1Label: 'English subtitle 1 ',
+			subtitle1value: Englishsubtitle1,
+			subtitle1onchange: handleEnglishsubtitle1,
+
+			Discription1: 'Discription in English',
+			Discription1value: EnglishDiscription1,
+			Discription1onchange: handleEnglishDiscription1,
 
 			PhoneNumberLabel: 'Phone Number',
-			PhoneNumberValue: EnglishPhone,
-			PhoneNumberonchange: handleEnglishPhone,
+			PhoneNumberValue: EnglishPhoneNumber,
+			PhoneNumberonchange: handleEnglishPhoneNumber,
 
 			EmailLabel: 'Email',
-			Emailvalue: Email,
-			Emailonchange: handleEmail,
+			Emailvalue: EnglishEmail,
+			Emailonchange: handleEnglishEmail,
 
-			contactLabel: 'Contact Info English',
-			contactvalue: Englishcontact,
-			contactonchange: handleEnglishcontact,
+			subtitle2Label: 'English Subtitle 2 ',
+			subtitle2value: EnglishSubtitle2,
+			subtitle2onchange: handleEnglishSubtitle2,
 		},
 		{
 			title: 'Arabic Title:',
@@ -119,22 +118,25 @@ export default function EditContactUs() {
 			Addressvalue: ArabicAddress,
 			Addresschange: handleArabicAddress,
 
-			workHourLabel: 'Work Hour Title English',
-			workHourvalue: EnglishWorkHour,
-			workHouronchange: handleEnglishWorkHour,
+			subtitle1Label: 'Arabic subtitle 1  ',
+			subtitle1value: Arabicsubtitle1,
+			subtitle1onchange: handleArabicsubtitle1,
 
-			TimeLabel: 'Time Arabic',
-			Timevalue: ArabicTime,
-			Timeonchange: handleArabicTime,
+			Discription1: 'Discription in Arabic',
+			Discription1value: ArabicDiscription1,
+			Discription1onchange: handleArabicDiscription1,
+
 			PhoneNumberLabel: 'Phone Number',
-			PhoneNumberValue: ArabicPhone,
-			PhoneNumberonchange: handleArabicPhone,
+			PhoneNumberValue: ArabicPhoneNumber,
+			PhoneNumberonchange: handleArabicPhoneNumber,
+
 			EmailLabel: 'Email',
-			Emailvalue: Email,
-			Emailonchange: handleEmail,
-			contactLabel: 'Contact Info English',
-			contactvalue: Arabiccontact,
-			contactonchange: handleArabiccontact,
+			Emailvalue: ArabicEmail,
+			Emailonchange: handleArabicEmail,
+
+			subtitle2Label: 'Arabic Subtitle 2 ',
+			subtitle2value: ArabicSubtitle2,
+			subtitle2onchange: handleArabicSubtitle2,
 		},
 	];
 	return (
@@ -148,6 +150,7 @@ export default function EditContactUs() {
 						{content.map((item) => (
 							<Grid item xs={12} md={6}>
 								<Stack direction="column" spacing={2}>
+									{/* {Title} */}
 									<Typography>{item.title}</Typography>
 									<TextField
 										required
@@ -157,7 +160,7 @@ export default function EditContactUs() {
 										variant="outlined"
 										fullWidth
 									/>
-
+									{/* {Address} */}
 									<Typography>{item.Address}</Typography>
 									<TextField
 										required
@@ -167,18 +170,58 @@ export default function EditContactUs() {
 										variant="outlined"
 										fullWidth
 									/>
-
-									<Typography>{item.workHourLabel}</Typography>
+									{/* {Subtitle 1} */}
+									<Typography>{item.subtitle1Label}</Typography>
 									<TextField
 										required
-										label={item.workHourLabel}
-										value={item.workHourvalue}
-										onChange={item.workHouronchange}
+										label={item.subtitle1Label}
+										value={item.subtitle1value}
+										onChange={item.subtitle1onchange}
 										variant="outlined"
 										fullWidth
 									/>
+									{/* {subtitle 1 discription} */}
+									<Typography>{item.Discription1}</Typography>
+									<TextareaAutosize
+										required
+										minRows={5}
+										placeholder={item.Discription1}
+										value={item.Discription1value}
+										onChange={item.Discription1onchange}
+										variant="outlined"
+										fullWidth
+									/>
+									{/* {Subtitle 2 } */}
 
-									{/* {Still have the discription text of the Opening Hour} */}
+									<Typography>{item.subtitle2Label}</Typography>
+									<TextField
+										required
+										label={item.subtitle2Label}
+										value={item.subtitle2value}
+										onChange={item.subtitle2onchange}
+										variant="outlined"
+										fullWidth
+									/>
+									{/* {Phone Number} */}
+									<Typography>{item.PhoneNumberLabel}</Typography>
+									<TextField
+										required
+										label={item.PhoneNumberLabel}
+										value={item.PhoneNumberValue}
+										onChange={item.PhoneNumberonchange}
+										variant="outlined"
+										fullWidth
+									/>
+									{/* {Email} */}
+									<Typography>{item.EmailLabel}</Typography>
+									<TextField
+										required
+										label={item.EmailLabel}
+										value={item.Emailvalue}
+										onChange={item.Emailonchange}
+										variant="outlined"
+										fullWidth
+									/>
 								</Stack>
 							</Grid>
 						))}

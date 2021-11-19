@@ -3,11 +3,6 @@ import React, { useState } from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 export default function EditMember() {
-	const [news, setNews] = useState('');
-	const handleChange = (event) => {
-		setNews(event.target.value);
-	};
-
 	const [username, SetUsername] = useState('');
 
 	const handleUserName = (event) => {

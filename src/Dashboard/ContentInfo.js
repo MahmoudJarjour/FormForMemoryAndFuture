@@ -7,6 +7,7 @@ import EditPostSection from '../ContactInfoSections/EditPostSection';
 import { useTranslation } from 'react-i18next';
 import EditMemberShipSections from '../ContactInfoSections/EditMemberShipSections';
 import EditContactUs from '../ContactInfoSections/EditContactUs';
+import EditSocialIcons from '../ContactInfoSections/EditSocialIcons';
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -62,7 +63,7 @@ export default function ContentInfo() {
 				<EditContactUs />
 			</TabPanel>
 			<TabPanel value={value} index={6}>
-				Social icons
+				<EditSocialIcons />
 			</TabPanel>
 		</Grid>
 	);
