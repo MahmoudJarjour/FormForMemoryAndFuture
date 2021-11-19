@@ -33,7 +33,7 @@ export default function EditPostSection() {
 				<CardContent>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
-							<Typography variant="h6">Editing Posts Section</Typography>
+							<Typography variant="h6">{t('Editing Posts Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
 							<Grid item xs={12} md={6}>

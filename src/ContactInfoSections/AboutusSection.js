@@ -44,22 +44,38 @@ export default function AboutusSection() {
 		SetArabicBlockDiscription(event.target.value);
 	};
 
+	const [EnglishImage, SetEnglishImage] = useState([]);
+	const handleEnglishImage = (event) => {
+		SetEnglishImage(event.target.value);
+	};
+
+	const [ArabicImage, SetArabicImage] = useState([]);
+	const handleArabicImage = (event) => {
+		SetArabicImage(event.target.value);
+	};
+
 	const content = [
 		{
 			title: 'English Title:',
 			Titlelabel: 'Enter English Title',
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
+
 			Discription: 'English Discription:',
 			Discriptionlabel: 'Enter English Discription',
 			Discriptionvalue: EnglishDiscription,
 			Discriptionchange: handleEnglishDiscription,
+
 			imageTitle: 'Choose an Icon',
+			imageValue: EnglishImage,
+			imageonChange: handleEnglishImage,
+
 			BlockTitle: 'English Block Title',
 			BlockTitlelabel: 'Enter Block English Title',
 			BlockDiscription: 'English Block Discription',
 			BlockTitlevalue: EnglishBlockTitle,
 			BlockTitleonchange: handleEnglishBlockTitle,
+
 			BlockDiscription: 'English Block Discription:',
 			BlockDiscriptionlabel: 'Enter English Block Discription',
 			BlockDiscriptionvalue: EnglishBlockDiscription,
@@ -70,16 +86,22 @@ export default function AboutusSection() {
 			Titlelabel: 'Enter Arabic Title',
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
+
 			Discription: 'Arabic Discription:',
 			Discriptionlabel: 'Enter Arabic Discription',
 			Discriptionvalue: ArabicDiscription,
 			Discriptionchange: handleArabicDiscription,
+
 			imageTitle: 'Choose an Icon',
+			imageValue: ArabicImage,
+			imageonChange: handleArabicImage,
+
 			BlockTitle: 'Arabic Block Title',
 			BlockTitlelabel: 'Enter Block Arabic Title',
 			BlockDiscription: 'Arabic Block Discription',
 			BlockTitlevalue: ArabicBlockTitle,
 			BlockTitleonchange: handleArabicBlockTitle,
+
 			BlockDiscription: 'Arabic Block Discription:',
 			BlockDiscriptionlabel: 'Enter Arabic Block Discription',
 			BlockDiscriptionvalue: ArabicBlockDiscription,
@@ -92,7 +114,7 @@ export default function AboutusSection() {
 				<CardContent>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
-							<Typography variant="h6">Editing About Us Section</Typography>
+							<Typography variant="h6">{t('Editing About Us Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
 							<Grid item xs={12} md={6}>
@@ -118,7 +140,7 @@ export default function AboutusSection() {
 									/>
 									<Typography variant="h6">{item.imageTitle}</Typography>
 									<label htmlFor="contained-button-file">
-										<Input accept="image/*" multiple type="file" />
+										<Input accept="image/*" multiple type="file" value={item.imageValue} onChange={item.imageonChange} />
 									</label>
 
 									<Typography>{item.BlockTitle}</Typography>

@@ -53,12 +53,31 @@
   "Remember me":"Remember me",
 
 
-  "Dashboard":"DASHBOARD",
   "Video":"VIDEO",
   
   "Subscribers":"SUBSCRIBERS",
-  "Contact Info":"CONTACT INFO"
+  "Contact Info":"CONTACT INFO",
+  "Social Icons":"Social Icons",
 
+
+  "First Section":"First Section",
+
+  "Editing First Section":"Editing First Page",
+  "Editing Members Section":"Editing Members ",
+  "Editing About Us Section":"Editing About Us ",
+  "Editing Posts Section":"Editing Posts ",
+  "Editing Membership section":"Editing Membership ",
+  "Editing Contact US Section":"Editing Contact US ",
+
+  "Editing Icons Section":"Editing Icons ",
+  "Name":"Name",
+  "Email":"Email",
+  "Date":"Date",
+
+  "Create Post":"Create Post",
+  "Update Post":"Update Post",
+  "View Posts":"View Posts"
+  
 
 
 }

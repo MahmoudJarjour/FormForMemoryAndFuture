@@ -1,47 +1,70 @@
 import React from 'react';
-import { Grid, Paper } from '@mui/material';
+import { CardContent, CardHeader, Grid, Card, CardMedia, IconButton } from '@mui/material';
 import i18n from '../Locales/i18n';
 import faker from 'faker';
-import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 faker.locale = i18n.language;
 
-const rows: GridRowsProp = [
+const content = [
 	{
-		id: 1,
-		Title: faker.lorem.words(),
-		Discription: faker.lorem.paragraph(),
+		key: 1,
+		PostTitle: faker.fake('{{name.lastName}}'),
+		PostImage: faker.image.abstract(),
+		postDiscription: faker.lorem.paragraph(),
 	},
 	{
-		id: 2,
-		Title: faker.lorem.words(),
-		Discription: faker.lorem.paragraph(),
+		key: 2,
+		PostTitle: faker.fake('{{name.lastName}}'),
+		PostImage: faker.image.nature(),
+		postDiscription: faker.lorem.paragraph(),
 	},
 	{
-		id: 3,
-		Title: faker.lorem.words(),
-		Discription: faker.lorem.paragraph(),
+		key: 3,
+		PostTitle: faker.fake('{{name.lastName}}'),
+		PostImage: faker.image.nature(),
+		postDiscription: faker.lorem.paragraph(),
 	},
 	{
-		id: 4,
-		Title: faker.lorem.words(),
-		Discription: faker.lorem.paragraph(),
+		key: 4,
+		PostTitle: faker.fake('{{name.lastName}}'),
+		PostImage: faker.image.abstract(),
+		postDiscription: faker.lorem.paragraph(),
+	},
+	{
+		key: 5,
+		PostTitle: faker.fake('{{name.lastName}}'),
+		PostImage: faker.image.abstract(),
+		postDiscription: faker.lorem.paragraph(),
+	},
+	{
+		key: 6,
+		PostTitle: faker.fake('{{name.lastName}}'),
+		PostImage: faker.image.nature(),
+		postDiscription: faker.lorem.paragraph(),
 	},
 ];
-const columns: GridColDef[] = [
-	{ field: 'Title', headerName: 'Title', width: 200 },
-	{ field: 'Discription', headerName: 'Discription', width: 500 },
-];
+
 export default function ViewPosts() {
 	return (
 		<Grid container spacing={2}>
-			<Grid item xs={12}>
-				<Paper>
-					<div style={{ height: 300, width: '100%' }}>
-						<DataGrid rows={rows} columns={columns} />
-					</div>
-				</Paper>
-			</Grid>
+			{content.map((item) => (
+				<Grid item xs={12} md={6}>
+					<Card sx={{ minHeight: '100%' }}>
+						<CardHeader
+							title={item.PostTitle}
+							action={
+								<IconButton aria-label="settings">
+									<DeleteOutlinedIcon />
+								</IconButton>
+							}
+						/>
+						<CardMedia image={item.PostImage} sx={{ pt: '100%' }} />
+						<CardContent> {item.postDiscription} </CardContent>
+					</Card>
+				</Grid>
+			))}
 		</Grid>
 	);
 }

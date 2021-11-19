@@ -68,7 +68,7 @@ export default function EditMemberShipSections() {
 				<CardContent>
 					<Grid container spacing={3}>
 						<Grid item xs={12}>
-							<Typography variant="h6">Editing First Section</Typography>
+							<Typography variant="h6">{t('Editing Membership section')}</Typography>
 						</Grid>
 						{content.map((item) => (
 							<Grid item xs={12} md={6}>

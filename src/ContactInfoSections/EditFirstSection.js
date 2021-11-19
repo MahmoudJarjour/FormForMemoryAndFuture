@@ -14,6 +14,11 @@ export default function EditFirstSection() {
 		SetEnglishDiscription(event.target.value);
 	};
 
+	const [EnglishImage, SetEnglishImage] = useState([]);
+	const handleEnglishImage = (event) => {
+		SetEnglishImage(event.target.value);
+	};
+
 	const [ArabicTitle, SetArabicTitle] = useState('');
 	const handleArabicTitle = (event) => {
 		SetArabicTitle(event.target.value);
@@ -24,28 +29,39 @@ export default function EditFirstSection() {
 		SetArabicDiscription(event.target.value);
 	};
 
+	const [ArabicImage, SetArabicImage] = useState([]);
+	const handleArabicImage = (event) => {
+		SetArabicImage(event.target.value);
+	};
+
 	const content = [
 		{
 			title: 'English Title:',
-			Titlelabel: 'Enter English Title',
+			Titlelabel: 'English Title',
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
 			Discription: 'English Discription:',
-			Discriptionlabel: 'Enter English Discription',
+			Discriptionlabel: 'English Discription',
 			Discriptionvalue: EnglishDiscription,
 			Discriptionchange: handleEnglishDiscription,
 			imageTitle: 'Choose an Image',
+			imageValue: EnglishImage,
+			imageonChange: handleEnglishImage,
 		},
 		{
 			title: 'Arabic Title:',
-			Titlelabel: 'Enter Arabic Title',
+			Titlelabel: 'Arabic Title',
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
+
 			Discription: 'Arabic Discription:',
-			Discriptionlabel: 'Enter Arabic Discription',
+			Discriptionlabel: 'Arabic Discription',
 			Discriptionvalue: ArabicDiscription,
 			Discriptionchange: handleArabicDiscription,
+
 			imageTitle: 'Choose an Image',
+			imageValue: ArabicImage,
+			imageonChange: handleArabicImage,
 		},
 	];
 	return (
@@ -54,7 +70,7 @@ export default function EditFirstSection() {
 				<CardContent>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
-							<Typography variant="h6">Editing First Section</Typography>
+							<Typography variant="h6">{t('Editing First Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
 							<Grid item xs={12} md={6}>
@@ -80,7 +96,7 @@ export default function EditFirstSection() {
 									/>
 									<Typography variant="h6">{item.imageTitle}</Typography>
 									<label htmlFor="contained-button-file">
-										<Input accept="image/*" multiple type="file" />
+										<Input accept="image/*" multiple type="file" value={item.imageValue} onChange={item.imageonChange} />
 									</label>
 								</Stack>
 							</Grid>

@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CardMedia, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
@@ -23,9 +23,9 @@ export default function EditMember() {
 				<Grid container spacing={2} mt={2}>
 					<Grid item xs={12}>
 						<Stack direction="column" spacing={2}>
-							<Typography variant="h6">Enter The Member Name:</Typography>
+							<Typography variant="h6">Member Name:</Typography>
 							<TextField required label="Enter Member name" value={username} onChange={handleUserName} variant="outlined" fullWidth />
-							<Typography variant="h6">Enter The Member Email:</Typography>
+							<Typography variant="h6">Member Email:</Typography>
 							<TextField required label="Enter Member Email" value={userEmail} onChange={handleUserEmail} variant="outlined" fullWidth />
 
 							<Typography variant="h6">Member Discription:</Typography>
@@ -44,7 +44,7 @@ export default function EditMember() {
 									</label>
 								</Grid>
 								<Grid item xs={12} md={6}>
-									<img src="1.png" style={{ width: '100%' }} />
+									<img src="3.png" style={{ width: '100%' }} />
 								</Grid>
 							</Grid>
 						</Stack>

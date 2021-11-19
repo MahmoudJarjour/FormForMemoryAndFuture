@@ -53,8 +53,27 @@
   "Remember me":"تذكرني",
 
 
-  "Dashboard":"لوحة القيادة",
   "Video":"الفيديو",
   "Subscribers":"المشتركين",
-  "Contact Info":"معلومات المشتركين"
+  "Contact Info":"معلومات المشتركين",
+  "Social Icons":"الأيقونات",
+
+  "First Section":"صفحة البداية",
+
+
+  "Editing First Section":"تعديل البداية",
+  "Editing Members Section":"تعديل الأعضاء",
+  "Editing About Us Section":"تعديل من نحن",
+  "Editing Posts Section":"تعديل المنشورات",
+  "Editing Membership section":"تعديل العضوية",
+  "Editing Contact US Section":"تعديل قسم التواصل ",
+  "Editing Icons Section":"تعديل الأيقونات",
+
+  "Name":"الاسم",
+  "Email":"البريد الالكتروني",
+  "Date":"التاريخ",
+
+  "Create Post":"إنشاء منشور",
+  "Update Post":"تعديل منشور",
+  "View Posts":"عرض المنشورات"
 }

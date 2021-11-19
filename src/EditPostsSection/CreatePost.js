@@ -17,10 +17,10 @@ export default function CreatePost() {
 				<Grid container spacing={2} mt={2}>
 					<Grid item xs={12}>
 						<Stack direction="column" spacing={2}>
-							<Typography variant="h6">Post Title</Typography>
+							<Typography variant="h6">Title</Typography>
 							<TextField required label="Enter Member name" value={title} onChange={handleTitle} variant="outlined" fullWidth />
 
-							<Typography variant="h6">Post Discription:</Typography>
+							<Typography variant="h6">Discription:</Typography>
 							<TextareaAutosize
 								aria-label="minimum height"
 								minRows={5}
@@ -29,6 +29,7 @@ export default function CreatePost() {
 								onChange={handleDiscription}
 							/>
 
+							<Typography variant="h6">Upload</Typography>
 							<label htmlFor="contained-button-file">
 								<Input accept="image/*" id="contained-button-file" multiple type="file" />
 							</label>

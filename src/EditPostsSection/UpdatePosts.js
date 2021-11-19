@@ -63,7 +63,7 @@ export default function UpdatePosts() {
 					<CardContent>
 						<Search>
 							<SearchIconWrapper>
-								<SearchIcon />
+								<SearchIcon color="inherit" />
 							</SearchIconWrapper>
 							<StyledInputBase placeholder="Search for Post..." inputProps={{ 'aria-label': 'search' }} />
 						</Search>

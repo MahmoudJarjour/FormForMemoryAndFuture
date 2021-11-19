@@ -145,7 +145,7 @@ export default function EditContactUs() {
 				<CardContent>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
-							<Typography variant="h6">Editing Contact US Section</Typography>
+							<Typography variant="h6">{t('Editing Contact US Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
 							<Grid item xs={12} md={6}>

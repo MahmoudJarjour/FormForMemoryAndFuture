@@ -40,7 +40,7 @@ export default function EditVideo() {
 										</Grid>
 									</Grid>
 
-									<Grid container spacing={2} alignItems="center">
+									<Grid container spacing={2} alignItems="center" pt={5}>
 										<Grid item xs={12} md={6}>
 											<CardMedia style={{ paddingTop: '56.25%', position: 'relative', width: '100%' }}>
 												<iframe frameBorder={0} title="Form For Memory And Future" src="https://www.youtube.com/embed/EmUa_tcSM-k" />
