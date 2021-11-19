@@ -1,5 +1,5 @@
 import { Button, Container, Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import GavelIcon from '@mui/icons-material/Gavel';
@@ -7,9 +7,22 @@ import GroupIcon from '@mui/icons-material/Group';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import DriveFileMoveIcon from '@mui/icons-material/DriveFileMove';
 import { Box } from '@mui/system';
+import i18next from 'i18next';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
 const AboutUs = () => {
 	const { t } = useTranslation();
+
+	useEffect(() => {
+		Aos.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	}, []);
 	return (
 		<Box name="AboutUs" py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container maxWidth="lg">
@@ -27,7 +40,7 @@ const AboutUs = () => {
 					<Grid item xs={12}>
 						{/* { First 3 items } */}
 						<Grid container spacing={3} justifyContent="center" alignItems="center">
-							<Grid item xs={12} md={4}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'slide-right' : 'slide-left'} xs={12} md={4}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={10} pb={5}>
 									<Grid item xs={12} align="center">
 										<ThumbUpAltIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -42,7 +55,7 @@ const AboutUs = () => {
 									</Grid>
 								</Grid>
 							</Grid>
-							<Grid item xs={12} md={4}>
+							<Grid item data-aos="slide-down" xs={12} md={4}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={10} pb={5}>
 									<Grid item xs={12} align="center">
 										<GavelIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -57,7 +70,7 @@ const AboutUs = () => {
 									</Grid>
 								</Grid>
 							</Grid>
-							<Grid item xs={12} md={4}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'slide-left' : 'slide-right'} xs={12} md={4}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={10} pb={5}>
 									<Grid item xs={12} align="center">
 										<GroupIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -78,7 +91,7 @@ const AboutUs = () => {
 
 						{/* {Second 2 Items } */}
 						<Grid container spacing={3} justifyContent="center" alignItems="center">
-							<Grid item xs={12} md={6}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'slide-right' : 'slide-left'} xs={12} md={6}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={5} pb={10}>
 									<Grid item xs={12} align="center">
 										<CloudDownloadIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -96,7 +109,7 @@ const AboutUs = () => {
 								</Grid>
 							</Grid>
 
-							<Grid item xs={12} md={6}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'slide-left' : 'slide-right'} xs={12} md={6}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={5} pb={10}>
 									<Grid item xs={12} align="center">
 										<DriveFileMoveIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />

@@ -1,6 +1,6 @@
 import { Button, Card, CardContent, CardMedia, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-
+import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
 export default function EditVideo() {
 	const [UrlenVideo, SetUrlenVideo] = useState('');
 
@@ -61,7 +61,7 @@ export default function EditVideo() {
 								</Stack>
 							</Grid>
 							<Grid item xs={12}>
-								<Button variant="contained" component="span">
+								<Button variant="contained" startIcon={<UpdateOutlinedIcon />} component="span">
 									update
 								</Button>
 							</Grid>

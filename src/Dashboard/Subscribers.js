@@ -51,10 +51,8 @@ export default function Subscribers() {
 		<Card variant="none">
 			<CardContent>
 				<Grid container spacing={2}>
-					<Grid item xs={12}>
-						<div style={{ height: 300, width: '100%' }}>
-							<DataGrid rows={rows} columns={columns} />
-						</div>
+					<Grid item xs={12} sx={{ height: 300, width: '100%' }}>
+						<DataGrid rows={rows} columns={columns} />
 					</Grid>
 				</Grid>
 			</CardContent>

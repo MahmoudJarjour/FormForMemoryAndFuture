@@ -19,12 +19,27 @@ import { useTranslation } from 'react-i18next';
 import faker from 'faker';
 import { useTheme } from '@emotion/react';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import i18next from 'i18next';
+
 const Members = () => {
 	const { t, i18n } = useTranslation();
 
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [selectedPost, setSelectedPost] = useState({});
 	const [divider, setDivider] = useState(1);
+
+	const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
+
+	useEffect(() => {
+		Aos.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	}, []);
 
 	faker.locale = i18n.language;
 	const members = [
@@ -82,18 +97,18 @@ const Members = () => {
 			<Box name="Members" sx={{ backgroundColor: '#ECEAE8' }} pt={10} pb={10}>
 				<Container maxWidth="lg">
 					<Grid container spacing={3}>
-						<Grid item xs={12}>
+						<Grid item data-aos="slide-up" xs={12}>
 							<Typography variant="h3" color="#524fa1" fontWeight="600">
 								{t('Members')}
 							</Typography>
 						</Grid>
 
-						<Grid item xs={12}>
+						<Grid item data-aos="zoom-in" xs={12}>
 							<Carousel>
 								{[...new Array(Math.ceil(members.length / divider))].map((_, index) => (
 									<Grid container spacing={5} key={'page' + index}>
 										{members.splice(0, divider).map((item) => (
-											<Grid item md={4} xs={12} key={item.key}>
+											<Grid item data-aos="flip-down" md={4} xs={12} key={item.key}>
 												<Card variant="none" sx={{ backgroundColor: '#ECEAE8' }}>
 													<CardActionArea onClick={() => openMember(item)}>
 														<CardMedia style={{ paddingTop: '100%', borderRadius: '100%' }} image={item.image} />
