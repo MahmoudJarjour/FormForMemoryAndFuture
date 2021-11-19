@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function EditMemberShipSections() {
 	const { t } = useTranslation();
+
 	const [EnglishTitle, SetEnglishTitle] = useState('');
 	const handleEnglishTitle = (event) => {
 		SetEnglishTitle(event.target.value);
@@ -14,6 +15,10 @@ export default function EditMemberShipSections() {
 		SetEnglishDiscription(event.target.value);
 	};
 
+	const [EnglishNews, SetEnglishNews] = useState('');
+	const handleEnglishNews = (event) => {
+		SetEnglishNews(event.target.value);
+	};
 	const [ArabicTitle, SetArabicTitle] = useState('');
 	const handleArabicTitle = (event) => {
 		SetArabicTitle(event.target.value);
@@ -22,11 +27,6 @@ export default function EditMemberShipSections() {
 	const [ArabicDiscription, SetArabicDiscription] = useState('');
 	const handleArabicDiscription = (event) => {
 		SetArabicDiscription(event.target.value);
-	};
-
-	const [EnglishNews, SetEnglishNews] = useState('');
-	const handleEnglishNews = (event) => {
-		SetEnglishNews(event.target.value);
 	};
 
 	const [ArabicNews, SetArabicNews] = useState('');
@@ -103,10 +103,12 @@ export default function EditMemberShipSections() {
 									/>
 									<Grid container spacing={2} justifyContent="space-between">
 										<Grid item xs={12} md={6}>
-											<Button variant="contained">Add Item to list</Button>
+											<Button variant="outlined" color="secondary">
+												Add Item to list
+											</Button>
 										</Grid>
 										<Grid item xs={12} md={6}>
-											<Button variant="outlined" color="warning">
+											<Button variant="outlined" color="info">
 												Remove Item from list
 											</Button>
 										</Grid>

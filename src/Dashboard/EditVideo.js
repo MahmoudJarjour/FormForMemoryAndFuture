@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 
 export default function EditVideo() {
@@ -20,27 +20,44 @@ export default function EditVideo() {
 					<CardContent>
 						<Grid container spacing={2}>
 							<Grid item xs={12}>
-								<Stack direction="column" spacing={2}>
-									<Typography variant="h6">English Video:</Typography>
-									<TextField
-										required
-										id="standard-Name"
-										label="Enter URL Of Video "
-										value={UrlenVideo}
-										onChange={handleUrlenVideo}
-										variant="outlined"
-										fullWidth
-									/>
-									<Typography variant="h6">Arabic Video:</Typography>
-									<TextField
-										required
-										id="standard-Name"
-										label="Enter URL Of Video "
-										value={UrlarVideo}
-										onChange={handleUrlarVideo}
-										variant="outlined"
-										fullWidth
-									/>
+								<Stack direction="column">
+									<Grid container spacing={2} alignItems="center">
+										<Grid item xs={12} md={6}>
+											<Typography variant="h6">English Video:</Typography>
+											<TextField
+												required
+												label="Enter URL Of Video "
+												value={UrlenVideo}
+												onChange={handleUrlenVideo}
+												variant="outlined"
+												fullWidth
+											/>
+										</Grid>
+										<Grid item xs={12} md={6}>
+											<CardMedia style={{ paddingTop: '56.25%', position: 'relative', width: '100%' }}>
+												<iframe frameBorder={0} title="Form For Memory And Future" src="https://www.youtube.com/embed/EmUa_tcSM-k" />
+											</CardMedia>
+										</Grid>
+									</Grid>
+
+									<Grid container spacing={2} alignItems="center">
+										<Grid item xs={12} md={6}>
+											<CardMedia style={{ paddingTop: '56.25%', position: 'relative', width: '100%' }}>
+												<iframe frameBorder={0} title="Form For Memory And Future" src="https://www.youtube.com/embed/EmUa_tcSM-k" />
+											</CardMedia>
+										</Grid>
+										<Grid item xs={12} md={6}>
+											<Typography variant="h6">Arabic Video:</Typography>
+											<TextField
+												required
+												label="Enter URL Of Video "
+												value={UrlarVideo}
+												onChange={handleUrlarVideo}
+												variant="outlined"
+												fullWidth
+											/>
+										</Grid>
+									</Grid>
 								</Stack>
 							</Grid>
 							<Grid item xs={12}>

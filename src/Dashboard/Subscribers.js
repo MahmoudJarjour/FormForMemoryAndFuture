@@ -29,14 +29,13 @@ const rows: GridRowsProp = [
 		News: faker.commerce.productName(),
 	},
 	{
-		id: 3,
+		id: 4,
 		Name: faker.fake('{{name.firstName}} {{name.lastName}}'),
 		Email: faker.internet.email(),
 		date: faker.date.past(),
 		News: faker.commerce.productName(),
 	},
 ];
-
 const columns: GridColDef[] = [
 	{ field: 'Name', headerName: 'Name', width: 200 },
 	{ field: 'Email', headerName: 'Email', width: 200 },

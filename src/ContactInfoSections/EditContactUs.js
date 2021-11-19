@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, Divider, Grid, Input, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
@@ -170,6 +170,7 @@ export default function EditContactUs() {
 										variant="outlined"
 										fullWidth
 									/>
+
 									{/* {Subtitle 1} */}
 									<Typography>{item.subtitle1Label}</Typography>
 									<TextField
@@ -191,6 +192,7 @@ export default function EditContactUs() {
 										variant="outlined"
 										fullWidth
 									/>
+
 									{/* {Subtitle 2 } */}
 
 									<Typography>{item.subtitle2Label}</Typography>

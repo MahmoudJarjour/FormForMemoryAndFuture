@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Grid, Input, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 
@@ -8,6 +8,11 @@ export default function EditMember() {
 	const handleUserName = (event) => {
 		SetUsername(event.target.value);
 	};
+	const [Discription, SetDiscription] = useState('');
+	const handleDiscription = (event) => {
+		SetDiscription(event.target.value);
+	};
+
 	const [userEmail, SetUserEmail] = useState('');
 	const handleUserEmail = (event) => {
 		SetUserEmail(event.target.value);
@@ -19,32 +24,29 @@ export default function EditMember() {
 					<Grid item xs={12}>
 						<Stack direction="column" spacing={2}>
 							<Typography variant="h6">Enter The Member Name:</Typography>
-							<TextField
-								required
-								id="standard-Name"
-								label="Enter Member name"
-								value={username}
-								onChange={handleUserName}
-								variant="outlined"
-								fullWidth
-							/>
+							<TextField required label="Enter Member name" value={username} onChange={handleUserName} variant="outlined" fullWidth />
 							<Typography variant="h6">Enter The Member Email:</Typography>
-							<TextField
-								required
-								id="Standerd-Email"
-								label="Enter Member Email"
-								value={userEmail}
-								onChange={handleUserEmail}
-								variant="outlined"
-								fullWidth
-							/>
+							<TextField required label="Enter Member Email" value={userEmail} onChange={handleUserEmail} variant="outlined" fullWidth />
 
 							<Typography variant="h6">Member Discription:</Typography>
-							<TextareaAutosize aria-label="minimum height" minRows={5} placeholder="Discription" />
+							<TextareaAutosize
+								aria-label="minimum height"
+								minRows={5}
+								placeholder="Discription"
+								value={Discription}
+								onChange={handleDiscription}
+							/>
 
-							<label htmlFor="contained-button-file">
-								<Input accept="image/*" id="contained-button-file" multiple type="file" />
-							</label>
+							<Grid container justifyContent="center" alignItems="center">
+								<Grid item xs={12} md={6}>
+									<label htmlFor="contained-button-file">
+										<Input accept="image/*" id="contained-button-file" multiple type="file" />
+									</label>
+								</Grid>
+								<Grid item xs={12} md={6}>
+									<img src="1.png" style={{ width: '100%' }} />
+								</Grid>
+							</Grid>
 						</Stack>
 					</Grid>
 					<Grid item xs={12}>
