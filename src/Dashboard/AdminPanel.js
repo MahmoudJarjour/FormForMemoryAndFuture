@@ -24,6 +24,7 @@ import Subscribers from './Subscribers';
 import ContentInfo from './ContentInfo';
 import EditMember from './EditMember';
 import EditPosts from './EditPosts';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const drawerWidth = 240;
 
@@ -136,9 +137,9 @@ export default function AdminPanel() {
 					<Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
 						{t('Forum for Memory and Future')}
 					</Typography>
-					<IconButton color="inherit">
-						<Link underline="none" color="#F5F5F5" to="/LogIn">
-							<LogoutIcon />
+					<IconButton>
+						<Link underline="none" to="/LogIn">
+							<LogoutIcon sx={{ color: 'white' }} />
 						</Link>
 					</IconButton>
 				</Toolbar>
@@ -147,13 +148,13 @@ export default function AdminPanel() {
 				<Toolbar
 					sx={{
 						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'flex-end',
 						px: [1],
 					}}
 				>
+					<DashboardIcon sx={{ flex: 0.5 }} />
+					<Typography sx={{ alignItems: 'center', justifyContent: 'flex-start', px: [3] }}>DashBoard</Typography>
 					<IconButton onClick={toggleDrawer}>
-						<ChevronLeftIcon />
+						<ChevronLeftIcon sx={{ justifyContent: 'flex-end' }} />
 					</IconButton>
 				</Toolbar>
 				<Divider />

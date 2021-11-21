@@ -1,79 +1,81 @@
 {
-  "Forum for Memory and Future":"منتدى الذاكرة والغد",
-  "FirstSectionText":"منتدى جامع يسعى إلى تعزيز مسارات التعامل مع الماضي وما تخلله من نزاعات عنيفة وما انتجته من ذاكرات متزاحمة، والتعاطي مع هذه النزاعات والذاكرات لجهة تأثيرها على الحاضر والمستقبل،",
+	"Forum for Memory and Future": "منتدى الذاكرة والغد",
+	"FirstSectionText": "منتدى جامع يسعى إلى تعزيز مسارات التعامل مع الماضي وما تخلله من نزاعات عنيفة وما انتجته من ذاكرات متزاحمة، والتعاطي مع هذه النزاعات والذاكرات لجهة تأثيرها على الحاضر والمستقبل،",
 
+	"Members": "الأعضاء",
+	"AboutUs": "من نحن",
+	"Give up violence": "التخلي عن العنف",
+	"Prevent the use of armed violence as a means of dealing with conflicts": "عدم اللجوء مجدداً الى العنف المسلح كوسيلة للتعامل مع النزاعات",
 
-  "Members":"الأعضاء",
-  "AboutUs":"من نحن",
-  "Give up violence":"التخلي عن العنف",
-  "Prevent the use of armed violence as a means of dealing with conflicts":"عدم اللجوء مجدداً الى العنف المسلح كوسيلة للتعامل مع النزاعات",
+	"Saving rights": "حفظ الحقوق",
+	"Highlight the right of the Lebanese ": "تبيان حق المجتمع اللبناني في مراجعة ما حصل، وأثره على الحاضر والمستقبل",
 
-  "Saving rights":"حفظ الحقوق",
-  "Highlight the right of the Lebanese ":"تبيان حق المجتمع اللبناني في مراجعة ما حصل، وأثره على الحاضر والمستقبل",
+	"Respect individuals": "احترام الأفراد",
+	"Establish a common life based on the respect of the rights of individuals and groups.": "إنشاء حياة مشتركة قائمة على إحترام حقوق الأفراد والجماعات",
 
-  "Respect individuals":"احترام الأفراد",
-  "Establish a common life based on the respect of the rights of individuals and groups.":"إنشاء حياة مشتركة قائمة على إحترام حقوق الأفراد والجماعات",
+	"Download Documents": "تحميل مستندات",
+	"Browse Archive": "تصفح الأرشيف",
 
-  "Download Documents":"تحميل مستندات",
-  "Browse Archive":"تصفح الأرشيف",
+	"POSTS": "المنشورات",
+	"Membership": "العضوية",
+	"If you agree with the principles": "بعد الاطلاع على بيان التأسيس لـ»منتدى الذاكرة والغد«، وعلى المبادئ والقيم المعددة أعلاه، أرغب في الانضمام إلى »المنتدى«، والالتزام بالسعي لتحقيق الأهداف التي أنشئ في سبيلها",
+	"News": "الخبر",
+	"Submit": "إضافة",
+	"Enter your name": "أدخل الاسم ",
+	"Enter your Email": "أدخل البريد الالكتروني",
+	"Contact us": "للتواصل معنا",
 
-  "POSTS":"المنشورات",
-  "Membership":"العضوية",
-  "If you agree with the principles":"بعد الاطلاع على بيان التأسيس لـ»منتدى الذاكرة والغد«، وعلى المبادئ والقيم المعددة أعلاه، أرغب في الانضمام إلى »المنتدى«، والالتزام بالسعي لتحقيق الأهداف التي أنشئ في سبيلها",
-  "News":"الخبر",
-  "Submit":"إضافة",
-  "Enter your name":"أدخل الاسم ",
-  "Enter your Email":"أدخل البريد الالكتروني",
-  "Contact us":"للتواصل معنا",
+	"--- Please Choose ----": "--- من فضلك اختر ----",
 
+	"Economic": "اقتصادية",
+	"Political": "سياسية",
+	"Weather news": "أخبار الطقس",
+	"Fashion": "الموضة",
+	"Art": "الفن",
 
-  "address":"بيروت ، وسط المدينة",
+	"address": "بيروت ، وسط المدينة",
 
+	"OPENING HOURS": "ساعات العمل",
+	"Monday - Thursday": "الاثنين - الخميس",
 
-  "OPENING HOURS":"ساعات العمل",
-  "Monday - Thursday":"الاثنين - الخميس",
+	"CONTACT INFO": "معلومات التواصل",
 
-  "CONTACT INFO":"معلومات التواصل",
+	"Copyright": "حقوق النشر ",
 
-  "Copyright":"حقوق النشر ",
+	"First Name": "الاسم الأول",
+	"Last Name": "الاسم الأخير",
+	"Email Address": "البريد الالكتروني",
+	"Password": "كلمة السر",
+	"Sign up": "إنشاء حساب",
 
-  "First Name":"الاسم الأول",
-  "Last Name":"الاسم الأخير",
-  "Email Address":"البريد الالكتروني",
-  "Password":"كلمة السر",
-  "Sign up":"إنشاء حساب",
+	"Already have an account? Sign in": "لديك حساب بالفعل؟ تسجيل الدخول",
+	"I want to receive news and updates via email.": "أريد تلقي الأخبار والتحديثات عبر البريد الإلكتروني.",
 
+	"Sign in": "تسجيل الدخول",
+	"Forgot password?": "نسيت كلمة المرور ؟",
+	"Don't have an account? Sign Up": "ليس لديك حساب؟ إنشاء حساب ",
+	"Remember me": "تذكرني",
 
-  "Already have an account? Sign in":"لديك حساب بالفعل؟ تسجيل الدخول",
-  "I want to receive news and updates via email.":"أريد تلقي الأخبار والتحديثات عبر البريد الإلكتروني.",
+	"Video": "الفيديو",
+	"Subscribers": "المشتركين",
+	"Contact Info": "معلومات المشتركين",
+	"Social Icons": "الأيقونات",
 
-  "Sign in":"تسجيل الدخول",
-  "Forgot password?":"نسيت كلمة المرور ؟",
-  "Don't have an account? Sign Up":"ليس لديك حساب؟ إنشاء حساب ",
-  "Remember me":"تذكرني",
+	"First Section": "صفحة البداية",
 
+	"Editing First Section": "تعديل البداية",
+	"Editing Members Section": "تعديل الأعضاء",
+	"Editing About Us Section": "تعديل من نحن",
+	"Editing Posts Section": "تعديل المنشورات",
+	"Editing Membership section": "تعديل العضوية",
+	"Editing Contact US Section": "تعديل قسم التواصل ",
+	"Editing Icons Section": "تعديل الأيقونات",
 
-  "Video":"الفيديو",
-  "Subscribers":"المشتركين",
-  "Contact Info":"معلومات المشتركين",
-  "Social Icons":"الأيقونات",
+	"Name": "الاسم",
+	"Email": "البريد الالكتروني",
+	"Date": "التاريخ",
 
-  "First Section":"صفحة البداية",
-
-
-  "Editing First Section":"تعديل البداية",
-  "Editing Members Section":"تعديل الأعضاء",
-  "Editing About Us Section":"تعديل من نحن",
-  "Editing Posts Section":"تعديل المنشورات",
-  "Editing Membership section":"تعديل العضوية",
-  "Editing Contact US Section":"تعديل قسم التواصل ",
-  "Editing Icons Section":"تعديل الأيقونات",
-
-  "Name":"الاسم",
-  "Email":"البريد الالكتروني",
-  "Date":"التاريخ",
-
-  "Create Post":"إنشاء منشور",
-  "Update Post":"تعديل منشور",
-  "View Posts":"عرض المنشورات"
+	"Create Post": "إنشاء منشور",
+	"Update Post": "تعديل منشور",
+	"View Posts": "عرض المنشورات"
 }

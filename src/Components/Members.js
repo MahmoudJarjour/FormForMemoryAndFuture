@@ -103,7 +103,7 @@ const Members = () => {
 							</Typography>
 						</Grid>
 
-						<Grid item data-aos="zoom-in" xs={12}>
+						<Grid item data-aos="fade-in" xs={12}>
 							<Carousel>
 								{[...new Array(Math.ceil(members.length / divider))].map((_, index) => (
 									<Grid container spacing={5} key={'page' + index}>

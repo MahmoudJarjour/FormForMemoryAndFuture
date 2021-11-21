@@ -28,19 +28,19 @@ const Posts = () => {
 			key: 'titlekey1',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
 			image: 'post1.png',
-			body: 'Qui irure amet do anim dolor ad. Lorem quis fugiat eu ea aliquip ex anim consequat cillum do ipsum. Anim aliquip duis excepteur laborum irure minim velit elit dolore. Velit dolor exercitation laborum sunt quis aliquip deserunt occaecat. Sint commodo voluptate commodo occaecat est.',
+			body: faker.fake('{{lorem.paragraph}}'),
 		},
 		{
 			key: 'titlekey2',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
 			image: 'post2.png',
-			body: 'Qui irure amet do anim dolor ad. Lorem quis fugiat eu ea aliquip ex anim consequat cillum do ipsum. Anim aliquip duis excepteur laborum irure minim velit elit dolore. Velit dolor exercitation laborum sunt quis aliquip deserunt occaecat. Sint commodo voluptate commodo occaecat est.',
+			body: faker.fake('{{lorem.paragraph}}'),
 		},
 		{
 			key: 'titlekey3',
 			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
 			image: 'post3.png',
-			body: 'Qui irure amet do anim dolor ad. Lorem quis fugiat eu ea aliquip ex anim consequat cillum do ipsum. Anim aliquip duis excepteur laborum irure minim velit elit dolore. Velit dolor exercitation laborum sunt quis aliquip deserunt occaecat. Sint commodo voluptate commodo occaecat est.',
+			body: faker.fake('{{lorem.paragraph}}'),
 		},
 	];
 
@@ -82,8 +82,8 @@ const Posts = () => {
 					</Stack>
 				</DialogTitle>
 				<DialogContent>
-					<Stack direction="column" spacing={3}>
-						<img src={selectedPost.image} alt={selectedPost.body} style={{ width: '100%' }} />
+					<Stack direction="column" spacing={3} alignItems="center" justifyContent="center">
+						<img src={selectedPost.image} alt={selectedPost.body} style={{ width: '30%' }} />
 						<Typography>{selectedPost.body}</Typography>
 					</Stack>
 				</DialogContent>

@@ -1,83 +1,81 @@
 {
-  "Forum for Memory and Future":"Forum for Memory and Future",
-  "FirstSectionText":"An inclusive forum that seeks to promote ways of coming to terms with the past, including its violent conflicts and the conflicting memories that arose as a result, with a view to dealing with these conflicts and memories in light of their impact on the present and future.",
+	"Forum for Memory and Future": "Forum for Memory and Future",
+	"FirstSectionText": "An inclusive forum that seeks to promote ways of coming to terms with the past, including its violent conflicts and the conflicting memories that arose as a result, with a view to dealing with these conflicts and memories in light of their impact on the present and future.",
 
-  "Members":"MEMBERS",
-  "AboutUs":"ABOUT US",
-  "Give up violence":"Give up violence",
-  "Prevent the use of armed violence as a means of dealing with conflicts":"Prevent the use of armed violence as a means of dealing with conflicts",
+	"Members": "MEMBERS",
+	"AboutUs": "ABOUT US",
+	"Give up violence": "Give up violence",
+	"Prevent the use of armed violence as a means of dealing with conflicts": "Prevent the use of armed violence as a means of dealing with conflicts",
 
-  "Saving rights":"Saving rights",
-  "Highlight the right of the Lebanese ":"Highlight the right of the Lebanese society to know what happened and its impact on the present and the future",
+	"Saving rights": "Saving rights",
+	"Highlight the right of the Lebanese ": "Highlight the right of the Lebanese society to know what happened and its impact on the present and the future",
 
-  "Respect individuals":"Respect individuals",
-  "Establish a common life based on the respect of the rights of individuals and groups.":"Establish a common life based on the respect of the rights of individuals and groups.",
+	"Respect individuals": "Respect individuals",
+	"Establish a common life based on the respect of the rights of individuals and groups.": "Establish a common life based on the respect of the rights of individuals and groups.",
 
+	"Download Documents": "Download Documents",
+	"Browse Archive": "Browse Archive",
 
-  "Download Documents":"Download Documents",
-  "Browse Archive":"Browse Archive",
+	"POSTS": "POSTS",
+	"Membership": "MEMBERSHIP",
+	"If you agree with the principles": "If you agree with the principles and values of the Forum You can join us and help in achieving its objectives.",
+	"News": "News",
+	"Submit": "Submit",
+	"Enter your name": "Enter your name",
+	"Enter your Email": "Enter your Email",
+	"Contact us": "CONTACT US",
 
-  "POSTS":"POSTS",
-  "Membership":"MEMBERSHIP",
-  "If you agree with the principles":"If you agree with the principles and values of the Forum You can join us and help in achieving its objectives.",
-  "News":"News",
-  "Submit":"Submit",
-  "Enter your name":"Enter your name",
-  "Enter your Email":"Enter your Email",
-  "Contact us":"CONTACT US",
+	"--- Please Choose ----": "--- Please Choose ----",
 
+	"Economic": "Economic",
+	"Political": "Political",
+	"Weather news": "Weather news",
+	"Fashion": "Fashion",
+	"Art": "Art",
 
-  "address":"Beirut , Downtown",
+	"address": "Beirut , Downtown",
 
-  "OPENING HOURS":"OPENING HOURS",
-  "Monday - Thursday":"Monday - Thursday",
+	"OPENING HOURS": "OPENING HOURS",
+	"Monday - Thursday": "Monday - Thursday",
 
-  "CONTACT INFO":"CONTACT INFO",
-  "Copyright":"Copyright",
-  
+	"CONTACT INFO": "CONTACT INFO",
+	"Copyright": "Copyright",
 
+	"First Name": "First Name",
+	"Last Name": "Last Name",
+	"Email Address": "Email Address",
+	"Password": "Password",
+	"Sign up": "Sign Up",
 
-  "First Name":"First Name",
-  "Last Name":"Last Name",
-  "Email Address":"Email Address",
-  "Password":"Password",
-  "Sign up":"Sign Up",
+	"Already have an account? Sign in": "Already have an account? Sign in",
+	"I want to receive news and updates via email.": "I want to receive news and updates via email.",
 
+	"Sign in": "Sign in",
+	"Forgot password?": "Forgot password?",
+	"Don't have an account? Sign Up": "Don't have an account? Sign Up",
+	"Remember me": "Remember me",
 
-  "Already have an account? Sign in":"Already have an account? Sign in",
-  "I want to receive news and updates via email.":"I want to receive news and updates via email.",
+	"Video": "VIDEO",
 
-  "Sign in":"Sign in",
-  "Forgot password?":"Forgot password?",
-  "Don't have an account? Sign Up":"Don't have an account? Sign Up",
-  "Remember me":"Remember me",
+	"Subscribers": "SUBSCRIBERS",
+	"Contact Info": "CONTACT INFO",
+	"Social Icons": "Social Icons",
 
+	"First Section": "First Section",
 
-  "Video":"VIDEO",
-  
-  "Subscribers":"SUBSCRIBERS",
-  "Contact Info":"CONTACT INFO",
-  "Social Icons":"Social Icons",
+	"Editing First Section": "Editing First Page",
+	"Editing Members Section": "Editing Members ",
+	"Editing About Us Section": "Editing About Us ",
+	"Editing Posts Section": "Editing Posts ",
+	"Editing Membership section": "Editing Membership ",
+	"Editing Contact US Section": "Editing Contact US ",
 
+	"Editing Icons Section": "Editing Icons ",
+	"Name": "Name",
+	"Email": "Email",
+	"Date": "Date",
 
-  "First Section":"First Section",
-
-  "Editing First Section":"Editing First Page",
-  "Editing Members Section":"Editing Members ",
-  "Editing About Us Section":"Editing About Us ",
-  "Editing Posts Section":"Editing Posts ",
-  "Editing Membership section":"Editing Membership ",
-  "Editing Contact US Section":"Editing Contact US ",
-
-  "Editing Icons Section":"Editing Icons ",
-  "Name":"Name",
-  "Email":"Email",
-  "Date":"Date",
-
-  "Create Post":"Create Post",
-  "Update Post":"Update Post",
-  "View Posts":"View Posts"
-  
-
-
+	"Create Post": "Create Post",
+	"Update Post": "Update Post",
+	"View Posts": "View Posts"
 }

@@ -49,41 +49,19 @@ const Membership = () => {
 
 					<Grid item data-aos="fade-in" xs={12}>
 						<Stack direction="column" spacing={1}>
-							<TextField
-								required
-								id="standard-Name"
-								label={t('Enter your name')}
-								value={username}
-								onChange={handleUserName}
-								variant="outlined"
-								fullWidth
-							/>
-							<TextField
-								required
-								id="Standerd-Email"
-								label={t('Enter your Email')}
-								value={userEmail}
-								onChange={handleUserEmail}
-								variant="outlined"
-								fullWidth
-							/>
+							<TextField required label={t('Enter your name')} value={username} onChange={handleUserName} variant="outlined" fullWidth />
+							<TextField required label={t('Enter your Email')} value={userEmail} onChange={handleUserEmail} variant="outlined" fullWidth />
 							<FormControl fullWidth required>
-								<InputLabel id="demo-simple-select-required-label">{t('News')}</InputLabel>
-								<Select
-									labelId="demo-simple-select-required-label"
-									id="demo-simple-select-required"
-									value={news}
-									label="News *"
-									onChange={handleChange}
-								>
+								<InputLabel>{t('News')}</InputLabel>
+								<Select value={news} label="News *" onChange={handleChange}>
 									<MenuItem value="">
 										<em>{t('--- Please Choose ----')}</em>
 									</MenuItem>
-									<MenuItem value={10}>Economic</MenuItem>
-									<MenuItem value={20}>Political</MenuItem>
-									<MenuItem value={30}>Weather news</MenuItem>
-									<MenuItem value={40}>Fashion</MenuItem>
-									<MenuItem value={50}>Art</MenuItem>
+									<MenuItem value={10}>{t('Economic')}</MenuItem>
+									<MenuItem value={20}>{t('Political')}</MenuItem>
+									<MenuItem value={30}>{t('Weather news')}</MenuItem>
+									<MenuItem value={40}>{t('Fashion')}</MenuItem>
+									<MenuItem value={50}>{t('Art')}</MenuItem>
 								</Select>
 							</FormControl>
 						</Stack>
