@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Toolbar, List, Box, Divider, Container, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Typography, Toolbar, List, Box, Divider, Container, Grid, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -134,9 +134,11 @@ export default function AdminPanel() {
 					>
 						<MenuIcon />
 					</IconButton>
+
 					<Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
 						{t('Forum for Memory and Future')}
 					</Typography>
+
 					<IconButton>
 						<Link underline="none" to="/LogIn">
 							<LogoutIcon sx={{ color: 'white' }} />
@@ -152,7 +154,7 @@ export default function AdminPanel() {
 					}}
 				>
 					<DashboardIcon sx={{ flex: 0.5 }} />
-					<Typography sx={{ alignItems: 'center', justifyContent: 'flex-start', px: [3] }}>DashBoard</Typography>
+					<Typography sx={{ alignItems: 'center', justifyContent: 'flex-start', px: [3] }}>{t('DashBoard')}</Typography>
 					<IconButton onClick={toggleDrawer}>
 						<ChevronLeftIcon sx={{ justifyContent: 'flex-end' }} />
 					</IconButton>
