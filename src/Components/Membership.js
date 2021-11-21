@@ -1,7 +1,10 @@
 import { Button, FormControl, Stack, Grid, InputLabel, MenuItem, Select, TextField, Typography, Container } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Membership = () => {
 	const [news, setNews] = useState('');
@@ -21,21 +24,30 @@ const Membership = () => {
 
 	const { t } = useTranslation();
 
+	useEffect(() => {
+		Aos.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	}, []);
+
 	return (
 		<Box name="MemberShip" py={10} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
-					<Grid item xs={12}>
+					<Grid item data-aos="slide-up" xs={12}>
 						<Typography variant="h3" color="#524fa1" fontWeight="600">
 							{t('Membership')}
 						</Typography>
 					</Grid>
 
-					<Grid item xs={12}>
+					<Grid item data-aos="fade-in" xs={12}>
 						<Typography>{t('If you agree with the principles')}</Typography>
 					</Grid>
 
-					<Grid item xs={12}>
+					<Grid item data-aos="fade-in" xs={12}>
 						<Stack direction="column" spacing={1}>
 							<TextField
 								required

@@ -1,9 +1,12 @@
 import { Card, CardActionArea, CardMedia, Container, Dialog, DialogContent, DialogTitle, Grid, IconButton, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import CloseIcon from '@mui/icons-material/Close';
 import faker from 'faker';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Posts = () => {
 	const { t, i18n } = useTranslation();
@@ -12,6 +15,14 @@ const Posts = () => {
 
 	faker.locale = i18n.language;
 
+	useEffect(() => {
+		Aos.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	}, []);
 	const posts = [
 		{
 			key: 'titlekey1',
@@ -50,7 +61,7 @@ const Posts = () => {
 						</Grid>
 
 						{posts.map((post) => (
-							<Grid item md={4} xs={12} key={post.key}>
+							<Grid item data-aos="flip-down" md={4} xs={12} key={post.key}>
 								<Card>
 									<CardActionArea onClick={() => openPost(post)}>
 										<CardMedia style={{ paddingTop: '100%' }} image={post.image} />
