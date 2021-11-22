@@ -42,7 +42,7 @@ export default function ContentInfo() {
 					<Tabs value={value} variant="scrollable" scrollButtons="auto" onChange={handleChange}>
 						<Tab label={t('First Section')} icon={<PageviewOutlinedIcon />} value={0} />
 
-						<Tab label={t('Members')} icon={<GroupOutlinedIcon />} value={1} />
+						<Tab label={t('Second Section')} icon={<GroupOutlinedIcon />} value={1} />
 						<Tab label={t('AboutUs')} icon={<InfoOutlinedIcon />} value={2} />
 						<Tab label={t('POSTS')} icon={<ModeEditOutlineOutlinedIcon />} value={3} />
 						<Tab label={t('Membership')} icon={<LoyaltyOutlinedIcon />} value={4} />

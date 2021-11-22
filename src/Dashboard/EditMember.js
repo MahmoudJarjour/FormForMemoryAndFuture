@@ -1,61 +1,58 @@
-import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { Card, Grid, Tab, Tabs } from '@mui/material';
 import React, { useState } from 'react';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
+import CreatePost from '../EditPostsSection/CreatePost';
+import ViewPosts from '../EditPostsSection/ViewPosts';
+import UpdatePosts from '../EditPostsSection/UpdatePosts';
+import { useTranslation } from 'react-i18next';
+
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import ModelTrainingOutlinedIcon from '@mui/icons-material/ModelTrainingOutlined';
+import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+import AddMember from '../EditMemberSection/AddMember';
+import UpdateMember from '../EditMemberSection/UpdateMember';
+import ViewMember from '../EditMemberSection/ViewMember';
+
+function TabPanel(props) {
+	const { children, value, index, ...other } = props;
+
+	return (
+		value === index && (
+			<Grid item xs={12}>
+				{children}
+			</Grid>
+		)
+	);
+}
 
 export default function EditMember() {
-	const [username, SetUsername] = useState('');
+	const [value, setValue] = useState(0);
 
-	const handleUserName = (event) => {
-		SetUsername(event.target.value);
+	const handleChange = (event, newValue) => {
+		setValue(newValue);
 	};
-	const [Discription, SetDiscription] = useState('');
-	const handleDiscription = (event) => {
-		SetDiscription(event.target.value);
-	};
-
-	const [userEmail, SetUserEmail] = useState('');
-	const handleUserEmail = (event) => {
-		SetUserEmail(event.target.value);
-	};
+	const { t } = useTranslation();
 	return (
-		<Card variant="none">
-			<CardContent>
-				<Grid container spacing={2} mt={2}>
-					<Grid item xs={12}>
-						<Stack direction="column" spacing={2}>
-							<Typography variant="h6">Member Name:</Typography>
-							<TextField required label="Enter Member name" value={username} onChange={handleUserName} variant="outlined" fullWidth />
-							<Typography variant="h6">Member Email:</Typography>
-							<TextField required label="Enter Member Email" value={userEmail} onChange={handleUserEmail} variant="outlined" fullWidth />
+		<Grid container spacing={2}>
+			<Grid item xs={12} mt={2}>
+				<Card>
+					<Tabs value={value} variant="scrollable" scrollButtons="auto" onChange={handleChange}>
+						<Tab label={t('Add Member')} icon={<AddCircleOutlineOutlinedIcon />} value={0} />
+						<Tab label={t('Update Member')} icon={<ModelTrainingOutlinedIcon />} value={1} />
+						<Tab label={t('View Member')} icon={<GridViewOutlinedIcon />} value={2} />
+					</Tabs>
+				</Card>
+			</Grid>
 
-							<Typography variant="h6">Member Discription:</Typography>
-							<TextareaAutosize
-								aria-label="minimum height"
-								minRows={5}
-								placeholder="Discription"
-								value={Discription}
-								onChange={handleDiscription}
-							/>
+			<TabPanel value={value} index={0}>
+				<AddMember />
+			</TabPanel>
+			<TabPanel value={value} index={1}>
+				<UpdateMember />
+			</TabPanel>
 
-							<Grid container justifyContent="center" alignItems="center">
-								<Grid item xs={12} md={6}>
-									<label htmlFor="contained-button-file">
-										<Input accept="image/*" id="contained-button-file" multiple type="file" />
-									</label>
-								</Grid>
-								<Grid item xs={12} md={6}>
-									<img src="3.png" style={{ width: '100%' }} />
-								</Grid>
-							</Grid>
-						</Stack>
-					</Grid>
-					<Grid item xs={12}>
-						<Button variant="contained" component="span">
-							update
-						</Button>
-					</Grid>
-				</Grid>
-			</CardContent>
-		</Card>
+			<TabPanel value={value} index={2}>
+				<ViewMember />
+			</TabPanel>
+		</Grid>
 	);
 }
