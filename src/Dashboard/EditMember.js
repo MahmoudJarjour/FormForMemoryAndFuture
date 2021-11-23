@@ -1,10 +1,6 @@
 import { Card, Grid, Tab, Tabs } from '@mui/material';
 import React, { useState } from 'react';
-import CreatePost from '../EditPostsSection/CreatePost';
-import ViewPosts from '../EditPostsSection/ViewPosts';
-import UpdatePosts from '../EditPostsSection/UpdatePosts';
 import { useTranslation } from 'react-i18next';
-
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import ModelTrainingOutlinedIcon from '@mui/icons-material/ModelTrainingOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
@@ -13,7 +9,7 @@ import UpdateMember from '../EditMemberSection/UpdateMember';
 import ViewMember from '../EditMemberSection/ViewMember';
 
 function TabPanel(props) {
-	const { children, value, index, ...other } = props;
+	const { children, value, index } = props;
 
 	return (
 		value === index && (

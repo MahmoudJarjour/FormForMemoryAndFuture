@@ -1,6 +1,7 @@
 import { Button, Card, CardContent, CardMedia, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import UpdateOutlinedIcon from '@mui/icons-material/UpdateOutlined';
+import { useTranslation } from 'react-i18next';
 export default function EditVideo() {
 	const [UrlenVideo, SetUrlenVideo] = useState('');
 
@@ -13,6 +14,8 @@ export default function EditVideo() {
 	const handleUrlarVideo = (event) => {
 		SetUrlarVideo(event.target.value);
 	};
+
+	const { t } = useTranslation();
 	return (
 		<Grid contianer spacing={2} justifyContent="center" alignItems="center">
 			<Grid item xs={12}>
@@ -23,10 +26,10 @@ export default function EditVideo() {
 								<Stack direction="column">
 									<Grid container spacing={2} alignItems="center">
 										<Grid item xs={12} md={6}>
-											<Typography variant="h6">English Video:</Typography>
+											<Typography variant="h6">{t('English Video:')}</Typography>
 											<TextField
 												required
-												label="Enter URL Of Video "
+												label={t('Enter URL Of Video')}
 												value={UrlenVideo}
 												onChange={handleUrlenVideo}
 												variant="outlined"
@@ -47,10 +50,10 @@ export default function EditVideo() {
 											</CardMedia>
 										</Grid>
 										<Grid item xs={12} md={6}>
-											<Typography variant="h6">Arabic Video:</Typography>
+											<Typography variant="h6">{t('Arabic Video:')}</Typography>
 											<TextField
 												required
-												label="Enter URL Of Video "
+												label={t('Enter URL Of Video')}
 												value={UrlarVideo}
 												onChange={handleUrlarVideo}
 												variant="outlined"
@@ -62,7 +65,7 @@ export default function EditVideo() {
 							</Grid>
 							<Grid item xs={12}>
 								<Button variant="contained" startIcon={<UpdateOutlinedIcon />} component="span">
-									update
+									{t('Update')}
 								</Button>
 							</Grid>
 						</Grid>

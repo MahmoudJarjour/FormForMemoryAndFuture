@@ -1,4 +1,4 @@
-import { Card, CardContent, Divider, Grid, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { Card, Grid, Tab, Tabs } from '@mui/material';
 import React, { useState } from 'react';
 import EditFirstSection from '../ContactInfoSections/EditFirstSection';
 import EditMembersSection from '../ContactInfoSections/EditMembersSection';
@@ -18,7 +18,7 @@ import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';
 import PermMediaOutlinedIcon from '@mui/icons-material/PermMediaOutlined';
 
 function TabPanel(props) {
-	const { children, value, index, ...other } = props;
+	const { children, value, index } = props;
 
 	return (
 		value === index && (
@@ -43,7 +43,7 @@ export default function ContentInfo() {
 						<Tab label={t('First Section')} icon={<PageviewOutlinedIcon />} value={0} />
 
 						<Tab label={t('Second Section')} icon={<GroupOutlinedIcon />} value={1} />
-						<Tab label={t('AboutUs')} icon={<InfoOutlinedIcon />} value={2} />
+						<Tab label={t('Third Section')} icon={<InfoOutlinedIcon />} value={2} />
 						<Tab label={t('POSTS')} icon={<ModeEditOutlineOutlinedIcon />} value={3} />
 						<Tab label={t('Membership')} icon={<LoyaltyOutlinedIcon />} value={4} />
 						<Tab label={t('Contact us')} icon={<ContactMailOutlinedIcon />} value={5} />

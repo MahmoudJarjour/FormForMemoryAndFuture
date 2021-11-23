@@ -24,7 +24,7 @@ const AboutUs = () => {
 		});
 	}, []);
 	return (
-		<Box name="AboutUs" py={10} sx={{ backgroundColor: '#F7F4F2' }}>
+		<Box name="AboutUs" py={15} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item data-aos="slide-up" xs={12}>
@@ -40,7 +40,7 @@ const AboutUs = () => {
 					<Grid item xs={12}>
 						{/* { First 3 items } */}
 						<Grid container spacing={3} justifyContent="center" alignItems="center">
-							<Grid item data-aos={getLanguage() === 'en' ? 'slide-right' : 'slide-left'} xs={12} md={4}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'flip-right' : 'flip-left'} xs={12} md={4}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={10} pb={5}>
 									<Grid item xs={12} align="center">
 										<ThumbUpAltIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -55,7 +55,7 @@ const AboutUs = () => {
 									</Grid>
 								</Grid>
 							</Grid>
-							<Grid item data-aos="slide-down" xs={12} md={4}>
+							<Grid item data-aos="flip-down" xs={12} md={4}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={10} pb={5}>
 									<Grid item xs={12} align="center">
 										<GavelIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -70,7 +70,7 @@ const AboutUs = () => {
 									</Grid>
 								</Grid>
 							</Grid>
-							<Grid item data-aos={getLanguage() === 'en' ? 'slide-left' : 'slide-right'} xs={12} md={4}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'flip-left' : 'flip-right'} xs={12} md={4}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={10} pb={5}>
 									<Grid item xs={12} align="center">
 										<GroupIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -91,7 +91,7 @@ const AboutUs = () => {
 
 						{/* {Second 2 Items } */}
 						<Grid container spacing={3} justifyContent="center" alignItems="center">
-							<Grid item data-aos={getLanguage() === 'en' ? 'slide-right' : 'slide-left'} xs={12} md={6}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'flip-right' : 'flip-left'} xs={12} md={6}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={5} pb={10}>
 									<Grid item xs={12} align="center">
 										<CloudDownloadIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />
@@ -109,7 +109,7 @@ const AboutUs = () => {
 								</Grid>
 							</Grid>
 
-							<Grid item data-aos={getLanguage() === 'en' ? 'slide-left' : 'slide-right'} xs={12} md={6}>
+							<Grid item data-aos={getLanguage() === 'en' ? 'flip-left' : 'flip-right'} xs={12} md={6}>
 								<Grid container spacing={3} justifyContent="center" alignItems="center" pt={5} pb={10}>
 									<Grid item xs={12} align="center">
 										<DriveFileMoveIcon variant="outlined" fontSize="large" sx={{ color: '#524fa1' }} />

@@ -5,15 +5,12 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import i18next from 'i18next';
 
 const FirstSection = () => {
 	const { t } = useTranslation();
 
 	const theme = useTheme();
 	const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
-
-	const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
 	useEffect(() => {
 		Aos.init({

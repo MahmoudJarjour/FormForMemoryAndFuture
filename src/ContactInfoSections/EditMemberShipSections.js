@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -36,28 +36,28 @@ export default function EditMemberShipSections() {
 
 	const content = [
 		{
-			title: 'English Title:',
-			Titlelabel: 'Enter English Title',
+			title: t('English Title:'),
+			Titlelabel: t('English Title:'),
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
-			Discription: 'English Discription:',
-			Discriptionlabel: 'Enter English Discription',
+			Discription: t('English Discription:'),
+			Discriptionlabel: t('English Discription:'),
 			Discriptionvalue: EnglishDiscription,
 			Discriptionchange: handleEnglishDiscription,
-			newslabel: 'Item in English',
+			newslabel: t('Item in English'),
 			newsName: EnglishNews,
 			newsOnchange: handleEnglishNews,
 		},
 		{
-			title: 'Arabic Title:',
-			Titlelabel: 'Enter Arabic Title',
+			title: t('Arabic Title:'),
+			Titlelabel: t('Arabic Title:'),
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
-			Discription: 'Arabic Discription:',
-			Discriptionlabel: 'Enter Arabic Discription',
+			Discription: t('Arabic Discription:'),
+			Discriptionlabel: t('Arabic Discription:'),
 			Discriptionvalue: ArabicDiscription,
 			Discriptionchange: handleArabicDiscription,
-			newslabel: 'Item in Arabic',
+			newslabel: t('Item in Arabic'),
 			newsName: ArabicNews,
 			newsOnchange: handleArabicNews,
 		},
@@ -104,12 +104,12 @@ export default function EditMemberShipSections() {
 									<Grid container spacing={2} justifyContent="space-between">
 										<Grid item xs={12} md={6}>
 											<Button variant="outlined" color="secondary">
-												Add Item to list
+												{t('Add Item to list')}
 											</Button>
 										</Grid>
 										<Grid item xs={12} md={6}>
 											<Button variant="outlined" color="info">
-												Remove Item from list
+												{t('Remove Item from list')}
 											</Button>
 										</Grid>
 									</Grid>

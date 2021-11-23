@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
-import { Typography, Toolbar, List, Box, Divider, Container, Grid, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Typography, Toolbar, List, Box, Divider, Container, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import LogoutIcon from '@mui/icons-material/Logout';
-
 import PeopleIcon from '@mui/icons-material/People';
 import LayersIcon from '@mui/icons-material/Layers';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import VideoSettingsIcon from '@mui/icons-material/VideoSettings';
 import { Copyright } from './CopyRight';
-import i18next from 'i18next';
 import EditVideo from './EditVideo';
 import Subscribers from './Subscribers';
 import ContentInfo from './ContentInfo';
@@ -69,7 +66,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 		}),
 	},
 }));
-const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
 export default function AdminPanel() {
 	const [open, setOpen] = useState(true);
@@ -107,7 +103,7 @@ export default function AdminPanel() {
 		},
 		{
 			id: 5,
-			label: t('Contact Info'),
+			label: t('CONTENT INFO'),
 			component: <ContentInfo />,
 			icon: <ContactPageIcon sx={{ color: '#524fa1' }} />,
 		},

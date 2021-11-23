@@ -34,7 +34,7 @@ const Membership = () => {
 	}, []);
 
 	return (
-		<Box name="MemberShip" py={10} sx={{ backgroundColor: '#F7F4F2' }}>
+		<Box name="MemberShip" py={15} sx={{ backgroundColor: '#F7F4F2' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item data-aos="slide-up" xs={12}>

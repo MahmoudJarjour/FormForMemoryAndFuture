@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
 import SearchIcon from '@mui/icons-material/Search';
-import { Grid, Paper } from '@mui/material';
+import { Grid } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { Button, Card, CardContent, Input, Stack, TextField, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -56,6 +57,8 @@ export default function UpdatePosts() {
 	const handleDiscription = (event) => {
 		SetDiscription(event.target.value);
 	};
+
+	const { t } = useTranslation();
 	return (
 		<Grid container spacing={2} justifyContent="center">
 			<Grid item sx={12} md={12}>
@@ -65,7 +68,7 @@ export default function UpdatePosts() {
 							<SearchIconWrapper>
 								<SearchIcon color="inherit" />
 							</SearchIconWrapper>
-							<StyledInputBase placeholder="Search for Post..." inputProps={{ 'aria-label': 'search' }} />
+							<StyledInputBase placeholder={t('Search for Post...')} inputProps={{ 'aria-label': 'search' }} />
 						</Search>
 					</CardContent>
 				</Card>
@@ -76,14 +79,14 @@ export default function UpdatePosts() {
 						<Grid container spacing={2} mt={2}>
 							<Grid item xs={12}>
 								<Stack direction="column" spacing={2}>
-									<Typography variant="h6">Post Title</Typography>
-									<TextField required label="Enter Member name" value={title} onChange={handleTitle} variant="outlined" fullWidth />
+									<Typography variant="h6">{t('Title')}</Typography>
+									<TextField required label={t('Enter Post Title')} value={title} onChange={handleTitle} variant="outlined" fullWidth />
 
-									<Typography variant="h6">Post Discription:</Typography>
+									<Typography variant="h6">{t('Discription')}</Typography>
 									<TextareaAutosize
 										aria-label="minimum height"
 										minRows={5}
-										placeholder="Discription"
+										placeholder={t('Discription')}
 										value={Discription}
 										onChange={handleDiscription}
 									/>
@@ -95,7 +98,7 @@ export default function UpdatePosts() {
 							</Grid>
 							<Grid item xs={12}>
 								<Button variant="contained" component="span">
-									update
+									{t('Update')}
 								</Button>
 							</Grid>
 						</Grid>

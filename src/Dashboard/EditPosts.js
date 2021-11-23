@@ -9,7 +9,7 @@ import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOu
 import ModelTrainingOutlinedIcon from '@mui/icons-material/ModelTrainingOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 function TabPanel(props) {
-	const { children, value, index, ...other } = props;
+	const { children, value, index } = props;
 
 	return (
 		value === index && (

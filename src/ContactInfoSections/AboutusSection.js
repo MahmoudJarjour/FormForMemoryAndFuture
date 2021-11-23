@@ -56,54 +56,54 @@ export default function AboutusSection() {
 
 	const content = [
 		{
-			title: 'English Title:',
-			Titlelabel: 'Enter English Title',
+			title: t('English Title:'),
+			Titlelabel: t('English Title:'),
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
 
-			Discription: 'English Discription:',
-			Discriptionlabel: 'Enter English Discription',
+			Discription: t('English Discription:'),
+			Discriptionlabel: t('English Discription:'),
 			Discriptionvalue: EnglishDiscription,
 			Discriptionchange: handleEnglishDiscription,
 
-			imageTitle: 'Choose an Icon',
+			imageTitle: t('Upload Image'),
 			imageValue: EnglishImage,
 			imageonChange: handleEnglishImage,
 
-			BlockTitle: 'English Block Title',
-			BlockTitlelabel: 'Enter Block English Title',
-			BlockDiscription: 'English Block Discription',
+			BlockTitle: t('English Block Title'),
+			BlockTitlelabel: t('English Block Title'),
+
 			BlockTitlevalue: EnglishBlockTitle,
 			BlockTitleonchange: handleEnglishBlockTitle,
 
-			BlockDiscription: 'English Block Discription:',
-			BlockDiscriptionlabel: 'Enter English Block Discription',
+			BlockDiscription: t('English Block Discription'),
+			BlockDiscriptionlabel: t('English Block Discription'),
 			BlockDiscriptionvalue: EnglishBlockDiscription,
 			BlockDiscriptionchange: handleEnglishBlockDiscription,
 		},
 		{
-			title: 'Arabic Title:',
-			Titlelabel: 'Enter Arabic Title',
+			title: t('Arabic Title:'),
+			Titlelabel: t('Arabic Title:'),
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
 
-			Discription: 'Arabic Discription:',
-			Discriptionlabel: 'Enter Arabic Discription',
+			Discription: t('Arabic Discription:'),
+			Discriptionlabel: t('Arabic Discription:'),
 			Discriptionvalue: ArabicDiscription,
 			Discriptionchange: handleArabicDiscription,
 
-			imageTitle: 'Choose an Icon',
+			imageTitle: t('Upload Image'),
 			imageValue: ArabicImage,
 			imageonChange: handleArabicImage,
 
-			BlockTitle: 'Arabic Block Title',
-			BlockTitlelabel: 'Enter Block Arabic Title',
-			BlockDiscription: 'Arabic Block Discription',
+			BlockTitle: t('Arabic Block Title'),
+			BlockTitlelabel: t('Arabic Block Title'),
+
 			BlockTitlevalue: ArabicBlockTitle,
 			BlockTitleonchange: handleArabicBlockTitle,
 
-			BlockDiscription: 'Arabic Block Discription:',
-			BlockDiscriptionlabel: 'Enter Arabic Block Discription',
+			BlockDiscription: t('Arabic Block Discription:'),
+			BlockDiscriptionlabel: t('Arabic Block Discription:'),
 			BlockDiscriptionvalue: ArabicBlockDiscription,
 			BlockDiscriptionchange: handleArabicBlockDiscription,
 		},

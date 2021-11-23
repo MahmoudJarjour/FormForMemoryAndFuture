@@ -1,8 +1,6 @@
-import { Button, Stack, Grid, AppBar, Container, IconButton, useMediaQuery } from '@mui/material';
+import { Button, Stack, Grid, AppBar, Container, IconButton, useMediaQuery, Typography } from '@mui/material';
 import React from 'react';
-
 import { useTranslation } from 'react-i18next';
-import i18n from '../Locales/i18n';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,8 +16,6 @@ import { Link } from 'react-scroll';
 import { useTheme } from '@emotion/react';
 import i18next from 'i18next';
 import Social from './Social';
-
-const langLink = i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '');
 
 const StyledMenu = styled((props) => (
 	<Menu
@@ -135,7 +131,10 @@ const Header = () => {
 									</MenuItem>
 									<Divider sx={{ my: 0.5 }} />
 									<MenuItem>
-										<Button href={langLink} variant="none">
+										<Button
+											href={i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '')}
+											variant="none"
+										>
 											{i18n.language === 'ar' ? 'English' : 'العربية'}
 										</Button>
 									</MenuItem>
@@ -186,8 +185,11 @@ const Header = () => {
 							</Grid>
 
 							<Grid item xs={12} md={1}>
-								<Button href={langLink} variant="none">
-									{i18n.language === 'ar' ? 'English' : 'العربية'}
+								<Button
+									href={i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '')}
+									variant="none"
+								>
+									<Typography>{i18n.language === 'ar' ? 'English' : 'العربية'}</Typography>
 								</Button>
 							</Grid>
 						</Grid>

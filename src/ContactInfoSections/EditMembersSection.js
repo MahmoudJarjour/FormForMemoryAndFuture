@@ -16,14 +16,14 @@ export default function EditMembersSection() {
 
 	const content = [
 		{
-			title: 'English Title:',
-			Titlelabel: 'Enter English Title',
+			title: t('English Title:'),
+			Titlelabel: t('English Title:'),
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
 		},
 		{
-			title: 'Arabic Title:',
-			Titlelabel: 'Enter Arabic Title',
+			title: t('Arabic Title:'),
+			Titlelabel: t('Arabic Title:'),
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
 		},

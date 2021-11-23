@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Divider, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { Button, Card, CardContent, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
@@ -78,63 +78,63 @@ export default function EditContactUs() {
 
 	const content = [
 		{
-			title: 'English Title:',
-			Titlelabel: 'Enter English Title',
+			title: t('English Title:'),
+			Titlelabel: t('English Title:'),
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
 
-			Address: 'English Address:',
-			Addresslabel: 'Enter English Address',
+			Address: t('English Address:'),
+			Addresslabel: t('English Address:'),
 			Addressvalue: EnglishAddress,
 			Addresschange: handleEnglishAddress,
 
-			subtitle1Label: 'English subtitle 1 ',
+			subtitle1Label: t('English subtitle 1'),
 			subtitle1value: Englishsubtitle1,
 			subtitle1onchange: handleEnglishsubtitle1,
 
-			Discription1: 'Discription in English',
+			Discription1: t('English Discription:'),
 			Discription1value: EnglishDiscription1,
 			Discription1onchange: handleEnglishDiscription1,
 
-			PhoneNumberLabel: 'Phone Number',
+			PhoneNumberLabel: t('Phone Number'),
 			PhoneNumberValue: EnglishPhoneNumber,
 			PhoneNumberonchange: handleEnglishPhoneNumber,
 
-			EmailLabel: 'Email',
+			EmailLabel: t('Email'),
 			Emailvalue: EnglishEmail,
 			Emailonchange: handleEnglishEmail,
 
-			subtitle2Label: 'English Subtitle 2 ',
+			subtitle2Label: t('English Subtitle 2'),
 			subtitle2value: EnglishSubtitle2,
 			subtitle2onchange: handleEnglishSubtitle2,
 		},
 		{
-			title: 'Arabic Title:',
-			Titlelabel: 'Enter Arabic Title',
+			title: t('Arabic Title:'),
+			Titlelabel: t('Arabic Title:'),
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
-			Address: 'Arabic Address:',
-			Addresslabel: 'Enter Arabic Address',
+			Address: t('Arabic Address:'),
+			Addresslabel: t('Arabic Address:'),
 			Addressvalue: ArabicAddress,
 			Addresschange: handleArabicAddress,
 
-			subtitle1Label: 'Arabic subtitle 1  ',
+			subtitle1Label: t('Arabic subtitle 1'),
 			subtitle1value: Arabicsubtitle1,
 			subtitle1onchange: handleArabicsubtitle1,
 
-			Discription1: 'Discription in Arabic',
+			Discription1: t('Arabic Discription:'),
 			Discription1value: ArabicDiscription1,
 			Discription1onchange: handleArabicDiscription1,
 
-			PhoneNumberLabel: 'Phone Number',
+			PhoneNumberLabel: t('Phone Number'),
 			PhoneNumberValue: ArabicPhoneNumber,
 			PhoneNumberonchange: handleArabicPhoneNumber,
 
-			EmailLabel: 'Email',
+			EmailLabel: t('Email'),
 			Emailvalue: ArabicEmail,
 			Emailonchange: handleArabicEmail,
 
-			subtitle2Label: 'Arabic Subtitle 2 ',
+			subtitle2Label: t('Arabic Subtitle 2'),
 			subtitle2value: ArabicSubtitle2,
 			subtitle2onchange: handleArabicSubtitle2,
 		},

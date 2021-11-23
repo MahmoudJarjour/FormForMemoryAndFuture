@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card, CardContent, Grid, Paper } from '@mui/material';
+import { Card, CardContent, Grid } from '@mui/material';
 import i18n from '../Locales/i18n';
-import faker, { fake } from 'faker';
+import faker from 'faker';
 import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
-import Avatar from '@mui/material/Avatar';
 import { useTranslation } from 'react-i18next';
 
 faker.locale = i18n.language;

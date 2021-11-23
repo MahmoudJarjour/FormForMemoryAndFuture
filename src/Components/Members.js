@@ -21,7 +21,6 @@ import { useTheme } from '@emotion/react';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import i18next from 'i18next';
 
 const Members = () => {
 	const { t, i18n } = useTranslation();
@@ -29,8 +28,6 @@ const Members = () => {
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [selectedPost, setSelectedPost] = useState({});
 	const [divider, setDivider] = useState(1);
-
-	const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
 	useEffect(() => {
 		Aos.init({
@@ -94,7 +91,7 @@ const Members = () => {
 
 	return (
 		<>
-			<Box name="Members" sx={{ backgroundColor: '#ECEAE8' }} pt={10} pb={10}>
+			<Box name="Members" sx={{ backgroundColor: '#ECEAE8' }} pt={15} pb={15}>
 				<Container maxWidth="lg">
 					<Grid container spacing={3}>
 						<Grid item data-aos="slide-up" xs={12}>

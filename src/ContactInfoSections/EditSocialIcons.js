@@ -26,10 +26,10 @@ export default function EditSocialIcons() {
 							</Grid>
 							<Grid item xs={12}>
 								<Stack direction="column" spacing={2}>
-									<Typography> Site URL:</Typography>
-									<TextField required label="Enter URL Of Icon " value={Urlicon} onChange={handleUrlicon} variant="outlined" fullWidth />
+									<Typography> {t('Site URL:')}</Typography>
+									<TextField required label={t('Site URL:')} value={Urlicon} onChange={handleUrlicon} variant="outlined" fullWidth />
 
-									<Typography>Choose an icon</Typography>
+									<Typography>{t('Choose an icon')}</Typography>
 									<label htmlFor="contained-button-file">
 										<Input accept="image/*" multiple type="file" value={Image} onChange={handleImage} />
 									</label>
@@ -37,7 +37,7 @@ export default function EditSocialIcons() {
 							</Grid>
 							<Grid item xs={12}>
 								<Button variant="contained" component="span">
-									update
+									{t('Update')}
 								</Button>
 							</Grid>
 						</Grid>

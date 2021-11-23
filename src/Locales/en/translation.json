@@ -21,6 +21,14 @@
 	"Update Member": "Update Member",
 	"View Member": "View Member",
 
+	"Member Name:":"Member Name:",
+	"Enter Member name":"Enter Member name",
+	"Member Email:":"Member Email:",
+	"Enter Member Email":"Enter Member Email",
+"Member Discription:":"Member Discription:",
+"Discription":"Discription",
+
+
 	"DashBoard": "DashBoard",
 	"POSTS": "POSTS",
 	"Membership": "MEMBERSHIP",
@@ -66,12 +74,13 @@
 	"Subscribers": "SUBSCRIBERS",
 	"Contact Info": "CONTACT INFO",
 	"Social Icons": "Social Icons",
+	"CONTENT INFO":"CONTENT INFO",
 
 	"First Section": "First Section",
 
 	"Editing First Section": "Editing First Page",
-	"Editing Members Section": "Editing Members ",
-	"Editing About Us Section": "Editing About Us ",
+	"Editing Members Section": "Editing  ",
+	"Editing About Us Section": "Editing ",
 	"Editing Posts Section": "Editing Posts ",
 	"Editing Membership section": "Editing Membership ",
 	"Editing Contact US Section": "Editing Contact US ",
@@ -83,5 +92,57 @@
 
 	"Create Post": "Create Post",
 	"Update Post": "Update Post",
-	"View Posts": "View Posts"
+	"View Posts": "View Posts",
+	"English Video:":"English Video:",
+	"Arabic Video:":"Arabic Video:",
+	"Enter URL Of Video":"Enter URL Of Video",
+	"Update":"Update",
+
+	"Title":"Post Title",
+	"Enter Post Title":"Enter Post Title",
+	"Upload Image":"Upload Image",
+	"Create":"Create",
+
+	"Search for Post...":"Search for Post...",
+
+
+	"English Title:":"English Title:",
+	"English Discription:":"English Discription:",
+	"Arabic Title:":"Arabic Title:"	,
+	"Arabic Discription:":"Arabic Discription:"	,
+
+	"English Block Title":"English Block Title",
+	"English Block Discription":"English Block Discription",
+	"Arabic Block Title":"Arabic Block Title",
+	"Arabic Block Discription:":"Arabic Block Discription:",
+
+	"English Post Title:":"English Post Title:",
+	"Enter English Post Title":"Enter English Post Title",
+	"Arabic Post Title:":"Arabic Post Title:",
+	"Enter Arabic Post Title":"Enter Arabic Post Title",
+
+
+	"Item in English":"news in English",
+	"Item in Arabic":"news in Arabic",
+
+
+	"Add Item to list":"Add news to list",
+	"Remove Item from list":"Remove news from list",
+
+	"English Address:":"English Address:",
+	"Arabic Address:":"Arabic Address:",
+
+	"English subtitle 1":"English subtitle 1",
+	"Arabic subtitle 1":"Arabic subtitle 1",
+	"Phone Number":"Phone Number",
+	"English Subtitle 2":"English Subtitle 2",
+	"Arabic Subtitle 2":"Arabic Subtitle 2",
+
+
+	"Site URL:":"Site URL:",
+	"Choose an icon":"Choose an icon",
+
+	"Third Section":"Third Section"
+
+
 }

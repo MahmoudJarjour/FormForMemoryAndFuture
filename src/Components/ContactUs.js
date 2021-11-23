@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 const ContactUs = () => {
 	const { t } = useTranslation();
 	return (
-		<Box name="ContactUs" py={10} sx={{ backgroundColor: '#262153' }}>
+		<Box name="ContactUs" py={15} sx={{ backgroundColor: '#262153' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={4}>

@@ -15,14 +15,14 @@ export default function EditPostSection() {
 
 	const content = [
 		{
-			Posttitle: 'English Post Title:',
-			PostTitlelabel: 'Enter English Post Title',
+			Posttitle: t('English Post Title:'),
+			PostTitlelabel: t('Enter English Post Title'),
 			PostTitlevalue: EnglishPostTitle,
 			PostTitleonchange: handleEnglishPostTitle,
 		},
 		{
-			Posttitle: 'Arabic Post Title:',
-			PostTitlelabel: 'Enter Arabic Post Title',
+			Posttitle: t('Arabic Post Title:'),
+			PostTitlelabel: t('Enter Arabic Post Title'),
 			PostTitlevalue: ArabicPostTitle,
 			PostTitleonchange: handleArabicPostTitle,
 		},

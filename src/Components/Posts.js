@@ -51,7 +51,7 @@ const Posts = () => {
 
 	return (
 		<>
-			<Box name="Posts" sx={{ backgroundColor: '#ECEAE8' }} py={10}>
+			<Box name="Posts" sx={{ backgroundColor: '#ECEAE8' }} py={15}>
 				<Container maxWidth="lg">
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
