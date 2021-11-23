@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Toolbar, List, Box, Divider, Container, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Typography, Toolbar, List, Box, Divider, Container, ListItem, ListItemIcon, ListItemText, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import MuiDrawer from '@mui/material/Drawer';
@@ -22,7 +22,9 @@ import ContentInfo from './ContentInfo';
 import EditMember from './EditMember';
 import EditPosts from './EditPosts';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import i18next from 'i18next';
 
+const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -137,7 +139,7 @@ export default function AdminPanel() {
 
 					<IconButton>
 						<Link underline="none" to="/LogIn">
-							<LogoutIcon sx={{ color: 'white' }} />
+							<LogoutIcon sx={{ color: 'white', transform: getLanguage() === 'ar' ? 'scaleX(-1)' : '' }} />
 						</Link>
 					</IconButton>
 				</Toolbar>
@@ -152,7 +154,7 @@ export default function AdminPanel() {
 					<DashboardIcon sx={{ flex: 0.5 }} />
 					<Typography sx={{ alignItems: 'center', justifyContent: 'flex-start', px: [3] }}>{t('DashBoard')}</Typography>
 					<IconButton onClick={toggleDrawer}>
-						<ChevronLeftIcon sx={{ justifyContent: 'flex-end' }} />
+						<ChevronLeftIcon sx={{ justifyContent: 'flex-end', transform: getLanguage() === 'ar' ? 'scaleX(-1)' : '' }} />
 					</IconButton>
 				</Toolbar>
 				<Divider />

@@ -45,11 +45,6 @@ export default function EditVideo() {
 
 									<Grid container spacing={2} alignItems="center" pt={5}>
 										<Grid item xs={12} md={6}>
-											<CardMedia style={{ paddingTop: '56.25%', position: 'relative', width: '100%' }}>
-												<iframe frameBorder={0} title="Form For Memory And Future" src="https://www.youtube.com/embed/EmUa_tcSM-k" />
-											</CardMedia>
-										</Grid>
-										<Grid item xs={12} md={6}>
 											<Typography variant="h6">{t('Arabic Video:')}</Typography>
 											<TextField
 												required
@@ -59,6 +54,11 @@ export default function EditVideo() {
 												variant="outlined"
 												fullWidth
 											/>
+										</Grid>
+										<Grid item xs={12} md={6}>
+											<CardMedia style={{ paddingTop: '56.25%', position: 'relative', width: '100%' }}>
+												<iframe frameBorder={0} title="Form For Memory And Future" src="https://www.youtube.com/embed/EmUa_tcSM-k" />
+											</CardMedia>
 										</Grid>
 									</Grid>
 								</Stack>
