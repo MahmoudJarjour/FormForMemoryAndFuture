@@ -154,27 +154,27 @@ const Header = () => {
 								<Stack direction="row" spacing={2} justifyContent="center">
 									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
 										<Link to="Members" variant="none">
-											{t('Members')}
+											<Typography>{t('Members')}</Typography>
 										</Link>
 									</IconButton>
 									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
 										<Link to="AboutUs" variant="none">
-											{t('AboutUs')}
+											<Typography>{t('AboutUs')}</Typography>
 										</Link>
 									</IconButton>
 									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
 										<Link to="Posts" variant="none">
-											{t('POSTS')}
+											<Typography>{t('POSTS')}</Typography>
 										</Link>
 									</IconButton>
 									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
 										<Link to="MemberShip" variant="none">
-											{t('Membership')}
+											<Typography>{t('Membership')}</Typography>
 										</Link>
 									</IconButton>
 									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
 										<Link to="ContactUs" variant="none">
-											{t('Contact us')}
+											<Typography>{t('Contact us')}</Typography>
 										</Link>
 									</IconButton>
 								</Stack>
