@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import i18next from 'i18next';
-import { createTheme, ThemeProvider, CssBaseline } from '@mui/material';
+import { createTheme, ThemeProvider, CssBaseline, CircularProgress } from '@mui/material';
 import createCache from '@emotion/cache';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { CacheProvider } from '@emotion/react';
@@ -11,6 +11,8 @@ import i18n from '../Locales/i18n';
 import LogIn from '../Dashboard/Login';
 import SignUp from '../Dashboard/SignUp';
 import AdminPanel from '../Dashboard/AdminPanel';
+import PrivateRoute from './PrivateRoute';
+import { AuthContextProvider } from '../firebase';
 
 const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
@@ -61,23 +63,28 @@ const LanguageContainer = ({ children }) => {
 	}
 };
 const Router = () => {
+	const [isLoading, setIsLoading] = useState(true);
 	if (window.location.pathname.split('/')[1] === 'ar') {
 		i18next.changeLanguage('ar');
 	} else {
 		i18next.changeLanguage('en');
 	}
+
 	return (
 		<BrowserRouter basename={getLanguage() === 'ar' ? 'ar' : 'en'} forceRefresh={true}>
 			<LanguageContainer>
 				<ThemeProvider theme={theme}>
 					<CssBaseline />
-					<Switch>
-						<Route path="/" exact component={Home} />
-						<Route path="/LogIn" exact component={LogIn} />
-						<Route path="/SignUp" exact component={SignUp} />
-						<Route path="/AdminPanel" exact component={AdminPanel} />
-						<Route component={NotFound} />
-					</Switch>
+					<AuthContextProvider>
+						<Switch>
+							<Route path="/" exact component={Home} />
+							<Route path="/login" exact component={LogIn} />
+							<PrivateRoute path="/admin" exact>
+								<AdminPanel />
+							</PrivateRoute>
+							<Route component={NotFound} />
+						</Switch>
+					</AuthContextProvider>
 				</ThemeProvider>
 			</LanguageContainer>
 		</BrowserRouter>
