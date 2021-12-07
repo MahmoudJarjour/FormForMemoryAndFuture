@@ -10,13 +10,11 @@ import {
 	Grid,
 	IconButton,
 	Stack,
-	Tab,
 	Table,
 	TableBody,
 	TableCell,
 	TableHead,
 	TableRow,
-	Tabs,
 	TextField,
 	Typography,
 } from '@mui/material';
@@ -28,18 +26,6 @@ import { AddCircleOutline, Delete, Edit } from '@mui/icons-material';
 import { LoadingButton } from '@mui/lab';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL, deleteObject } from '@firebase/storage';
 import { v4 as uuidv4 } from 'uuid';
-
-function TabPanel(props) {
-	const { children, value, index } = props;
-
-	return (
-		value === index && (
-			<Grid item xs={12}>
-				{children}
-			</Grid>
-		)
-	);
-}
 
 export default function EditMember() {
 	// const [value, setValue] = useState(0);
@@ -244,26 +230,6 @@ export default function EditMember() {
 					</LoadingButton>
 				</DialogActions>
 			</Dialog>
-			{/* <Grid item xs={12} mt={2}>
-				<Card>
-					<Tabs value={value} variant="scrollable" scrollButtons="auto" onChange={handleChange}>
-						<Tab label={t('Add Member')} icon={<AddCircleOutlineOutlinedIcon />} value={0} />
-						<Tab label={t('Update Member')} icon={<ModelTrainingOutlinedIcon />} value={1} />
-						<Tab label={t('View Member')} icon={<GridViewOutlinedIcon />} value={2} />
-					</Tabs>
-				</Card>
-			</Grid>
-
-			<TabPanel value={value} index={0}>
-				<AddMember />
-			</TabPanel>
-			<TabPanel value={value} index={1}>
-				<manageMember />
-			</TabPanel>
-
-			<TabPanel value={value} index={2}>
-				<ViewMember />
-			</TabPanel> */}
 		</Grid>
 	);
 }
