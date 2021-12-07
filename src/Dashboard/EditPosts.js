@@ -169,7 +169,7 @@ export default function EditPosts() {
 								{posts.map((post) => (
 									<TableRow key={post.id}>
 										<TableCell>
-											<Avatar src={post.image} alt={post.title} />
+											<img src={post.image} alt={post.title} style={{ height: 100 }} />
 										</TableCell>
 										<TableCell>
 											<Typography>{post.title}</Typography>
