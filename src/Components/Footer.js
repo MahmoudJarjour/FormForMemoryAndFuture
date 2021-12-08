@@ -1,12 +1,13 @@
-import { Container, Grid, Stack, Typography } from '@mui/material';
+import { Container, Grid, IconButton, Stack, Typography, Link } from '@mui/material';
 import React from 'react';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import YoutubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { useTranslation } from 'react-i18next';
-import { Link } from '@mui/material';
 
-const Footer = () => {
+const Footer = ({ data }) => {
 	const { t } = useTranslation();
 	return (
 		<Container name="Footer" sx={{ maxWidth: '100%' }}>
@@ -25,16 +26,48 @@ const Footer = () => {
 				</Grid>
 				<Grid item xs={12} md={2}>
 					<Stack direction="row" spacing={2} justifyContent="center">
-						<Link href="https://www.facebook.com/pg/memoryfuturelb/posts/" target="_blank">
-							<FacebookRoundedIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
-						</Link>
-
-						<Link href="https://www.instagram.com/" target="_blank">
-							<InstagramIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
-						</Link>
-						<Link href="https://twitter.com/" target="_blank">
-							<TwitterIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
-						</Link>
+						{data.facebook && (
+							<IconButton>
+								<Link href={data.facebook} target="_blank">
+									<FacebookRoundedIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+								</Link>
+							</IconButton>
+						)}
+						{data.instagram && (
+							<IconButton>
+								<Link href={data.instagram} target="_blank">
+									<InstagramIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+								</Link>
+							</IconButton>
+						)}
+						{data.twitter && (
+							<IconButton>
+								<Link href={data.twitter} target="_blank">
+									<TwitterIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+								</Link>
+							</IconButton>
+						)}
+						{data.youtube && (
+							<IconButton>
+								<Link href={data.youtube} target="_blank">
+									<YoutubeIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+								</Link>
+							</IconButton>
+						)}
+						{data.linkedin && (
+							<IconButton>
+								<Link href={data.linkedin} target="_blank">
+									<LinkedInIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+								</Link>
+							</IconButton>
+						)}
+						{data.tiktok && (
+							<IconButton>
+								<Link href={data.tiktok} target="_blank">
+									<LinkedInIcon sx={{ color: '#524fa1' }} variant="outlined" fontSize="medium" />
+								</Link>
+							</IconButton>
+						)}
 					</Stack>
 				</Grid>
 			</Grid>

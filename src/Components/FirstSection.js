@@ -2,13 +2,11 @@ import { useTheme } from '@emotion/react';
 import { Container, Grid, Typography, useMediaQuery } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import i18next from 'i18next';
 
-const FirstSection = () => {
-	const { t } = useTranslation();
-
+const FirstSection = ({ data }) => {
 	const theme = useTheme();
 	const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -29,17 +27,17 @@ const FirstSection = () => {
 						<Grid container data-aos="slide-up" spacing={3}>
 							<Grid item xs={12}>
 								<Typography variant={isMobileView ? 'h3' : 'h2'} color="white">
-									{t('Forum for Memory and Future')}
+									{data[i18next.language].title}
 								</Typography>
 							</Grid>
 							<Grid item data-aos="flip-up" xs={12}>
-								<Typography color="white">{t('FirstSectionText')}</Typography>
+								<Typography color="white">{data[i18next.language].description}</Typography>
 							</Grid>
 						</Grid>
 					</Grid>
 					{!isMobileView && (
 						<Grid item data-aos="slide-down" xs={12} md={5}>
-							<img src="whitelogo.png" alt="Form For Memory And Future" style={{ width: '100%' }} />
+							<img src={data[i18next.language].image} alt={data[i18next.language].title} style={{ width: '100%' }} />
 						</Grid>
 					)}
 				</Grid>

@@ -54,10 +54,10 @@ const StyledMenu = styled((props) => (
 	},
 }));
 
-const Header = () => {
+const Header = ({ data }) => {
 	const { t, i18n } = useTranslation();
 	const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 300 });
-
+	console.log(data);
 	const theme = useTheme();
 
 	const isMobileView = useMediaQuery(theme.breakpoints.down('md'));
@@ -97,31 +97,31 @@ const Header = () => {
 									<MenuItem onClick={handleClose} disableRipple>
 										<EditIcon />
 										<Link to="Members" variant="none">
-											{t('Members')}
+											{data.members[i18next.language].title}
 										</Link>
 									</MenuItem>
 									<MenuItem onClick={handleClose} disableRipple>
 										<FileCopyIcon />
 										<Link to="AboutUs" variant="none">
-											{t('AboutUs')}
+											{data.about[i18next.language].title}
 										</Link>
 									</MenuItem>
 									<MenuItem onClick={handleClose} disableRipple>
 										<ArchiveIcon />
 										<Link to="Posts" variant="none">
-											{t('POSTS')}
+											{data.posts[i18next.language].title}
 										</Link>
 									</MenuItem>
 									<MenuItem onClick={handleClose} disableRipple>
 										<MoreHorizIcon />
 										<Link to="MemberShip" variant="none">
-											{t('Membership')}
+											{data.membership[i18next.language].title}
 										</Link>
 									</MenuItem>
 									<MenuItem onClick={handleClose} disableRipple>
 										<MoreHorizIcon />
 										<Link to="ContactUs" variant="none">
-											{t('Contact us')}
+											{data.contact[i18next.language].title}
 										</Link>
 									</MenuItem>
 
@@ -142,55 +142,63 @@ const Header = () => {
 							</Grid>
 						</Grid>
 					) : (
-						<Grid container spacing={2} alignItems="center">
-							<Grid item xs={1} md={1}>
-								<IconButton size="small" sx={{ color: 'white' }}>
-									<Link to="FirstSection" variant="none">
-										<img src="headerLogo.png" alt="Form For Memory And Future" style={{ width: '100%' }} />
-									</Link>
-								</IconButton>
-							</Grid>
-							<Grid item xs={12} md={8}>
-								<Stack direction="row" spacing={2} justifyContent="center">
-									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
-										<Link to="Members" variant="none">
-											<Typography>{t('Members')}</Typography>
-										</Link>
-									</IconButton>
-									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
-										<Link to="AboutUs" variant="none">
-											<Typography>{t('AboutUs')}</Typography>
-										</Link>
-									</IconButton>
-									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
-										<Link to="Posts" variant="none">
-											<Typography>{t('POSTS')}</Typography>
-										</Link>
-									</IconButton>
-									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
-										<Link to="MemberShip" variant="none">
-											<Typography>{t('Membership')}</Typography>
-										</Link>
-									</IconButton>
-									<IconButton sx={{ color: 'white', fontSize: '16px' }}>
-										<Link to="ContactUs" variant="none">
-											<Typography>{t('Contact us')}</Typography>
-										</Link>
-									</IconButton>
-								</Stack>
+						<Grid container spacing={2} alignItems="center" justifyContent="space-between">
+							<Grid item>
+								<Grid container spacing={2} alignItems="center">
+									<Grid item>
+										<IconButton size="small" sx={{ color: 'white' }}>
+											<Link to="FirstSection" variant="none">
+												<img src="headerLogo.png" alt="Form For Memory And Future" style={{ height: 90 }} />
+											</Link>
+										</IconButton>
+									</Grid>
+									<Grid item>
+										<Stack direction="row" spacing={2} justifyContent="center">
+											<Button sx={{ color: 'white', fontSize: '16px' }}>
+												<Link to="Members" variant="none">
+													<Typography>{data.members[i18next.language].title}</Typography>
+												</Link>
+											</Button>
+											<Button sx={{ color: 'white', fontSize: '16px' }}>
+												<Link to="AboutUs" variant="none">
+													<Typography>{data.about[i18next.language].title}</Typography>
+												</Link>
+											</Button>
+											<Button sx={{ color: 'white', fontSize: '16px' }}>
+												<Link to="Posts" variant="none">
+													<Typography>{data.posts[i18next.language].title}</Typography>
+												</Link>
+											</Button>
+											<Button sx={{ color: 'white', fontSize: '16px' }}>
+												<Link to="MemberShip" variant="none">
+													<Typography>{data.membership[i18next.language].title}</Typography>
+												</Link>
+											</Button>
+											<Button sx={{ color: 'white', fontSize: '16px' }}>
+												<Link to="ContactUs" variant="none">
+													<Typography>{data.contact[i18next.language].title}</Typography>
+												</Link>
+											</Button>
+										</Stack>
+									</Grid>
+								</Grid>
 							</Grid>
 
-							<Grid item xs={12} md={2}>
-								<Social />
-							</Grid>
+							<Grid item>
+								<Grid container spacing={2}>
+									<Grid item>
+										<Social data={data.footer} />
+									</Grid>
 
-							<Grid item xs={12} md={1}>
-								<Button
-									href={i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '')}
-									variant="none"
-								>
-									<Typography>{i18n.language === 'ar' ? 'English' : 'العربية'}</Typography>
-								</Button>
+									<Grid item>
+										<Button
+											href={i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '')}
+											variant="none"
+										>
+											<Typography>{i18n.language === 'ar' ? 'English' : 'العربية'}</Typography>
+										</Button>
+									</Grid>
+								</Grid>
 							</Grid>
 						</Grid>
 					)}

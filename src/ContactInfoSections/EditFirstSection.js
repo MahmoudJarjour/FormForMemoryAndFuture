@@ -1,69 +1,112 @@
-import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { deleteObject, getDownloadURL, getStorage, ref, uploadBytesResumable } from '@firebase/storage';
+import { LoadingButton } from '@mui/lab';
+import { Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function EditFirstSection() {
+export default function EditFirstSection({ isLoading, defaultValue, onSubmit }) {
 	const { t } = useTranslation();
-	const [EnglishTitle, SetEnglishTitle] = useState('');
-	const handleEnglishTitle = (event) => {
-		SetEnglishTitle(event.target.value);
-	};
+	const [loading, setLoading] = useState();
+	const [images, setImages] = useState({
+		en: '',
+		ar: '',
+	});
 
-	const [EnglishDiscription, SetEnglishDiscription] = useState('');
-	const handleEnglishDiscription = (event) => {
-		SetEnglishDiscription(event.target.value);
-	};
+	const [section, setSection] = useState(defaultValue);
 
-	const [EnglishImage, SetEnglishImage] = useState([]);
-	const handleEnglishImage = (event) => {
-		SetEnglishImage(event.target.value);
-	};
-
-	const [ArabicTitle, SetArabicTitle] = useState('');
-	const handleArabicTitle = (event) => {
-		SetArabicTitle(event.target.value);
-	};
-
-	const [ArabicDiscription, SetArabicDiscription] = useState('');
-	const handleArabicDiscription = (event) => {
-		SetArabicDiscription(event.target.value);
-	};
-
-	const [ArabicImage, SetArabicImage] = useState([]);
-	const handleArabicImage = (event) => {
-		SetArabicImage(event.target.value);
+	const onChangeText = (lang, property, value) => {
+		setSection({
+			...section,
+			[lang]: {
+				...section[lang],
+				[property]: value,
+			},
+		});
 	};
 
 	const content = [
 		{
+			key: 'en',
 			title: t('English Title:'),
-			Titlelabel: t('English Title:'),
-			Titlevalue: EnglishTitle,
-			Titleonchange: handleEnglishTitle,
-			Discription: t('English Discription:'),
-			Discriptionlabel: t('English Discription:'),
-			Discriptionvalue: EnglishDiscription,
-			Discriptionchange: handleEnglishDiscription,
+			titleLabel: t('English Title:'),
+			description: t('Arabic Description:'),
+			descriptionLabel: t('Arabic Description:'),
 			imageTitle: t('Upload Image'),
-			imageValue: EnglishImage,
-			imageonChange: handleEnglishImage,
 		},
 		{
+			key: 'ar',
 			title: t('Arabic Title:'),
-			Titlelabel: t('Arabic Title:'),
-			Titlevalue: ArabicTitle,
-			Titleonchange: handleArabicTitle,
-
-			Discription: t('Arabic Discription:'),
-			Discriptionlabel: t('Arabic Discription:'),
-			Discriptionvalue: ArabicDiscription,
-			Discriptionchange: handleArabicDiscription,
-
+			titleLabel: t('Arabic Title:'),
+			description: t('Arabic Description:'),
+			descriptionLabel: t('Arabic Description:'),
 			imageTitle: t('Upload Image'),
-			imageValue: ArabicImage,
-			imageonChange: handleArabicImage,
 		},
 	];
+
+	const onSave = async () => {
+		setLoading(true);
+		let englishImage = section.en.image;
+		let arabicImage = section.ar.image;
+		if (images.en) {
+			englishImage = await uploadFile(images.en);
+			section.en.image && (await deleteFile(section.en.image));
+			setImages({ ...images, en: '' });
+		}
+		if (images.ar) {
+			arabicImage = await uploadFile(images.ar);
+			section.ar.image && (await deleteFile(section.ar.image));
+			setImages({ ...images, ar: '' });
+		}
+		setSection({ en: { ...section.en, image: englishImage }, ar: { ...section.ar, image: arabicImage } });
+		// send payload
+		onSubmit({ header: { en: { ...section.en, image: englishImage }, ar: { ...section.ar, image: arabicImage } } });
+		setLoading(false);
+	};
+
+	const deleteFile = async (link) => {
+		return new Promise(async (resolve, reject) => {
+			const storage = getStorage();
+
+			// Create a reference to the file to delete
+			const desertRef = ref(storage, link);
+
+			// Delete the file
+			await deleteObject(desertRef);
+			resolve();
+		});
+	};
+
+	const uploadFile = async (file) => {
+		return new Promise((resolve, reject) => {
+			const storage = getStorage();
+
+			// Upload file and metadata to the object 'images/mountains.jpg'
+			const extension = file.name.substring(file.name.lastIndexOf('.') + 1);
+			const storageRef = ref(storage, `images/${uuidv4()}.${extension}`);
+			const uploadTask = uploadBytesResumable(storageRef, file, {});
+
+			// Listen for state changes, errors, and completion of the upload.
+			return uploadTask.on(
+				'state_changed',
+				(snapshot) => {
+					// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+					const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+					console.log('Upload is ' + progress + '% done');
+				},
+				(error) => {
+					console.log('upload file error', error);
+					reject(error);
+				},
+				async () => {
+					// Upload completed successfully, now we can get the download URL
+					const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+					resolve(downloadURL);
+				}
+			);
+		});
+	};
+
 	return (
 		<Grid item xs={12}>
 			<Card>
@@ -72,39 +115,46 @@ export default function EditFirstSection() {
 						<Grid item xs={12}>
 							<Typography variant="h6">{t('Editing First Section')}</Typography>
 						</Grid>
-						{content.map((item) => (
-							<Grid item xs={12} md={6}>
-								<Stack direction="column" spacing={2}>
-									<Typography>{item.title}</Typography>
-									<TextField
-										required
-										label={item.Titlelabel}
-										value={item.Titlevalue}
-										onChange={item.Titleonchange}
-										variant="outlined"
-										fullWidth
-									/>
+						{section &&
+							section.en &&
+							content.map((item) => (
+								<Grid key={item.key} item xs={12} md={6}>
+									<Stack direction="column" spacing={2}>
+										<Typography>{item.title}</Typography>
+										<TextField
+											required
+											label={item.titleLabel}
+											value={section[item.key].title}
+											onChange={({ target: { value } }) => onChangeText(item.key, 'title', value)}
+											variant="outlined"
+											fullWidth
+										/>
 
-									<Typography>{item.Discription}</Typography>
-									<TextField
-										required
-										label={item.Discriptionlabel}
-										value={item.Discriptionvalue}
-										onChange={item.Discriptionchange}
-										variant="outlined"
-										fullWidth
-									/>
-									<Typography variant="h6">{item.imageTitle}</Typography>
-									<label htmlFor="contained-button-file">
-										<Input accept="image/*" multiple type="file" value={item.imageValue} onChange={item.imageonChange} />
-									</label>
-								</Stack>
-							</Grid>
-						))}
+										<Typography>{item.description}</Typography>
+										<TextField
+											required
+											label={item.descriptionLabel}
+											value={section[item.key].description}
+											onChange={({ target: { value } }) => onChangeText(item.key, 'description', value)}
+											variant="outlined"
+											fullWidth
+										/>
+										<Typography variant="h6">{item.imageTitle}</Typography>
+										<img src={section[item.key].image} alt={section[item.key].title} />
+										<Input
+											accept="image/*"
+											multiple
+											type="file"
+											{...(images[item.key] ? {} : { value: '' })}
+											onChange={({ target: { files } }) => setImages({ ...images, [item.key]: files[0] })}
+										/>
+									</Stack>
+								</Grid>
+							))}
 						<Grid item xs={12}>
-							<Button variant="contained" sx={{ backgroundColor: '#524fa1' }}>
+							<LoadingButton loading={isLoading || loading} variant="outlined" onClick={onSave}>
 								{t('Submit')}
-							</Button>
+							</LoadingButton>
 						</Grid>
 					</Grid>
 				</CardContent>

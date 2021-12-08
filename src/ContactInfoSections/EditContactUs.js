@@ -2,143 +2,40 @@ import { Button, Card, CardContent, Grid, Stack, TextField, Typography } from '@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
+import { LoadingButton } from '@mui/lab';
 
-export default function EditContactUs() {
+export default function EditContactUs({ isLoading, defaultValue, onSubmit }) {
 	const { t } = useTranslation();
 
-	const [EnglishTitle, SetEnglishTitle] = useState('');
-	const handleEnglishTitle = (event) => {
-		SetEnglishTitle(event.target.value);
-	};
-
-	const [EnglishAddress, SetEnglishAddress] = useState('');
-	const handleEnglishAddress = (event) => {
-		SetEnglishAddress(event.target.value);
-	};
-
-	const [ArabicTitle, SetArabicTitle] = useState('');
-	const handleArabicTitle = (event) => {
-		SetArabicTitle(event.target.value);
-	};
-
-	const [ArabicAddress, SetArabicAddress] = useState('');
-	const handleArabicAddress = (event) => {
-		SetArabicAddress(event.target.value);
-	};
-
-	const [Englishsubtitle1, SetEnglishsubtitle1] = useState('');
-	const handleEnglishsubtitle1 = (event) => {
-		SetEnglishsubtitle1(event.target.value);
-	};
-
-	const [EnglishDiscription1, SetEnglishDiscription1] = useState('');
-	const handleEnglishDiscription1 = (event) => {
-		SetEnglishDiscription1(event.target.value);
-	};
-
-	const [EnglishPhoneNumber, SetEnglishPhoneNumber] = useState('');
-	const handleEnglishPhoneNumber = (event) => {
-		SetEnglishPhoneNumber(event.target.value);
-	};
-
-	const [ArabicPhoneNumber, SetArabicPhoneNumber] = useState('');
-	const handleArabicPhoneNumber = (event) => {
-		SetArabicPhoneNumber(event.target.value);
-	};
-
-	const [EnglishSubtitle2, SetEnglishSubtitle2] = useState('');
-	const handleEnglishSubtitle2 = (event) => {
-		SetEnglishSubtitle2(event.target.value);
-	};
-
-	const [Arabicsubtitle1, SetArabicsubtitle1] = useState('');
-	const handleArabicsubtitle1 = (event) => {
-		SetArabicsubtitle1(event.target.value);
-	};
-
-	const [ArabicDiscription1, SetArabicDiscription1] = useState('');
-	const handleArabicDiscription1 = (event) => {
-		SetArabicDiscription1(event.target.value);
-	};
-
-	const [ArabicSubtitle2, SetArabicSubtitle2] = useState('');
-	const handleArabicSubtitle2 = (event) => {
-		SetArabicSubtitle2(event.target.value);
-	};
-
-	const [ArabicEmail, SetArabicEmail] = useState('');
-	const handleArabicEmail = (event) => {
-		SetArabicEmail(event.target.value);
-	};
-
-	const [EnglishEmail, SetEnglishEmail] = useState('');
-	const handleEnglishEmail = (event) => {
-		SetEnglishEmail(event.target.value);
-	};
+	const [section, setSection] = useState(defaultValue);
 
 	const content = [
 		{
+			key: 'en',
 			title: t('English Title:'),
-			Titlelabel: t('English Title:'),
-			Titlevalue: EnglishTitle,
-			Titleonchange: handleEnglishTitle,
-
+			titleLabel: t('English Title:'),
 			Address: t('English Address:'),
-			Addresslabel: t('English Address:'),
-			Addressvalue: EnglishAddress,
-			Addresschange: handleEnglishAddress,
-
+			addressLabel: t('English Address:'),
 			subtitle1Label: t('English subtitle 1'),
-			subtitle1value: Englishsubtitle1,
-			subtitle1onchange: handleEnglishsubtitle1,
-
-			Discription1: t('English Discription:'),
-			Discription1value: EnglishDiscription1,
-			Discription1onchange: handleEnglishDiscription1,
-
+			Description1: t('English Description:'),
 			PhoneNumberLabel: t('Phone Number'),
-			PhoneNumberValue: EnglishPhoneNumber,
-			PhoneNumberonchange: handleEnglishPhoneNumber,
-
 			EmailLabel: t('Email'),
-			Emailvalue: EnglishEmail,
-			Emailonchange: handleEnglishEmail,
-
 			subtitle2Label: t('English Subtitle 2'),
-			subtitle2value: EnglishSubtitle2,
-			subtitle2onchange: handleEnglishSubtitle2,
 		},
 		{
+			key: 'ar',
 			title: t('Arabic Title:'),
-			Titlelabel: t('Arabic Title:'),
-			Titlevalue: ArabicTitle,
-			Titleonchange: handleArabicTitle,
+			titleLabel: t('Arabic Title:'),
 			Address: t('Arabic Address:'),
-			Addresslabel: t('Arabic Address:'),
-			Addressvalue: ArabicAddress,
-			Addresschange: handleArabicAddress,
-
+			addressLabel: t('Arabic Address:'),
 			subtitle1Label: t('Arabic subtitle 1'),
-			subtitle1value: Arabicsubtitle1,
-			subtitle1onchange: handleArabicsubtitle1,
-
-			Discription1: t('Arabic Discription:'),
-			Discription1value: ArabicDiscription1,
-			Discription1onchange: handleArabicDiscription1,
-
+			Description1: t('Arabic Description:'),
 			PhoneNumberLabel: t('Phone Number'),
-			PhoneNumberValue: ArabicPhoneNumber,
-			PhoneNumberonchange: handleArabicPhoneNumber,
-
 			EmailLabel: t('Email'),
-			Emailvalue: ArabicEmail,
-			Emailonchange: handleArabicEmail,
-
 			subtitle2Label: t('Arabic Subtitle 2'),
-			subtitle2value: ArabicSubtitle2,
-			subtitle2onchange: handleArabicSubtitle2,
 		},
 	];
+
 	return (
 		<Grid item xs={12}>
 			<Card>
@@ -148,89 +45,87 @@ export default function EditContactUs() {
 							<Typography variant="h6">{t('Editing Contact US Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
-							<Grid item xs={12} md={6}>
+							<Grid key={item.key} item xs={12} md={6}>
 								<Stack direction="column" spacing={2}>
 									{/* {Title} */}
 									<Typography>{item.title}</Typography>
 									<TextField
-										required
-										label={item.Titlelabel}
-										value={item.Titlevalue}
-										onChange={item.Titleonchange}
+										label={item.titleLabel}
+										value={section[item.key].title}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { ...section[item.key], title: value } })}
 										variant="outlined"
 										fullWidth
 									/>
 									{/* {Address} */}
 									<Typography>{item.Address}</Typography>
 									<TextField
-										required
-										label={item.Addresslabel}
-										value={item.Addressvalue}
-										onChange={item.Addresschange}
+										label={item.addressLabel}
+										value={section[item.key].address}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { ...section[item.key], address: value } })}
 										variant="outlined"
 										fullWidth
 									/>
-
 									{/* {Subtitle 1} */}
 									<Typography>{item.subtitle1Label}</Typography>
 									<TextField
-										required
 										label={item.subtitle1Label}
-										value={item.subtitle1value}
-										onChange={item.subtitle1onchange}
+										value={section[item.key].openingDays}
+										onChange={({ target: { value } }) =>
+											setSection({ ...section, [item.key]: { ...section[item.key], openingDays: value } })
+										}
 										variant="outlined"
 										fullWidth
 									/>
-									{/* {subtitle 1 discription} */}
-									<Typography>{item.Discription1}</Typography>
-									<TextareaAutosize
-										required
-										minRows={5}
-										placeholder={item.Discription1}
-										value={item.Discription1value}
-										onChange={item.Discription1onchange}
-										variant="outlined"
-										fullWidth
-									/>
-
-									{/* {Subtitle 2 } */}
-
-									<Typography>{item.subtitle2Label}</Typography>
+									{/* {Subtitle 1} */}
+									<Typography>{item.subtitle1Label}</Typography>
 									<TextField
-										required
-										label={item.subtitle2Label}
-										value={item.subtitle2value}
-										onChange={item.subtitle2onchange}
+										label={item.subtitle1Label}
+										value={section[item.key].openingHoursTitle}
+										onChange={({ target: { value } }) =>
+											setSection({ ...section, [item.key]: { ...section[item.key], openingHoursTitle: value } })
+										}
 										variant="outlined"
 										fullWidth
 									/>
+									{/* {subtitle 1 description} */}
+									<Typography>{item.Description1}</Typography>
+									<TextField
+										placeholder={item.Description1}
+										value={section[item.key].openingHours}
+										onChange={({ target: { value } }) =>
+											setSection({ ...section, [item.key]: { ...section[item.key], openingHours: value } })
+										}
+										variant="outlined"
+										fullWidth
+									/>
+									{/* {Subtitle 2 } */}
+									<Typography>{item.subtitle2Label}</Typography>
+									<TextField label={item.subtitle2Label} variant="outlined" fullWidth />
 									{/* {Phone Number} */}
 									<Typography>{item.PhoneNumberLabel}</Typography>
 									<TextField
-										required
 										label={item.PhoneNumberLabel}
-										value={item.PhoneNumberValue}
-										onChange={item.PhoneNumberonchange}
+										value={section[item.key].phone}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { ...section[item.key], phone: value } })}
 										variant="outlined"
 										fullWidth
 									/>
 									{/* {Email} */}
 									<Typography>{item.EmailLabel}</Typography>
 									<TextField
-										required
 										label={item.EmailLabel}
-										value={item.Emailvalue}
-										onChange={item.Emailonchange}
 										variant="outlined"
+										value={section[item.key].email}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { ...section[item.key], email: value } })}
 										fullWidth
 									/>
 								</Stack>
 							</Grid>
 						))}
 						<Grid item xs={12}>
-							<Button variant="contained" sx={{ backgroundColor: '#524fa1' }}>
+							<LoadingButton variant="outlined" loading={isLoading} onClick={() => onSubmit({ contact: section })}>
 								{t('Submit')}
-							</Button>
+							</LoadingButton>
 						</Grid>
 					</Grid>
 				</CardContent>

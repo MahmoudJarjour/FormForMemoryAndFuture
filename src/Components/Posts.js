@@ -8,7 +8,7 @@ import faker from 'faker';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-const Posts = () => {
+const Posts = ({ data, posts }) => {
 	const { t, i18n } = useTranslation();
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
 	const [selectedPost, setSelectedPost] = useState({});
@@ -23,26 +23,6 @@ const Posts = () => {
 			delay: 100,
 		});
 	}, []);
-	const posts = [
-		{
-			key: 'titlekey1',
-			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'post1.png',
-			body: faker.fake('{{lorem.paragraph}}'),
-		},
-		{
-			key: 'titlekey2',
-			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'post2.png',
-			body: faker.fake('{{lorem.paragraph}}'),
-		},
-		{
-			key: 'titlekey3',
-			title: faker.fake('{{name.firstName}} {{name.lastName}}'),
-			image: 'post3.png',
-			body: faker.fake('{{lorem.paragraph}}'),
-		},
-	];
 
 	const openPost = (post) => {
 		setSelectedPost(post);
@@ -61,7 +41,7 @@ const Posts = () => {
 						</Grid>
 
 						{posts.map((post) => (
-							<Grid item data-aos="flip-down" md={4} xs={12} key={post.key}>
+							<Grid item data-aos="flip-down" md={4} xs={12} key={post.id}>
 								<Card>
 									<CardActionArea onClick={() => openPost(post)}>
 										<CardMedia style={{ paddingTop: '100%' }} image={post.image} />
@@ -83,8 +63,8 @@ const Posts = () => {
 				</DialogTitle>
 				<DialogContent>
 					<Stack direction="column" spacing={3} alignItems="center" justifyContent="center">
-						<img src={selectedPost.image} alt={selectedPost.body} style={{ width: '30%' }} />
-						<Typography>{selectedPost.body}</Typography>
+						<img src={selectedPost.image} alt={selectedPost.text} style={{ width: '30%' }} />
+						<Typography>{selectedPost.text}</Typography>
 					</Stack>
 				</DialogContent>
 			</Dialog>

@@ -53,9 +53,9 @@ export default function UpdatePosts() {
 		SetTitle(event.target.value);
 	};
 
-	const [Discription, SetDiscription] = useState('');
-	const handleDiscription = (event) => {
-		SetDiscription(event.target.value);
+	const [Description, SetDescription] = useState('');
+	const handleDescription = (event) => {
+		SetDescription(event.target.value);
 	};
 
 	const { t } = useTranslation();
@@ -82,13 +82,13 @@ export default function UpdatePosts() {
 									<Typography variant="h6">{t('Title')}</Typography>
 									<TextField required label={t('Enter Post Title')} value={title} onChange={handleTitle} variant="outlined" fullWidth />
 
-									<Typography variant="h6">{t('Discription')}</Typography>
+									<Typography variant="h6">{t('Description')}</Typography>
 									<TextareaAutosize
 										aria-label="minimum height"
 										minRows={5}
-										placeholder={t('Discription')}
-										value={Discription}
-										onChange={handleDiscription}
+										placeholder={t('Description')}
+										value={Description}
+										onChange={handleDescription}
 									/>
 
 									<label htmlFor="contained-button-file">

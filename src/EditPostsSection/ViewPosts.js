@@ -12,37 +12,37 @@ const content = [
 		key: 1,
 		PostTitle: faker.fake('{{name.lastName}}'),
 		PostImage: faker.image.abstract(),
-		postDiscription: faker.lorem.paragraph(),
+		postDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 2,
 		PostTitle: faker.fake('{{name.lastName}}'),
 		PostImage: faker.image.nature(),
-		postDiscription: faker.lorem.paragraph(),
+		postDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 3,
 		PostTitle: faker.fake('{{name.lastName}}'),
 		PostImage: faker.image.nature(),
-		postDiscription: faker.lorem.paragraph(),
+		postDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 4,
 		PostTitle: faker.fake('{{name.lastName}}'),
 		PostImage: faker.image.abstract(),
-		postDiscription: faker.lorem.paragraph(),
+		postDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 5,
 		PostTitle: faker.fake('{{name.lastName}}'),
 		PostImage: faker.image.abstract(),
-		postDiscription: faker.lorem.paragraph(),
+		postDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 6,
 		PostTitle: faker.fake('{{name.lastName}}'),
 		PostImage: faker.image.nature(),
-		postDiscription: faker.lorem.paragraph(),
+		postDescription: faker.lorem.paragraph(),
 	},
 ];
 
@@ -61,7 +61,7 @@ export default function ViewPosts() {
 							}
 						/>
 						<CardMedia image={item.PostImage} sx={{ pt: '100%' }} />
-						<CardContent> {item.postDiscription} </CardContent>
+						<CardContent> {item.postDescription} </CardContent>
 					</Card>
 				</Grid>
 			))}

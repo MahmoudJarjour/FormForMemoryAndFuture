@@ -11,37 +11,37 @@ const content = [
 		key: 1,
 		MemberName: faker.fake('{{name.lastName}}'),
 		MemberImage: faker.image.people(),
-		MemberDiscription: faker.lorem.paragraph(),
+		MemberDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 2,
 		MemberName: faker.fake('{{name.lastName}}'),
 		MemberImage: faker.image.people(),
-		MemberDiscription: faker.lorem.paragraph(),
+		MemberDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 3,
 		MemberName: faker.fake('{{name.lastName}}'),
 		MemberImage: faker.image.people(),
-		MemberDiscription: faker.lorem.paragraph(),
+		MemberDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 4,
 		MemberName: faker.fake('{{name.lastName}}'),
 		MemberImage: faker.image.people(),
-		MemberDiscription: faker.lorem.paragraph(),
+		MemberDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 5,
 		MemberName: faker.fake('{{name.lastName}}'),
 		MemberImage: faker.image.people(),
-		MemberDiscription: faker.lorem.paragraph(),
+		MemberDescription: faker.lorem.paragraph(),
 	},
 	{
 		key: 6,
 		MemberName: faker.fake('{{name.lastName}}'),
 		MemberImage: faker.image.people(),
-		MemberDiscription: faker.lorem.paragraph(),
+		MemberDescription: faker.lorem.paragraph(),
 	},
 ];
 
@@ -60,7 +60,7 @@ export default function ViewMember() {
 							}
 						/>
 						<CardMedia image={item.MemberImage} sx={{ pt: '100%' }} />
-						<CardContent> {item.MemberDiscription} </CardContent>
+						<CardContent> {item.MemberDescription} </CardContent>
 					</Card>
 				</Grid>
 			))}

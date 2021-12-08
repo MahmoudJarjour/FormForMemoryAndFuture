@@ -12,7 +12,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 
-const AboutUs = () => {
+const AboutUs = ({ data }) => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
@@ -29,12 +29,11 @@ const AboutUs = () => {
 				<Grid container spacing={2}>
 					<Grid item data-aos="slide-up" xs={12}>
 						<Typography variant="h3" color="#524fa1" fontWeight="600">
-							{' '}
-							{t('AboutUs')}{' '}
+							{data[i18next.language].title}
 						</Typography>
 					</Grid>
 					<Grid item data-aos="slide-up" xs={12}>
-						<Typography>{t('FirstSectionText')}</Typography>
+						<Typography>{data[i18next.language].description}</Typography>
 					</Grid>
 
 					<Grid item xs={12}>

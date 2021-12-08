@@ -3,10 +3,9 @@ import React from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MailIcon from '@mui/icons-material/Mail';
 import { Box } from '@mui/system';
-import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
-const ContactUs = () => {
-	const { t } = useTranslation();
+const ContactUs = ({ data }) => {
 	return (
 		<Box name="ContactUs" py={15} sx={{ backgroundColor: '#262153' }}>
 			<Container maxWidth="lg">
@@ -15,11 +14,11 @@ const ContactUs = () => {
 						<Grid container spacing={2}>
 							<Grid item xs={12}>
 								<Typography variant="h3" color="white" fontWeight="600">
-									{t('Contact us')}
+									{data[i18next.language].title}
 								</Typography>
 							</Grid>
 							<Grid item xs={12}>
-								<Typography color="white">{t('address')}</Typography>
+								<Typography color="white">{data[i18next.language].address}</Typography>
 							</Grid>
 						</Grid>
 					</Grid>
@@ -31,17 +30,17 @@ const ContactUs = () => {
 							</Grid>
 							<Grid item xs={12} md={11}>
 								<Typography variant="h5" color="white">
-									{t('OPENING HOURS')}
+									{data[i18next.language].openingHoursTitle}
 								</Typography>
 							</Grid>
 							<Grid item xs={12}>
 								<Divider />
 							</Grid>
 							<Grid item xs={12} color="white">
-								{t('Monday - Thursday')}
+								{data[i18next.language].openingDays}
 							</Grid>
 							<Grid item xs={12} color="white">
-								12pm - 10pm
+								{data[i18next.language].openingHours}
 							</Grid>
 						</Grid>
 					</Grid>
@@ -53,17 +52,17 @@ const ContactUs = () => {
 							</Grid>
 							<Grid item xs={11}>
 								<Typography variant="h5" color="white">
-									{t('CONTACT INFO')}
+									{data[i18next.language].contactInfoTitle}
 								</Typography>
 							</Grid>
 							<Grid item xs={12}>
 								<Divider />
 							</Grid>
 							<Grid item xs={12} color="white">
-								+961 1 123 456
+								{data[i18next.language].phone}
 							</Grid>
 							<Grid item xs={12} color="white">
-								memoryfuturelb@gmail.com
+								{data[i18next.language].email}
 							</Grid>
 						</Grid>
 					</Grid>

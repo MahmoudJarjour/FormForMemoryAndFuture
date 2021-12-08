@@ -1,33 +1,26 @@
+import { LoadingButton } from '@mui/lab';
 import { Button, Card, CardContent, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function EditMembersSection() {
+export default function EditMembersSection({ defaultValue, onSubmit, isLoading }) {
 	const { t } = useTranslation();
-	const [EnglishTitle, SetEnglishTitle] = useState('');
-	const handleEnglishTitle = (event) => {
-		SetEnglishTitle(event.target.value);
-	};
 
-	const [ArabicTitle, SetArabicTitle] = useState('');
-	const handleArabicTitle = (event) => {
-		SetArabicTitle(event.target.value);
-	};
+	const [section, setSection] = useState(defaultValue);
 
 	const content = [
 		{
+			key: 'en',
 			title: t('English Title:'),
-			Titlelabel: t('English Title:'),
-			Titlevalue: EnglishTitle,
-			Titleonchange: handleEnglishTitle,
+			titleLabel: t('English Title:'),
 		},
 		{
+			key: 'ar',
 			title: t('Arabic Title:'),
-			Titlelabel: t('Arabic Title:'),
-			Titlevalue: ArabicTitle,
-			Titleonchange: handleArabicTitle,
+			titleLabel: t('Arabic Title:'),
 		},
 	];
+
 	return (
 		<Grid item xs={12}>
 			<Card>
@@ -37,14 +30,14 @@ export default function EditMembersSection() {
 							<Typography variant="h6">{t('Editing Members Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
-							<Grid item xs={12} md={6}>
+							<Grid key={item.key} item xs={12} md={6}>
 								<Stack direction="column" spacing={2}>
 									<Typography>{item.title}</Typography>
 									<TextField
 										required
-										label={item.Titlelabel}
-										value={item.Titlevalue}
-										onChange={item.Titleonchange}
+										label={item.titleLabel}
+										value={section[item.key].title}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { title: value } })}
 										variant="outlined"
 										fullWidth
 									/>
@@ -52,9 +45,9 @@ export default function EditMembersSection() {
 							</Grid>
 						))}
 						<Grid item xs={12}>
-							<Button variant="contained" sx={{ backgroundColor: '#524fa1' }}>
+							<LoadingButton variant="outlined" onClick={() => onSubmit({ members: section })}>
 								{t('Submit')}
-							</Button>
+							</LoadingButton>
 						</Grid>
 					</Grid>
 				</CardContent>

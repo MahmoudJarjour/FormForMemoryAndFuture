@@ -21,13 +21,12 @@
 	"Update Member": "Update Member",
 	"View Member": "View Member",
 
-	"Member Name:":"Member Name:",
-	"Enter Member name":"Enter Member name",
-	"Member Email:":"Member Email:",
-	"Enter Member Email":"Enter Member Email",
-"Member Discription:":"Member Discription:",
-"Discription":"Discription",
-
+	"Member Name:": "Member Name:",
+	"Enter Member name": "Enter Member name",
+	"Member Email:": "Member Email:",
+	"Enter Member Email": "Enter Member Email",
+	"Member Description:": "Member Description:",
+	"Description": "Description",
 
 	"DashBoard": "DashBoard",
 	"POSTS": "POSTS",
@@ -74,7 +73,7 @@
 	"Subscribers": "SUBSCRIBERS",
 	"Contact Info": "CONTACT INFO",
 	"Social Icons": "Social Icons",
-	"CONTENT INFO":"CONTENT INFO",
+	"CONTENT INFO": "CONTENT INFO",
 
 	"First Section": "First Section",
 
@@ -93,56 +92,50 @@
 	"Create Post": "Create Post",
 	"Update Post": "Update Post",
 	"View Posts": "View Posts",
-	"English Video:":"English Video:",
-	"Arabic Video:":"Arabic Video:",
-	"Enter URL Of Video":"Enter URL Of Video",
-	"Update":"Update",
+	"English Video:": "English Video:",
+	"Arabic Video:": "Arabic Video:",
+	"Enter URL Of Video": "Enter URL Of Video",
+	"Update": "Update",
 
-	"Title":"Post Title",
-	"Enter Post Title":"Enter Post Title",
-	"Upload Image":"Upload Image",
-	"Create":"Create",
+	"Title": "Post Title",
+	"Enter Post Title": "Enter Post Title",
+	"Upload Image": "Upload Image",
+	"Create": "Create",
 
-	"Search for Post...":"Search for Post...",
+	"Search for Post...": "Search for Post...",
 
+	"English Title:": "English Title:",
+	"English Description:": "English Description:",
+	"Arabic Title:": "Arabic Title:",
+	"Arabic Description:": "Arabic Description:",
 
-	"English Title:":"English Title:",
-	"English Discription:":"English Discription:",
-	"Arabic Title:":"Arabic Title:"	,
-	"Arabic Discription:":"Arabic Discription:"	,
+	"English Block Title": "English Block Title",
+	"English Block Description": "English Block Description",
+	"Arabic Block Title": "Arabic Block Title",
+	"Arabic Block Description:": "Arabic Block Description:",
 
-	"English Block Title":"English Block Title",
-	"English Block Discription":"English Block Discription",
-	"Arabic Block Title":"Arabic Block Title",
-	"Arabic Block Discription:":"Arabic Block Discription:",
+	"English Post Title:": "English Post Title:",
+	"Enter English Post Title": "Enter English Post Title",
+	"Arabic Post Title:": "Arabic Post Title:",
+	"Enter Arabic Post Title": "Enter Arabic Post Title",
 
-	"English Post Title:":"English Post Title:",
-	"Enter English Post Title":"Enter English Post Title",
-	"Arabic Post Title:":"Arabic Post Title:",
-	"Enter Arabic Post Title":"Enter Arabic Post Title",
+	"Item in English": "news in English",
+	"Item in Arabic": "news in Arabic",
 
+	"Add Item to list": "Add news to list",
+	"Remove Item from list": "Remove news from list",
 
-	"Item in English":"news in English",
-	"Item in Arabic":"news in Arabic",
+	"English Address:": "English Address:",
+	"Arabic Address:": "Arabic Address:",
 
+	"English subtitle 1": "English subtitle 1",
+	"Arabic subtitle 1": "Arabic subtitle 1",
+	"Phone Number": "Phone Number",
+	"English Subtitle 2": "English Subtitle 2",
+	"Arabic Subtitle 2": "Arabic Subtitle 2",
 
-	"Add Item to list":"Add news to list",
-	"Remove Item from list":"Remove news from list",
+	"Site URL:": "Site URL:",
+	"Choose an icon": "Choose an icon",
 
-	"English Address:":"English Address:",
-	"Arabic Address:":"Arabic Address:",
-
-	"English subtitle 1":"English subtitle 1",
-	"Arabic subtitle 1":"Arabic subtitle 1",
-	"Phone Number":"Phone Number",
-	"English Subtitle 2":"English Subtitle 2",
-	"Arabic Subtitle 2":"Arabic Subtitle 2",
-
-
-	"Site URL:":"Site URL:",
-	"Choose an icon":"Choose an icon",
-
-	"Third Section":"Third Section"
-
-
+	"Third Section": "Third Section"
 }

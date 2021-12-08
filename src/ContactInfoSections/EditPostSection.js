@@ -1,49 +1,55 @@
+import { LoadingButton } from '@mui/lab';
 import { Button, Card, CardContent, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-export default function EditPostSection() {
-	const { t } = useTranslation();
-	const [EnglishPostTitle, SetEnglishPostTitle] = useState('');
-	const handleEnglishPostTitle = (event) => {
-		SetEnglishPostTitle(event.target.value);
-	};
 
-	const [ArabicPostTitle, SetArabicPostTitle] = useState('');
-	const handleArabicPostTitle = (event) => {
-		SetArabicPostTitle(event.target.value);
-	};
+export default function EditPostsSection({ defaultValue, onSubmit, isLoading }) {
+	const { t } = useTranslation();
+
+	const [section, setSection] = useState(defaultValue);
 
 	const content = [
 		{
-			Posttitle: t('English Post Title:'),
-			PostTitlelabel: t('Enter English Post Title'),
-			PostTitlevalue: EnglishPostTitle,
-			PostTitleonchange: handleEnglishPostTitle,
+			key: 'en',
+			title: t('English Title:'),
+			titleLabel: t('English Title:'),
+			description: t('Arabic Description:'),
+			descriptionLabel: t('Arabic Description:'),
 		},
 		{
-			Posttitle: t('Arabic Post Title:'),
-			PostTitlelabel: t('Enter Arabic Post Title'),
-			PostTitlevalue: ArabicPostTitle,
-			PostTitleonchange: handleArabicPostTitle,
+			key: 'ar',
+			title: t('Arabic Title:'),
+			titleLabel: t('Arabic Title:'),
+			description: t('Arabic Description:'),
+			descriptionLabel: t('Arabic Description:'),
 		},
 	];
+
 	return (
 		<Grid item xs={12}>
 			<Card>
 				<CardContent>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
-							<Typography variant="h6">{t('Editing Posts Section')}</Typography>
+							<Typography variant="h6">{t('Editing Post Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
-							<Grid item xs={12} md={6}>
+							<Grid key={item.key} item xs={12} md={6}>
 								<Stack direction="column" spacing={2}>
-									<Typography>{item.Posttitle}</Typography>
+									<Typography>{item.title}</Typography>
 									<TextField
-										required
-										label={item.PostTitlelabel}
-										value={item.PostTitlevalue}
-										onChange={item.PostTitleonchange}
+										label={item.titleLabel}
+										value={section[item.key].title}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { title: value } })}
+										variant="outlined"
+										fullWidth
+									/>
+
+									<Typography>{item.description}</Typography>
+									<TextField
+										label={item.descriptionLabel}
+										value={section[item.key].description}
+										onChange={({ target: { value } }) => setSection({ ...section, [item.key]: { description: value } })}
 										variant="outlined"
 										fullWidth
 									/>
@@ -51,9 +57,9 @@ export default function EditPostSection() {
 							</Grid>
 						))}
 						<Grid item xs={12}>
-							<Button variant="contained" sx={{ backgroundColor: '#524fa1' }}>
+							<LoadingButton variant="outlined" onClick={() => onSubmit({ posts: section })}>
 								{t('Submit')}
-							</Button>
+							</LoadingButton>
 						</Grid>
 					</Grid>
 				</CardContent>

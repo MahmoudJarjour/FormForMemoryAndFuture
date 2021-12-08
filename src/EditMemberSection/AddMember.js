@@ -9,9 +9,9 @@ export default function AddMember() {
 	const handleUserName = (event) => {
 		SetUsername(event.target.value);
 	};
-	const [Discription, SetDiscription] = useState('');
-	const handleDiscription = (event) => {
-		SetDiscription(event.target.value);
+	const [Description, SetDescription] = useState('');
+	const handleDescription = (event) => {
+		SetDescription(event.target.value);
 	};
 
 	const [userEmail, SetUserEmail] = useState('');
@@ -31,13 +31,13 @@ export default function AddMember() {
 							<Typography variant="h6">{t('Member Email:')}</Typography>
 							<TextField required label={t('Enter Member Email')} value={userEmail} onChange={handleUserEmail} variant="outlined" fullWidth />
 
-							<Typography variant="h6">{t('Member Discription:')}</Typography>
+							<Typography variant="h6">{t('Member Description:')}</Typography>
 							<TextareaAutosize
 								aria-label="minimum height"
 								minRows={5}
-								placeholder={t('Discription')}
-								value={Discription}
-								onChange={handleDiscription}
+								placeholder={t('Description')}
+								value={Description}
+								onChange={handleDescription}
 							/>
 
 							<Grid container justifyContent="center" alignItems="center">

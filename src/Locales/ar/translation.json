@@ -21,12 +21,12 @@
 	"Update Member": "تعديل عضو",
 	"View Member": "عرض الأعضاء",
 
-	"Member Name:":"اسم الشخص:",
-	"Enter Member name":"أدخل اسم الشخص",
-	"Member Email:":"البريد اللالكتروني للشخص:",
-	"Enter Member Email":"أدخل البريد الالكتروني",
-	"Member Discription:":"وصف الشخص: ",
-	"Discription":"الوصف",
+	"Member Name:": "اسم الشخص:",
+	"Enter Member name": "أدخل اسم الشخص",
+	"Member Email:": "البريد اللالكتروني للشخص:",
+	"Enter Member Email": "أدخل البريد الالكتروني",
+	"Member Description:": "وصف الشخص: ",
+	"Description": "الوصف",
 
 	"DashBoard": "لوحة القيادة",
 	"POSTS": "المنشورات",
@@ -37,7 +37,7 @@
 	"Enter your name": "أدخل الاسم ",
 	"Enter your Email": "أدخل البريد الالكتروني",
 	"Contact us": "للتواصل معنا",
-	"CONTENT INFO":"معلومات الأقسام",
+	"CONTENT INFO": "معلومات الأقسام",
 
 	"--- Please Choose ----": "--- من فضلك اختر ----",
 
@@ -93,55 +93,49 @@
 	"Update Post": "تعديل منشور",
 	"View Posts": "عرض المنشورات",
 
+	"English Video:": "الفيديو بالانكليزي",
+	"Arabic Video:": "الفيديو بالعربي",
+	"Enter URL Of Video": "ادخل رابط الفيديو",
+	"Update": "تعديل",
 
-	"English Video:":"الفيديو بالانكليزي",
-	"Arabic Video:":"الفيديو بالعربي",
-	"Enter URL Of Video":"ادخل رابط الفيديو",
-	"Update":"تعديل",
+	"Title": "عنوان المنشور ",
+	"Enter Post Title": "أدخل عنوان البوست",
+	"Upload Image": "تحميل صورة",
+	"Create": "إنشاء",
 
+	"Search for Post...": "البحث عن المنشور ...",
 
-	"Title":"عنوان المنشور ",
-	"Enter Post Title":"أدخل عنوان البوست",
-	"Upload Image":"تحميل صورة",
-	"Create":"إنشاء",
+	"English Title:": "العنوان بالانكليزي",
+	"English Description:": "الوصف بالانكليزي",
+	"Arabic Title:": "العنوان بالعربي",
+	"Arabic Description:": "الوصف بالعربي",
 
-	"Search for Post...":"البحث عن المنشور ...",
+	"English Block Title": "عنوان القسم بالانكليزي",
+	"English Block Description": "وصق القسم بالانكليزي",
+	"Arabic Block Title": "عنوان القسم بالعربي",
+	"Arabic Block Description:": "وصف القسم بالعربي",
 
-	"English Title:":"العنوان بالانكليزي",
-	"English Discription:":"الوصف بالانكليزي",
-	"Arabic Title:":"العنوان بالعربي"	,
-	"Arabic Discription:":"الوصف بالعربي"	,
+	"English Post Title:": "عنوان المنشور بالانكليزي",
+	"Enter English Post Title": "أدخل عنوان المنشور بالانكليزي",
+	"Arabic Post Title:": "عنوان المنشور بالعربي",
+	"Enter Arabic Post Title": "أدخل عنوان المنشور بالعربي",
 
+	"Item in English": "الخبر بالانكليزي",
+	"Item in Arabic": "الخبر بالعربي",
+	"Add Item to list": "إضافة خبر",
+	"Remove Item from list": "حذف خبر",
 
-	"English Block Title":"عنوان القسم بالانكليزي",
-	"English Block Discription":"وصق القسم بالانكليزي",
-	"Arabic Block Title":"عنوان القسم بالعربي",
-	"Arabic Block Discription:":"وصف القسم بالعربي",
+	"English Address:": "العنوان بالانكليزي",
+	"Arabic Address:": "العنوان بالعربي",
 
-	"English Post Title:":"عنوان المنشور بالانكليزي",
-	"Enter English Post Title":"أدخل عنوان المنشور بالانكليزي",
-	"Arabic Post Title:":"عنوان المنشور بالعربي",
-	"Enter Arabic Post Title":"أدخل عنوان المنشور بالعربي",
+	"English subtitle 1": "العنوان الفرعي الأول بالانكليزي",
+	"Arabic subtitle 1": "العنوان الفرعي الأول بالعربي",
+	"Phone Number": "الهاتف",
+	"English Subtitle 2": "العنوان الفرعي الثاني بالانكليزي",
+	"Arabic Subtitle 2": "العنوان الفرعي الثاني بالعربي",
 
-	"Item in English":"الخبر بالانكليزي",
-	"Item in Arabic":"الخبر بالعربي",
-	"Add Item to list":"إضافة خبر",
-	"Remove Item from list":"حذف خبر",
+	"Site URL:": "ال URL للموقع",
+	"Choose an icon": "اختر أيقونة ",
 
-	"English Address:":"العنوان بالانكليزي",
-	"Arabic Address:":"العنوان بالعربي",
-
-
-	"English subtitle 1":"العنوان الفرعي الأول بالانكليزي",
-	"Arabic subtitle 1":"العنوان الفرعي الأول بالعربي",
-	"Phone Number":"الهاتف",
-	"English Subtitle 2":"العنوان الفرعي الثاني بالانكليزي",
-	"Arabic Subtitle 2":"العنوان الفرعي الثاني بالعربي",
-
-	"Site URL:":"ال URL للموقع",
-	"Choose an icon":"اختر أيقونة ",
-
-
-	"Third Section":"القسم الثالث"
-
+	"Third Section": "القسم الثالث"
 }

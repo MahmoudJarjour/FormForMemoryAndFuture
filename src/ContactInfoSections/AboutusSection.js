@@ -2,16 +2,16 @@ import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } 
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function AboutusSection() {
+export default function AboutUsSection() {
 	const { t } = useTranslation();
 	const [EnglishTitle, SetEnglishTitle] = useState('');
 	const handleEnglishTitle = (event) => {
 		SetEnglishTitle(event.target.value);
 	};
 
-	const [EnglishDiscription, SetEnglishDiscription] = useState('');
-	const handleEnglishDiscription = (event) => {
-		SetEnglishDiscription(event.target.value);
+	const [EnglishDescription, SetEnglishDescription] = useState('');
+	const handleEnglishDescription = (event) => {
+		SetEnglishDescription(event.target.value);
 	};
 
 	const [ArabicTitle, SetArabicTitle] = useState('');
@@ -19,9 +19,9 @@ export default function AboutusSection() {
 		SetArabicTitle(event.target.value);
 	};
 
-	const [ArabicDiscription, SetArabicDiscription] = useState('');
-	const handleArabicDiscription = (event) => {
-		SetArabicDiscription(event.target.value);
+	const [ArabicDescription, SetArabicDescription] = useState('');
+	const handleArabicDescription = (event) => {
+		SetArabicDescription(event.target.value);
 	};
 
 	const [EnglishBlockTitle, SetEnglishBlockTitle] = useState('');
@@ -29,9 +29,9 @@ export default function AboutusSection() {
 		SetEnglishBlockTitle(event.target.value);
 	};
 
-	const [EnglishBlockDiscription, SetEnglishBlockDiscription] = useState('');
-	const handleEnglishBlockDiscription = (event) => {
-		SetEnglishBlockDiscription(event.target.value);
+	const [EnglishBlockDescription, SetEnglishBlockDescription] = useState('');
+	const handleEnglishBlockDescription = (event) => {
+		SetEnglishBlockDescription(event.target.value);
 	};
 
 	const [ArabicBlockTitle, SetArabicBlockTitle] = useState('');
@@ -39,9 +39,9 @@ export default function AboutusSection() {
 		SetArabicBlockTitle(event.target.value);
 	};
 
-	const [ArabicBlockDiscription, SetArabicBlockDiscription] = useState('');
-	const handleArabicBlockDiscription = (event) => {
-		SetArabicBlockDiscription(event.target.value);
+	const [ArabicBlockDescription, SetArabicBlockDescription] = useState('');
+	const handleArabicBlockDescription = (event) => {
+		SetArabicBlockDescription(event.target.value);
 	};
 
 	const [EnglishImage, SetEnglishImage] = useState([]);
@@ -61,10 +61,10 @@ export default function AboutusSection() {
 			Titlevalue: EnglishTitle,
 			Titleonchange: handleEnglishTitle,
 
-			Discription: t('English Discription:'),
-			Discriptionlabel: t('English Discription:'),
-			Discriptionvalue: EnglishDiscription,
-			Discriptionchange: handleEnglishDiscription,
+			Description: t('English Description:'),
+			Descriptionlabel: t('English Description:'),
+			Descriptionvalue: EnglishDescription,
+			Descriptionchange: handleEnglishDescription,
 
 			imageTitle: t('Upload Image'),
 			imageValue: EnglishImage,
@@ -76,10 +76,10 @@ export default function AboutusSection() {
 			BlockTitlevalue: EnglishBlockTitle,
 			BlockTitleonchange: handleEnglishBlockTitle,
 
-			BlockDiscription: t('English Block Discription'),
-			BlockDiscriptionlabel: t('English Block Discription'),
-			BlockDiscriptionvalue: EnglishBlockDiscription,
-			BlockDiscriptionchange: handleEnglishBlockDiscription,
+			BlockDescription: t('English Block Description'),
+			BlockDescriptionlabel: t('English Block Description'),
+			BlockDescriptionvalue: EnglishBlockDescription,
+			BlockDescriptionchange: handleEnglishBlockDescription,
 		},
 		{
 			title: t('Arabic Title:'),
@@ -87,10 +87,10 @@ export default function AboutusSection() {
 			Titlevalue: ArabicTitle,
 			Titleonchange: handleArabicTitle,
 
-			Discription: t('Arabic Discription:'),
-			Discriptionlabel: t('Arabic Discription:'),
-			Discriptionvalue: ArabicDiscription,
-			Discriptionchange: handleArabicDiscription,
+			Description: t('Arabic Description:'),
+			Descriptionlabel: t('Arabic Description:'),
+			Descriptionvalue: ArabicDescription,
+			Descriptionchange: handleArabicDescription,
 
 			imageTitle: t('Upload Image'),
 			imageValue: ArabicImage,
@@ -102,10 +102,10 @@ export default function AboutusSection() {
 			BlockTitlevalue: ArabicBlockTitle,
 			BlockTitleonchange: handleArabicBlockTitle,
 
-			BlockDiscription: t('Arabic Block Discription:'),
-			BlockDiscriptionlabel: t('Arabic Block Discription:'),
-			BlockDiscriptionvalue: ArabicBlockDiscription,
-			BlockDiscriptionchange: handleArabicBlockDiscription,
+			BlockDescription: t('Arabic Block Description:'),
+			BlockDescriptionlabel: t('Arabic Block Description:'),
+			BlockDescriptionvalue: ArabicBlockDescription,
+			BlockDescriptionchange: handleArabicBlockDescription,
 		},
 	];
 	return (
@@ -129,12 +129,12 @@ export default function AboutusSection() {
 										fullWidth
 									/>
 
-									<Typography>{item.Discription}</Typography>
+									<Typography>{item.Description}</Typography>
 									<TextField
 										required
-										label={item.Discriptionlabel}
-										value={item.Discriptionvalue}
-										onChange={item.Discriptionchange}
+										label={item.Descriptionlabel}
+										value={item.Descriptionvalue}
+										onChange={item.Descriptionchange}
 										variant="outlined"
 										fullWidth
 									/>
@@ -153,12 +153,12 @@ export default function AboutusSection() {
 										fullWidth
 									/>
 
-									<Typography>{item.BlockDiscription}</Typography>
+									<Typography>{item.BlockDescription}</Typography>
 									<TextField
 										required
-										label={item.BlockDiscriptionlabel}
-										value={item.BlockDiscriptionvalue}
-										onChange={item.BlockDiscriptionchange}
+										label={item.BlockDescriptionlabel}
+										value={item.BlockDescriptionvalue}
+										onChange={item.BlockDescriptionchange}
 										variant="outlined"
 										fullWidth
 									/>

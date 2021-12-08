@@ -1,24 +1,17 @@
-import { Button, Card, CardContent, Grid, Input, Stack, TextField, Typography } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
+import { Card, CardContent, Grid, Stack, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function EditSocialIcons() {
-	const [Urlicon, SetUrlicon] = useState('');
-
-	const handleUrlicon = (event) => {
-		SetUrlicon(event.target.value);
-	};
-
-	const [Image, SetImage] = useState('');
-
-	const handleImage = (event) => {
-		SetImage(event.target.value);
-	};
+export default function EditSocialIcons({ isLoading, onSubmit, defaultValue }) {
 	const { t } = useTranslation();
+
+	const [section, setSection] = useState(defaultValue);
+
 	return (
-		<Grid contianer spacing={2} justifyContent="center" alignItems="center">
+		<Grid container spacing={2} justifyContent="center" alignItems="center">
 			<Grid item xs={12}>
-				<Card variant="none">
+				<Card>
 					<CardContent>
 						<Grid container spacing={2}>
 							<Grid item xs={12}>
@@ -26,19 +19,54 @@ export default function EditSocialIcons() {
 							</Grid>
 							<Grid item xs={12}>
 								<Stack direction="column" spacing={2}>
-									<Typography> {t('Site URL:')}</Typography>
-									<TextField required label={t('Site URL:')} value={Urlicon} onChange={handleUrlicon} variant="outlined" fullWidth />
-
-									<Typography>{t('Choose an icon')}</Typography>
-									<label htmlFor="contained-button-file">
-										<Input accept="image/*" multiple type="file" value={Image} onChange={handleImage} />
-									</label>
+									<Typography>Facebook</Typography>
+									<TextField
+										value={section.facebook}
+										onChange={({ target: { value } }) => setSection({ ...section, facebook: value })}
+										variant="outlined"
+										fullWidth
+									/>
+									<Typography>Instagram</Typography>
+									<TextField
+										value={section.instagram}
+										onChange={({ target: { value } }) => setSection({ ...section, instagram: value })}
+										variant="outlined"
+										fullWidth
+									/>
+									<Typography>Twitter</Typography>
+									<TextField
+										value={section.twitter}
+										onChange={({ target: { value } }) => setSection({ ...section, twitter: value })}
+										variant="outlined"
+										fullWidth
+									/>
+									<Typography>Youtube</Typography>
+									<TextField
+										value={section.youtube}
+										onChange={({ target: { value } }) => setSection({ ...section, youtube: value })}
+										variant="outlined"
+										fullWidth
+									/>
+									<Typography>LinkedIn</Typography>
+									<TextField
+										value={section.linkedin}
+										onChange={({ target: { value } }) => setSection({ ...section, linkedin: value })}
+										variant="outlined"
+										fullWidth
+									/>
+									<Typography>TikTok</Typography>
+									<TextField
+										value={section.tiktok}
+										onChange={({ target: { value } }) => setSection({ ...section, tiktok: value })}
+										variant="outlined"
+										fullWidth
+									/>
 								</Stack>
 							</Grid>
 							<Grid item xs={12}>
-								<Button variant="contained" component="span">
+								<LoadingButton loading={isLoading} variant="outlined" onClick={() => onSubmit({ footer: section })}>
 									{t('Update')}
-								</Button>
+								</LoadingButton>
 							</Grid>
 						</Grid>
 					</CardContent>

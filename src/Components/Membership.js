@@ -5,8 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import i18next from 'i18next';
 
-const Membership = () => {
+const Membership = ({ data }) => {
 	const [news, setNews] = useState('');
 	const handleChange = (event) => {
 		setNews(event.target.value);
@@ -39,29 +40,36 @@ const Membership = () => {
 				<Grid container spacing={2}>
 					<Grid item data-aos="slide-up" xs={12}>
 						<Typography variant="h3" color="#524fa1" fontWeight="600">
-							{t('Membership')}
+							{data[i18next.language].title}
 						</Typography>
 					</Grid>
 
 					<Grid item data-aos="fade-in" xs={12}>
-						<Typography>{t('If you agree with the principles')}</Typography>
+						<Typography>{data[i18next.language].description}</Typography>
 					</Grid>
 
 					<Grid item data-aos="fade-in" xs={12}>
 						<Stack direction="column" spacing={1}>
-							<TextField required label={t('Enter your name')} value={username} onChange={handleUserName} variant="outlined" fullWidth />
-							<TextField required label={t('Enter your Email')} value={userEmail} onChange={handleUserEmail} variant="outlined" fullWidth />
+							<TextField required label={data[i18next.language].name} value={username} onChange={handleUserName} variant="outlined" fullWidth />
+							<TextField
+								required
+								label={data[i18next.language].email}
+								value={userEmail}
+								onChange={handleUserEmail}
+								variant="outlined"
+								fullWidth
+							/>
 							<FormControl fullWidth required>
 								<InputLabel>{t('News')}</InputLabel>
-								<Select value={news} label="News *" onChange={handleChange}>
+								<Select value={news} label={data[i18next.language].type} onChange={handleChange}>
 									<MenuItem value="">
 										<em>{t('--- Please Choose ----')}</em>
 									</MenuItem>
-									<MenuItem value={10}>{t('Economic')}</MenuItem>
-									<MenuItem value={20}>{t('Political')}</MenuItem>
-									<MenuItem value={30}>{t('Weather news')}</MenuItem>
-									<MenuItem value={40}>{t('Fashion')}</MenuItem>
-									<MenuItem value={50}>{t('Art')}</MenuItem>
+									{data[i18next.language].types.map((item) => (
+										<MenuItem key={item} value={item}>
+											{item}
+										</MenuItem>
+									))}
 								</Select>
 							</FormControl>
 						</Stack>
