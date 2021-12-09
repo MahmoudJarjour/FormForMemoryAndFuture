@@ -16,7 +16,10 @@ export default function EditMemberShipSection({ defaultValue, isLoading, onSubmi
 			description: t('English Description:'),
 			descriptionLabel: t('English Description:'),
 			name: t('English Name'),
+			email: t('English Email'),
+			newsType: t('English newsTypes'),
 			nameLabel: t('English Name'),
+
 			newsLabel: t('Item in English'),
 		},
 		{
@@ -27,6 +30,8 @@ export default function EditMemberShipSection({ defaultValue, isLoading, onSubmi
 			descriptionLabel: t('Arabic Description:'),
 			name: t('Arabic Name'),
 			nameLabel: t('Arabic Name'),
+			email: t('Arabic Email'),
+			newsType: t('Arabic newsTypes'),
 			newsLabel: t('Item in Arabic'),
 		},
 	];
@@ -89,7 +94,7 @@ export default function EditMemberShipSection({ defaultValue, isLoading, onSubmi
 										variant="outlined"
 										fullWidth
 									/>
-									<Typography>{item.options}</Typography>
+									<Typography>{item.newsType}</Typography>
 									<TextField
 										required
 										label={item.optionsLabel}

@@ -1,6 +1,7 @@
 import { collection, doc, getDoc, getDocs } from '@firebase/firestore';
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import AboutUs from '../Components/AboutUs';
 import ContactUs from '../Components/ContactUs';
 import FirstSection from '../Components/FirstSection';
@@ -41,15 +42,24 @@ const Home = () => {
 	useEffect(() => {
 		init();
 	}, [init]);
-
+	const { t } = useTranslation();
 	return (
 		<>
 			{isLoading ? (
-				<CircularProgress />
+				<>
+					<Grid container direction="column" sx={{ minHeight: '100vh' }} justifyContent="center" alignItems="center">
+						<Grid item xs={12}>
+							<CircularProgress />
+						</Grid>
+						<Grid item xs={12}>
+							<Typography>{t('loading')}</Typography>
+						</Grid>
+					</Grid>
+				</>
 			) : (
 				<>
 					<Header data={data} />
-					<FirstSection data={data.header} />}
+					<FirstSection data={data.header} />
 					<Video data={data.video} />
 					<Members data={data.members} members={data.listOfMembers} />
 					<AboutUs data={data.about} />

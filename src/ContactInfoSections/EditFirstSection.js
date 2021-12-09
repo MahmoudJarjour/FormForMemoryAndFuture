@@ -30,8 +30,8 @@ export default function EditFirstSection({ isLoading, defaultValue, onSubmit }) 
 			key: 'en',
 			title: t('English Title:'),
 			titleLabel: t('English Title:'),
-			description: t('Arabic Description:'),
-			descriptionLabel: t('Arabic Description:'),
+			description: t('English Description:'),
+			descriptionLabel: t('English Description:'),
 			imageTitle: t('Upload Image'),
 		},
 		{

@@ -19,42 +19,42 @@ export default function EditSocialIcons({ isLoading, onSubmit, defaultValue }) {
 							</Grid>
 							<Grid item xs={12}>
 								<Stack direction="column" spacing={2}>
-									<Typography>Facebook</Typography>
+									<Typography>{t('Facebook')}</Typography>
 									<TextField
 										value={section.facebook}
 										onChange={({ target: { value } }) => setSection({ ...section, facebook: value })}
 										variant="outlined"
 										fullWidth
 									/>
-									<Typography>Instagram</Typography>
+									<Typography>{t('Instagram')}</Typography>
 									<TextField
 										value={section.instagram}
 										onChange={({ target: { value } }) => setSection({ ...section, instagram: value })}
 										variant="outlined"
 										fullWidth
 									/>
-									<Typography>Twitter</Typography>
+									<Typography>{t('Twitter')}</Typography>
 									<TextField
 										value={section.twitter}
 										onChange={({ target: { value } }) => setSection({ ...section, twitter: value })}
 										variant="outlined"
 										fullWidth
 									/>
-									<Typography>Youtube</Typography>
+									<Typography>{t('Youtube')}</Typography>
 									<TextField
 										value={section.youtube}
 										onChange={({ target: { value } }) => setSection({ ...section, youtube: value })}
 										variant="outlined"
 										fullWidth
 									/>
-									<Typography>LinkedIn</Typography>
+									<Typography>{t('LinkedIn')}</Typography>
 									<TextField
 										value={section.linkedin}
 										onChange={({ target: { value } }) => setSection({ ...section, linkedin: value })}
 										variant="outlined"
 										fullWidth
 									/>
-									<Typography>TikTok</Typography>
+									<Typography>{t('TikTok')}</Typography>
 									<TextField
 										value={section.tiktok}
 										onChange={({ target: { value } }) => setSection({ ...section, tiktok: value })}
