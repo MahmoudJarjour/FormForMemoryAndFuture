@@ -13,8 +13,8 @@ export default function EditPostsSection({ defaultValue, onSubmit, isLoading }) 
 			key: 'en',
 			title: t('English Title:'),
 			titleLabel: t('English Title:'),
-			description: t('Arabic Description:'),
-			descriptionLabel: t('Arabic Description:'),
+			description: t('English Description:'),
+			descriptionLabel: t('English Description:'),
 		},
 		{
 			key: 'ar',
@@ -31,7 +31,7 @@ export default function EditPostsSection({ defaultValue, onSubmit, isLoading }) 
 				<CardContent>
 					<Grid container spacing={2}>
 						<Grid item xs={12}>
-							<Typography variant="h6">{t('Editing Post Section')}</Typography>
+							<Typography variant="h6">{t('Editing Posts Section')}</Typography>
 						</Grid>
 						{content.map((item) => (
 							<Grid key={item.key} item xs={12} md={6}>

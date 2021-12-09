@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function AboutUsSection() {
 	const { t } = useTranslation();
+
 	const [EnglishTitle, SetEnglishTitle] = useState('');
 	const handleEnglishTitle = (event) => {
 		SetEnglishTitle(event.target.value);

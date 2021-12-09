@@ -76,17 +76,7 @@ export default function EditContactUs({ isLoading, defaultValue, onSubmit }) {
 										variant="outlined"
 										fullWidth
 									/>
-									{/* {Subtitle 1} */}
-									<Typography>{item.subtitle1Label}</Typography>
-									<TextField
-										label={item.subtitle1Label}
-										value={section[item.key].openingHoursTitle}
-										onChange={({ target: { value } }) =>
-											setSection({ ...section, [item.key]: { ...section[item.key], openingHoursTitle: value } })
-										}
-										variant="outlined"
-										fullWidth
-									/>
+
 									{/* {subtitle 1 description} */}
 									<Typography>{item.Description1}</Typography>
 									<TextField

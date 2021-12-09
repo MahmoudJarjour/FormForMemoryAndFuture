@@ -60,6 +60,16 @@
 	"Password": "Password",
 	"Sign up": "Sign Up",
 
+
+	"English Name":"English Name",
+	"Arabic Name":"Arabic Name",
+
+
+	"English Email":"English Email",
+	"Arabic Email":"Arabic Email",
+
+
+
 	"Already have an account? Sign in": "Already have an account? Sign in",
 	"I want to receive news and updates via email.": "I want to receive news and updates via email.",
 
@@ -78,8 +88,8 @@
 	"First Section": "First Section",
 
 	"Editing First Section": "Editing First Page",
-	"Editing Members Section": "Editing  ",
-	"Editing About Us Section": "Editing ",
+	"Editing Members Section": "Editing Members",
+	"Editing About Us Section": "Editing About Us",
 	"Editing Posts Section": "Editing Posts ",
 	"Editing Membership section": "Editing Membership ",
 	"Editing Contact US Section": "Editing Contact US ",
@@ -101,8 +111,11 @@
 	"Enter Post Title": "Enter Post Title",
 	"Upload Image": "Upload Image",
 	"Create": "Create",
+	"loading":"Loading",
 
 	"Search for Post...": "Search for Post...",
+	"English newsTypes":"All English News with  \" , \" between",
+	"Arabic newsTypes":"All Arabic News with \" , \" between",
 
 	"English Title:": "English Title:",
 	"English Description:": "English Description:",
@@ -136,6 +149,13 @@
 
 	"Site URL:": "Site URL:",
 	"Choose an icon": "Choose an icon",
+
+	"Facebook":"Facebook",
+	"Instagram":"Instagram",
+	"Twitter":"Twitter",
+	"Youtube":"Youtube",
+	"LinkedIn":"LinkedIn",
+	"TikTok":"TikTok",
 
 	"Third Section": "Third Section"
 }
