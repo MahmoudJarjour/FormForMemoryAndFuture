@@ -23,12 +23,7 @@ const Home = () => {
 		const membersRequest = await getDocs(collection(db, 'members'));
 		const listOfPostsRequest = await getDocs(collection(db, 'posts'));
 		const dataRequest = await getDoc(doc(db, 'info', 'website'));
-		console.log({
-			video: videoRequest.data(),
-			listOfMembers: membersRequest.docs.map((item) => item.data()),
-			listOfPosts: listOfPostsRequest.docs.map((item) => item.data()),
-			...dataRequest.data(),
-		});
+
 		setData({
 			video: videoRequest.data(),
 			listOfMembers: membersRequest.docs.map((item) => ({ ...item.data(), id: item.id })),

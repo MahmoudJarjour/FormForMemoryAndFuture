@@ -192,7 +192,7 @@ const Header = ({ data }) => {
 
 									<Grid item>
 										<Button
-											href={i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '')}
+											href={i18next.language === 'en' ? window.location.origin.replace('/en', '') : window.location.origin + '/en'}
 											variant="none"
 										>
 											<Typography>{i18n.language === 'ar' ? 'English' : 'العربية'}</Typography>

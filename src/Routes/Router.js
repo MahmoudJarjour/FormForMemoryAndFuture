@@ -14,15 +14,14 @@ import AdminPanel from '../Dashboard/AdminPanel';
 import PrivateRoute from './PrivateRoute';
 import { AuthContextProvider } from '../firebase';
 
-const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
+const getLanguage = () => i18next.language;
 
 const cacheRtl = createCache({
 	key: 'muirtl',
 	stylisPlugins: [rtlPlugin],
 });
 
-const theme = createTheme({
-	direction: getLanguage() === 'ar' ? 'rtl' : 'ltr',
+const defaultTheme = {
 	palette: {
 		primary: {
 			main: '#262153',
@@ -35,26 +34,60 @@ const theme = createTheme({
 		h3: {
 			lineHeight: 1.1,
 		},
-		fontFamily: getLanguage() === 'en' ? 'Advent Pro' : 'Tajawal',
 		fontSize: 16,
+	},
+};
+
+const enTheme = {
+	direction: 'ltr',
+	...defaultTheme,
+	typography: {
+		...defaultTheme.typography,
+		fontFamily: 'Advent Pro',
 	},
 	overrides: {
 		MuiFormLabel: {
 			root: {
-				right: getLanguage() === 'ar' ? 30 : 'unset',
-				left: getLanguage() === 'ar' ? 'unset' : 0,
+				right: 30,
+				left: 'unset',
 				'&$focused': {
-					right: getLanguage() === 'ar' ? 20 : 'unset',
-					left: getLanguage() === 'ar' ? 'unset' : 0,
+					right: 20,
+					left: 'unset',
 				},
 				'&$filled': {
-					right: getLanguage() === 'ar' ? 20 : 'unset',
-					left: getLanguage() === 'ar' ? 'unset' : 0,
+					right: 20,
+					left: 'unset',
 				},
 			},
 		},
 	},
-});
+};
+
+const arTheme = {
+	...defaultTheme,
+	direction: 'rtl',
+	typography: {
+		...defaultTheme.typography,
+		fontFamily: 'Tajawal',
+	},
+	overrides: {
+		MuiFormLabel: {
+			root: {
+				right: 'unset',
+				left: 0,
+				'&$focused': {
+					right: 'unset',
+					left: 0,
+				},
+				'&$filled': {
+					right: 'unset',
+					left: 0,
+				},
+			},
+		},
+	},
+};
+
 const LanguageContainer = ({ children }) => {
 	if (getLanguage() === 'ar') {
 		return <CacheProvider value={cacheRtl}>{children}</CacheProvider>;
@@ -63,15 +96,16 @@ const LanguageContainer = ({ children }) => {
 	}
 };
 const Router = () => {
-	const [isLoading, setIsLoading] = useState(true);
-	if (window.location.pathname.split('/')[1] === 'ar') {
-		i18next.changeLanguage('ar');
-	} else {
+	if (window.location.pathname.split('/')[1] === 'en') {
 		i18next.changeLanguage('en');
+	} else {
+		i18next.changeLanguage('ar');
 	}
 
+	const theme = React.useMemo(() => createTheme(window.location.pathname.split('/')[1] === 'en' ? enTheme : arTheme), []);
+
 	return (
-		<BrowserRouter basename={getLanguage() === 'ar' ? 'ar' : 'en'} forceRefresh={true}>
+		<BrowserRouter basename={getLanguage() === 'en' ? 'en' : 'ar'} forceRefresh={true}>
 			<LanguageContainer>
 				<ThemeProvider theme={theme}>
 					<CssBaseline />
