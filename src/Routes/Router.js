@@ -24,7 +24,7 @@ const cacheRtl = createCache({
 const defaultTheme = {
 	palette: {
 		primary: {
-			main: '#262153',
+			main: '#221e38',
 		},
 		background: {
 			default: '#f5f5f5',

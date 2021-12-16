@@ -7,7 +7,7 @@ import i18next from 'i18next';
 
 const ContactUs = ({ data }) => {
 	return (
-		<Box name="ContactUs" py={15} sx={{ backgroundColor: '#262153' }}>
+		<Box name="ContactUs" py={15} sx={{ backgroundColor: '#221e38' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={4}>
