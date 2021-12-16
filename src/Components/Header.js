@@ -90,7 +90,7 @@ const Header = ({ data }) => {
 								</IconButton>
 							</Grid>
 							<Grid item xs={2} sm={2}>
-								<IconButton variant="contained" disableElevation onClick={handleClick} sx={{ color: 'white' }}>
+								<IconButton variant="contained" onClick={handleClick} sx={{ color: 'white' }}>
 									<MenuIcon />
 								</IconButton>
 								<StyledMenu anchorEl={anchorEl} open={open} onClose={handleClose}>
@@ -124,15 +124,10 @@ const Header = ({ data }) => {
 											{data.contact[i18next.language].title}
 										</Link>
 									</MenuItem>
-
-									<Divider sx={{ my: 0.5 }} />
-									<MenuItem>
-										<Social />
-									</MenuItem>
 									<Divider sx={{ my: 0.5 }} />
 									<MenuItem>
 										<Button
-											href={i18next.language === 'en' ? window.location.origin + '/ar' : window.location.origin.replace('/ar', '')}
+											href={i18next.language === 'ar' ? window.location.origin + '/en' : window.location.origin.replace('/en', '')}
 											variant="none"
 										>
 											{i18n.language === 'ar' ? 'English' : 'العربية'}
