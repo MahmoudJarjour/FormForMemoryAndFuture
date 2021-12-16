@@ -76,7 +76,7 @@ const Header = ({ data }) => {
 				position="sticky"
 				variant="none"
 				style={{
-					backgroundColor: trigger ? 'rgba(38, 33, 83, 0.9)' : 'rgba(38, 33, 83, 1)',
+					backgroundColor: trigger ? 'rgba(34, 30, 56, 0.9)' : 'rgba(34, 30, 56, 1)',
 				}}
 			>
 				<Container>

@@ -20,7 +20,7 @@ const FirstSection = ({ data }) => {
 	}, []);
 
 	return (
-		<Box pt={isMobileView ? 10 : 3} pb={isMobileView ? 10 : 3} name="FirstSection" sx={{ backgroundColor: '#262153' }}>
+		<Box pt={isMobileView ? 10 : 3} pb={isMobileView ? 10 : 3} name="FirstSection" sx={{ backgroundColor: '#221e38' }}>
 			<Container maxWidth="lg">
 				<Grid container spacing={3} justifyContent="space-between" alignItems="center">
 					<Grid item xs={12} sm={12} md={6}>
