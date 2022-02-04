@@ -3,6 +3,7 @@ import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import AboutUs from '../Components/AboutUs';
+import ComingSoon from '../Components/ComingSoon';
 import ContactUs from '../Components/ContactUs';
 import FirstSection from '../Components/FirstSection';
 import Footer from '../Components/Footer';
@@ -14,7 +15,7 @@ import Video from '../Components/Video';
 import { db } from '../firebase';
 
 const Home = () => {
-	const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
 	const [data, setData] = useState({});
 
 	const init = useCallback(async () => {
@@ -35,9 +36,10 @@ const Home = () => {
 	}, []);
 
 	useEffect(() => {
-		init();
+		// init();
 	}, [init]);
 	const { t } = useTranslation();
+
 	return (
 		<>
 			{isLoading ? (
@@ -53,19 +55,24 @@ const Home = () => {
 				</>
 			) : (
 				<>
-					<Header data={data} />
-					<FirstSection data={data.header} />
-					<Video data={data.video} />
-					<Members data={data.members} members={data.listOfMembers} />
-					<AboutUs data={data.about} />
-					<Posts data={data.posts} posts={data.listOfPosts} />
-					<Membership data={data.membership} />
-					<ContactUs data={data.contact} />
-					<Footer data={data.footer} />
+					<ComingSoon />
 				</>
 			)}
 		</>
 	);
 };
+{
+	/* <>
+	<Header data={data} />
+	<FirstSection data={data.header} />
+	<Video data={data.video} />
+	<Members data={data.members} members={data.listOfMembers} />
+	<AboutUs data={data.about} />
+	<Posts data={data.posts} posts={data.listOfPosts} />
+	<Membership data={data.membership} />
+	<ContactUs data={data.contact} />
+	<Footer data={data.footer} />
+</> */
+}
 
 export default Home;
